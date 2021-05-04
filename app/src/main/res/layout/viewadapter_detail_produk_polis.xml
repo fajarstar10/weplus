@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/adapterWrapper"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:paddingTop="@dimen/margin"
+    android:layout_marginTop="4dp">
+
+    <ImageView
+        android:id="@+id/detailpolis_img_icon"
+        android:layout_width="@dimen/icon"
+        android:layout_height="@dimen/icon"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/margin_m"
+        android:layout_marginEnd="16dp"
+        app:srcCompat="@drawable/ic_baseline_person_24px" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:layout_toStartOf="@id/viewadapterprofillist_next"
+        android:layout_toEndOf="@id/detailpolis_img_icon">
+        <TextView
+            android:id="@+id/detailpolis_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_b"
+            android:text="title"
+            android:textColor="@color/black_7070"
+            android:textSize="@dimen/font_normal" />
+
+        <TextView
+            android:id="@+id/detailpolis_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginBottom="@dimen/margin"
+            android:fontFamily="@font/ubuntu_r"
+            android:text="description"
+            android:textColor="@color/grey_medium"
+            android:textSize="@dimen/font_normal" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/viewadapterprofillist_next"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/margin_m"
+        app:tint="@color/black_7f7f7f"
+        app:srcCompat="@drawable/ic_chevron_right_black_24dp" />
+
+</RelativeLayout>

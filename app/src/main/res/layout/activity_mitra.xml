@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Mitra.MitraActivity">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/view_back"/>
+    <LinearLayout
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/bg_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <View
+                android:id="@+id/bg_red"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="@color/red" />
+
+            <View
+                android:id="@+id/bg_white"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@+id/bg_red"
+                android:background="@color/white" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rec_mitra_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:scrollIndicators="bottom">
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pilihmitraweplus"
+                android:fontFamily="@font/ubuntu_b"
+                android:textSize="15sp"
+                android:layout_marginStart="@dimen/margin_big"
+                tools:ignore="NotSibling">
+            </TextView>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rec_mitra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:clipToPadding="false">
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:orientation="vertical"
+        android:id="@+id/loader_bg"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey">
+    <com.agrawalsuneet.dotsloader.loaders.AllianceLoader
+        android:id="@+id/loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:alliance_animDuration="500"
+        app:alliance_distanceMultiplier="5"
+        app:alliance_dotsRadius="4dp"
+        app:alliance_drawOnlyStroke="true"
+        app:alliance_firstDotsColor="@color/colorPrimary"
+        app:alliance_secondDotsColor="@color/colorPrimary"
+        app:alliance_strokeWidth="8dp"
+        app:alliance_thirdDotsColor="@color/colorPrimary" />
+    </RelativeLayout>
+</RelativeLayout>

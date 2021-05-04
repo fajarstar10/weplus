@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/adapterkategori_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/adapterkategori_icon"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:scaleType="centerInside"
+
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/border_fill_red_rounded" />
+
+    <TextView
+        android:id="@+id/adapterkategori_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="11dp"
+        android:gravity="center_horizontal"
+        android:text="Category"
+        android:textColor="#777777"
+        android:textSize="15sp"
+        android:layout_below="@id/adapterkategori_icon"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/ubuntu_m"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>

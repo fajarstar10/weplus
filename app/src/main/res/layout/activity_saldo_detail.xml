@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    tools:context=".agen.saldo.SaldoDetailActivity">
+    <include
+        android:id="@+id/layoutHeader"
+        layout="@layout/view_back" />
+    <RelativeLayout
+        android:id="@+id/saldoWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_grey_rounded"
+        android:paddingVertical="10dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_below="@id/layoutHeader"
+        android:layout_marginTop="16dp">
+        <ImageView
+            android:id="@+id/icIdr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_idr"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Saldo"
+            android:fontFamily="@font/ubuntu_r"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/black_7f7f7f"
+            android:layout_toEndOf="@id/icIdr"/>
+        <TextView
+            android:id="@+id/tvTotalSaldo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_b"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            tools:text="Rp 1.000.000"/>
+    </RelativeLayout>
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_red_primary"
+        android:layout_marginHorizontal="16dp"
+        android:text="Tarik Saldo"
+        android:layout_below="@id/saldoWrapper"/>
+    <TextView
+        android:id="@+id/withdrawalHistoryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Riwayat Saldo"
+        android:layout_below="@id/btnNext"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/ubuntu_b"
+        android:textColor="@color/black_7f7f7f"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSaldoHistory"
+        android:layout_marginHorizontal="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/withdrawalHistoryLabel"
+        android:layout_marginTop="16dp"/>
+    <RelativeLayout
+        android:id="@+id/loadingProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layoutHeader"
+        android:visibility="gone"
+        android:background="#80d5d5d5">
+        <com.agrawalsuneet.dotsloader.loaders.AllianceLoader
+            android:id="@+id/loader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            app:alliance_animDuration="500"
+            app:alliance_distanceMultiplier="5"
+            app:alliance_dotsRadius="4dp"
+            app:alliance_drawOnlyStroke="true"
+            app:alliance_firstDotsColor="@color/colorPrimary"
+            app:alliance_secondDotsColor="@color/colorPrimary"
+            app:alliance_strokeWidth="8dp"
+            app:alliance_thirdDotsColor="@color/colorPrimary" />
+    </RelativeLayout>
+</RelativeLayout>

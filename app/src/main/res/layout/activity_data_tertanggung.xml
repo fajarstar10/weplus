@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey">
+
+    <include
+        android:id="@+id/pemegangpolis_top"
+        layout="@layout/view_back" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pemegangpolis_top">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_m">
+
+            <!-- start nama lengkap-->
+            <ImageView
+                android:id="@+id/pemegangpolis_name_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/pemegangpolis_label_name"
+                android:layout_alignBottom="@+id/pemegangpolis_name"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_m"
+                android:src="@drawable/ic_baseline_person_24px" />
+
+            <TextView
+                android:id="@+id/pemegangpolis_label_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/pemegangpolis_name_icon"
+                android:text="@string/namalengkap"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_midle"
+                android:fontFamily="@font/ubuntu_r"/>
+
+            <EditText
+                android:id="@+id/pemegangpolis_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/icon"
+                android:layout_below="@id/pemegangpolis_label_name"
+                android:layout_toRightOf="@id/pemegangpolis_name_icon"
+                android:background="@null"
+                android:hint="@string/masukkannamalengkap"
+                android:paddingLeft="0dp"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_b"
+                android:textColorHint="@color/grey_medium" />
+
+            <View
+                android:id="@+id/line_nama_lengkap"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/pemegangpolis_name"
+                android:layout_toRightOf="@id/pemegangpolis_name_icon"
+                android:background="@color/grey_bg_border"
+                android:layout_marginBottom="@dimen/margin"/>
+            <!-- END NAMA LENGKAP-->
+
+            <!-- START NOMOR KTP-->
+            <ImageView
+                android:id="@+id/pemegangpolis_no_ktp_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_nama_lengkap"
+                android:layout_alignTop="@+id/pemegangpolis_label_no_ktp"
+                android:layout_alignBottom="@+id/pemegangpolis_no_ktp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_m"
+                android:src="@drawable/ic_baseline_account_box_24px" />
+
+            <TextView
+                android:id="@+id/pemegangpolis_label_no_ktp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_nama_lengkap"
+                android:layout_toRightOf="@+id/pemegangpolis_no_ktp_icon"
+                android:text="@string/nomorktp"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_midle"
+                android:fontFamily="@font/ubuntu_r"/>
+
+            <EditText
+                android:id="@+id/pemegangpolis_no_ktp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/icon"
+                android:layout_below="@id/pemegangpolis_label_no_ktp"
+                android:layout_toRightOf="@id/pemegangpolis_no_ktp_icon"
+                android:background="@null"
+                android:hint="@string/masukkannomorktp"
+                android:paddingLeft="0dp"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_b"
+                android:textColor="@color/grey_medium"
+                android:textColorHint="@color/grey_medium" />
+
+            <View
+                android:id="@+id/line_no_ktp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/pemegangpolis_no_ktp"
+                android:layout_toRightOf="@id/pemegangpolis_no_ktp_icon"
+                android:background="@color/grey_bg_border"
+                android:layout_marginBottom="@dimen/margin"/>
+            <!-- END NOMOR KTP -->
+
+            <!-- START TGL LAHIR-->
+            <ImageView
+                android:id="@+id/pemegangpolis_dob_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_no_ktp"
+                android:layout_alignTop="@+id/pemegangpolis_label_dob"
+                android:layout_alignBottom="@+id/pemegangpolis_dob"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_m"
+                android:src="@drawable/ic_baseline_date_range_24px" />
+
+            <TextView
+                android:id="@+id/pemegangpolis_label_dob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_no_ktp"
+                android:layout_toRightOf="@+id/pemegangpolis_dob_icon"
+                android:text="@string/tgllahir"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_midle"
+                android:fontFamily="@font/ubuntu_r"/>
+
+            <EditText
+                android:id="@+id/pemegangpolis_dob"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/icon"
+                android:layout_below="@id/pemegangpolis_label_dob"
+                android:layout_toRightOf="@id/pemegangpolis_dob_icon"
+                android:background="@null"
+                android:hint="@string/masukkantgllahir"
+                android:paddingLeft="0dp"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_b"
+                android:textColor="@color/grey_medium"
+                android:textColorHint="@color/grey_medium" />
+
+            <View
+                android:id="@+id/line_dob"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/pemegangpolis_dob"
+                android:layout_toRightOf="@id/pemegangpolis_no_ktp_icon"
+                android:background="@color/grey_bg_border"
+                android:layout_marginBottom="@dimen/margin"/>
+            <!-- END TGL LAHIR -->
+
+            <!-- START Jenis Kelamin-->
+            <ImageView
+                android:id="@+id/pemegangpolis_gender_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_dob"
+                android:layout_alignTop="@+id/pemegangpolis_label_gender"
+                android:layout_alignBottom="@+id/pemegangpolis_layout_gender"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_m"
+                android:src="@drawable/ic_gender" />
+
+            <TextView
+                android:id="@+id/pemegangpolis_label_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_dob"
+                android:layout_toRightOf="@+id/pemegangpolis_gender_icon"
+                android:text="@string/jeniskelamin"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_midle"
+                android:fontFamily="@font/ubuntu_r"/>
+
+            <LinearLayout
+                android:id="@+id/pemegangpolis_layout_gender"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height"
+                android:layout_below="@+id/pemegangpolis_label_gender"
+                android:layout_toRightOf="@+id/pemegangpolis_gender_icon"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/pemegangpolis_gender_pria"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@drawable/border_grey_stroke_greymedium"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="@dimen/margin_small"
+                    android:paddingBottom="@dimen/margin_small"
+                    android:text="@string/pria"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_b"
+                    />
+
+                <TextView
+                    android:id="@+id/pemegangpolis_gender_wanita"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_big"
+                    android:layout_weight="1"
+                    android:background="@drawable/border_grey_stroke_greymedium"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="@dimen/margin_small"
+                    android:paddingBottom="@dimen/margin_small"
+                    android:text="@string/wanita"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_b"/>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line_gender"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/pemegangpolis_layout_gender"
+                android:layout_toRightOf="@id/pemegangpolis_gender_icon"
+                android:background="@color/grey_bg_border"
+                android:layout_marginBottom="@dimen/margin"/>
+            <!-- END jenis kelamin-->
+
+            <!-- START no telp-->
+            <ImageView
+                android:id="@+id/pemegangpolis_no_telp_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_gender"
+                android:layout_alignTop="@+id/pemegangpolis_label_no_telp"
+                android:layout_alignBottom="@+id/pemegangpolis_no_telp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_m"
+                android:src="@drawable/ic_baseline_stay_current_portrait_24px" />
+
+            <TextView
+                android:id="@+id/pemegangpolis_label_no_telp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_gender"
+                android:layout_toRightOf="@+id/pemegangpolis_no_telp_icon"
+                android:text="@string/nomortelepon"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_midle"
+                android:fontFamily="@font/ubuntu_r"/>
+
+            <EditText
+                android:id="@+id/pemegangpolis_no_telp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/icon"
+                android:layout_below="@id/pemegangpolis_label_no_telp"
+                android:layout_toRightOf="@id/pemegangpolis_no_telp_icon"
+                android:background="@null"
+                android:hint="@string/masukkannomortelepon"
+                android:paddingLeft="0dp"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_b"
+                android:textColor="@color/grey_medium"
+                android:textColorHint="@color/grey_medium" />
+
+            <View
+                android:id="@+id/line_no_telp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/pemegangpolis_no_telp"
+                android:layout_toRightOf="@id/pemegangpolis_no_telp_icon"
+                android:background="@color/grey_bg_border"
+                android:layout_marginBottom="@dimen/margin"/>
+            <!-- END no telp -->
+
+            <!-- START email-->
+            <ImageView
+                android:id="@+id/pemegangpolis_email_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_no_telp"
+                android:layout_alignTop="@+id/pemegangpolis_label_email"
+                android:layout_alignBottom="@+id/pemegangpolis_email"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_m"
+                android:src="@drawable/ic_round_mail_24px" />
+
+            <TextView
+                android:id="@+id/pemegangpolis_label_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_no_telp"
+                android:layout_toRightOf="@+id/pemegangpolis_email_icon"
+                android:text="@string/alamatemail"
+                android:fontFamily="@font/ubuntu_r"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_midle" />
+
+            <EditText
+                android:id="@+id/pemegangpolis_email"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/icon"
+                android:layout_below="@id/pemegangpolis_label_email"
+                android:layout_toRightOf="@id/pemegangpolis_email_icon"
+                android:background="@null"
+                android:hint="@string/masukkanalamatemail"
+                android:paddingLeft="0dp"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_b"
+                android:textColor="@color/grey_medium"
+                android:textColorHint="@color/grey_medium" />
+
+            <View
+                android:id="@+id/line_email"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/pemegangpolis_email"
+                android:layout_toRightOf="@id/pemegangpolis_email_icon"
+                android:background="@color/grey_bg_border"
+                android:layout_marginBottom="@dimen/margin"/>
+            <!-- END email -->
+
+            <!-- START address-->
+            <ImageView
+                android:id="@+id/pemegangpolis_address_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_email"
+                android:layout_alignTop="@+id/pemegangpolis_label_address"
+                android:layout_alignBottom="@+id/pemegangpolis_address"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_m"
+                android:src="@drawable/ic_baseline_location_on_24px" />
+
+            <TextView
+                android:id="@+id/pemegangpolis_label_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_email"
+                android:layout_toRightOf="@+id/pemegangpolis_address_icon"
+                android:text="@string/alamatlengkap"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_midle"
+                android:fontFamily="@font/ubuntu_r"/>
+
+            <EditText
+                android:id="@+id/pemegangpolis_address"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/icon"
+                android:layout_below="@id/pemegangpolis_label_address"
+                android:layout_toRightOf="@id/pemegangpolis_address_icon"
+                android:background="@null"
+                android:hint="@string/masukkanalamatlengkap"
+                android:paddingLeft="0dp"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_b"
+                android:textColor="@color/grey_medium"
+                android:textColorHint="@color/grey_medium" />
+
+            <View
+                android:id="@+id/line_address"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/pemegangpolis_address"
+                android:layout_toRightOf="@id/pemegangpolis_address_icon"
+                android:background="@color/grey_bg_border"
+                android:layout_marginBottom="@dimen/margin"/>
+            <!-- END address -->
+
+            <!-- START provinsi-->
+            <ImageView
+                android:id="@+id/pemegangpolis_provinsi_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_address"
+                android:layout_alignTop="@+id/pemegangpolis_label_provinsi"
+                android:layout_alignBottom="@+id/pemegangpolis_provinsi_spinner"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_m"
+                android:src="@drawable/ic_map_24_px" />
+
+            <TextView
+                android:id="@+id/pemegangpolis_label_provinsi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_address"
+                android:layout_toRightOf="@+id/pemegangpolis_provinsi_icon"
+                android:text="@string/provinsi"
+                android:fontFamily="@font/ubuntu_r"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_midle" />
+
+            <Spinner
+                android:id="@+id/pemegangpolis_provinsi_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/icon"
+                android:layout_below="@id/pemegangpolis_label_provinsi"
+                android:layout_toRightOf="@id/pemegangpolis_provinsi_icon"
+                android:entries="@array/daftar_propinsi"
+                android:isScrollContainer="true"
+                android:textAlignment="textStart"
+                android:tooltipText="@string/pilihpartnerasuransi" />
+
+            <View
+                android:id="@+id/line_provinsi"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/pemegangpolis_provinsi_spinner"
+                android:layout_toRightOf="@id/pemegangpolis_address_icon"
+                android:background="@color/grey_bg_border"
+                android:layout_marginBottom="@dimen/margin"/>
+            <!-- END provinsi -->
+
+            <!-- START kota-->
+            <ImageView
+                android:id="@+id/pemegangpolis_kota_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_provinsi"
+                android:layout_alignTop="@+id/pemegangpolis_label_kota"
+                android:layout_alignBottom="@+id/pemegangpolis_kota_spinner"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_m"
+                android:src="@drawable/ic_map_24_px" />
+
+            <TextView
+                android:id="@+id/pemegangpolis_label_kota"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_provinsi"
+                android:layout_toRightOf="@+id/pemegangpolis_kota_icon"
+                android:text="@string/kota"
+                android:fontFamily="@font/ubuntu_r"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_midle" />
+
+            <Spinner
+                android:id="@+id/pemegangpolis_kota_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/icon"
+                android:layout_below="@id/pemegangpolis_label_kota"
+                android:layout_toRightOf="@id/pemegangpolis_kota_icon"
+                android:entries="@array/daftar_propinsi"
+                android:isScrollContainer="true"
+                android:textAlignment="textStart"
+                android:tooltipText="@string/pilihpartnerasuransi" />
+
+            <View
+                android:id="@+id/line_kota"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/pemegangpolis_kota_spinner"
+                android:layout_toRightOf="@id/pemegangpolis_kota_icon"
+                android:background="@color/grey_bg_border"
+                android:layout_marginBottom="@dimen/margin"/>
+            <!-- END kota -->
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/pemegangpolis_btn_simpan"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height"
+                android:layout_below="@+id/line_kota"
+                android:background="@drawable/border_red"
+                android:text="@string/simpan"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_b"
+                android:layout_marginTop="@dimen/margin_m"
+                android:layout_marginBottom="@dimen/margin_m"/>
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

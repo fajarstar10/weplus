@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/perjalanan_top"
+        layout="@layout/view_back" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/perjalanan_top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="120dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_m"
+                android:text="@string/asurasiygdiajukan"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_normal" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:background="@drawable/border_white"
+                android:padding="@dimen/margin">
+
+                <ImageView
+                    android:id="@+id/perjalanan_icon_asuransi"
+                    android:layout_width="@dimen/icon"
+                    android:layout_height="@dimen/icon"
+                    android:layout_alignTop="@id/mobil_title_asuransi"
+                    android:layout_alignBottom="@id/mobil_price_asuransi"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/aca_insurance" />
+
+                <TextView
+                    android:id="@+id/perjalanan_title_asuransi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_m"
+                    android:layout_toRightOf="@id/perjalanan_icon_asuransi"
+                    android:maxLines="1"
+                    android:text="Asuransi mobil Adira"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_normal" />
+
+                <TextView
+                    android:id="@+id/perjalanan_price_asuransi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/perjalanan_title_asuransi"
+                    android:layout_marginLeft="@dimen/margin_m"
+                    android:layout_toRightOf="@id/perjalanan_icon_asuransi"
+                    android:maxLines="1"
+                    android:text="Rp 175.000"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/font_normal" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_m"
+                android:text="@string/datapemesan"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:text="@string/semuadetailtransaksiakan"
+                android:textColor="@color/green"
+                android:textSize="@dimen/font_small" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_m"
+                android:background="@drawable/border_grey"
+                android:orientation="vertical"
+                android:padding="@dimen/margin">
+
+                <TextView
+                    android:id="@+id/perjalanan_nama_pemesan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Henry Chrystianto"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_normal"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/perjalanan_email_pemesan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="henry@gmail.com"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_small"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/perjalanan_telp_pemesan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="08123456789"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_small"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:text="@string/datatertanggung"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_normal" />
+
+            <Switch
+                android:id="@+id/perjalanan_switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:checked="false"
+                android:text="@string/samadgndatapemesan"
+                android:textColor="@color/grey_medium"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_margin="@dimen/margin_m"
+                android:background="@drawable/border_grey">
+
+                <TextView
+                    android:id="@+id/perjalanan_data_tertanggung"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="@string/masukkandatatertanggung"
+                    android:paddingLeft="@dimen/margin"
+                    android:paddingTop="@dimen/margin_small"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/perjalanan_edit_data_tertanggung"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:src="@drawable/ic_baseline_edit_24px" />
+
+            </RelativeLayout>
+
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:text="@string/dataahliwaris"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_normal" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_margin="@dimen/margin_m"
+                android:background="@drawable/border_grey">
+
+                <TextView
+                    android:id="@+id/perjalanan_data_ahli_waris"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="@string/masukkandataahliwaris"
+                    android:paddingLeft="@dimen/margin"
+                    android:paddingTop="@dimen/margin_small"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/perjalanan_data_ahli_waris_btn_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:src="@drawable/ic_baseline_edit_24px" />
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/perjalanan_btn_selanjutnya"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height"
+                android:layout_margin="@dimen/margin_m"
+                android:background="@drawable/border_red"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/selanjutnya"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_medium"
+                android:textStyle="bold"
+                app:cornerRadius="1mm"
+                android:onClick="showAlertDialogSelanjutnyaButtonClicked"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

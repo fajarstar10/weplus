@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/view_back" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/tipeasuransimotor_btn_lanjutkan">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_big"
+                android:layout_marginEnd="@dimen/margin_16">
+
+                <ImageView
+                    android:id="@+id/datamotor_konvensional_tipeasuransi_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin"
+                    android:src="@drawable/ic_beach_access_24" />
+
+                <TextView
+                    android:id="@+id/datamotor_konvensional_tipeasuransi_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/datamotor_konvensional_tipeasuransi_icon"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/tipeasuransi"
+                    android:fontFamily="@font/ubuntu_r"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/datamotor_konvensional_tipeasuransi_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@id/datamotor_konvensional_tipeasuransi_label"
+                    android:layout_toEndOf="@id/datamotor_konvensional_tipeasuransi_icon"
+                    android:background="@null"
+                    android:hint="Konvensional"
+                    android:textColor="@color/black_7f7f7f"
+                    android:textColorHint="@color/grey_medium"
+                    android:fontFamily="@font/ubuntu_b"
+                    tools:ignore="HardcodedText,RtlSymmetry" />
+
+                <View
+                    android:id="@+id/datamotor_thn_prod_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/datamotor_konvensional_tipeasuransi_name"
+                    android:layout_toEndOf="@id/datamotor_konvensional_tipeasuransi_icon"
+                    android:background="@color/grey_bg_border" />
+            </RelativeLayout>
+
+    <!-- start merek motor -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_m"
+                android:visibility="visible"
+                android:layout_marginStart="@dimen/margin_16">
+
+                <ImageView
+                    android:id="@+id/imgInsuranceType"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin"
+                    app:srcCompat="@drawable/ic_chrome_reader_mode_24_px" />
+
+                <TextView
+                    android:id="@+id/tvInsuranceTypeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/imgInsuranceType"
+                    android:text="Tipe Perlindungan"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/formmotor_mikro_tipe_perlindungan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvInsuranceTypeLabel"
+                    android:layout_marginTop="4dp"
+                    android:layout_toEndOf="@id/imgInsuranceType"
+                    android:hint="Pilih Tipe Asuransi"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/black_7f7f7f"
+                    android:textColorHint="@color/grey_medium"
+                    android:textStyle="bold" />
+                <ImageView
+                    android:id="@+id/formmotor_mikro_type_chevron_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvInsuranceTypeLabel"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/margin"
+                    app:srcCompat="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+                <TextView
+                    android:id="@+id/errorTextInsuranceType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/insuranceTypeLine"
+                    android:layout_toEndOf="@id/imgInsuranceType"
+                    android:text="Silahkan isi data"
+                    android:layout_marginStart="8dp"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    android:textColorHint="@color/grey_medium" />
+                <View
+                    android:id="@+id/insuranceTypeLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/formmotor_mikro_tipe_perlindungan"
+                    android:layout_toEndOf="@id/imgInsuranceType"
+                    android:background="@color/grey_bg_border" />
+
+            </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16">
+
+        <TextView
+            android:id="@+id/formmotor_mikro_tahun_produksi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/formmotor_mikro_tahun_label"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="8dp"
+            android:layout_toStartOf="@id/formmotor_mikro_year_chevron_down"
+            android:layout_toEndOf="@id/formmotor_mikro_merek_icon"
+            android:fontFamily="@font/ubuntu_b"
+            android:hint="Pilih Tahun Produksi"
+            android:paddingBottom="0dp"
+            android:textColor="@color/black_7f7f7f"
+            android:textColorHint="@color/grey_medium"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/formmotor_mikro_tahun_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/formmotor_mikro_merek_icon"
+            android:text="@string/tahunproduksi"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/ubuntu_r"
+            android:textColor="@color/grey_medium"
+            android:textSize="14sp" />
+        <ImageView
+            android:id="@+id/formmotor_mikro_merek_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin"
+            app:srcCompat="@drawable/ic_build_24_px" />
+        <TextView
+            android:id="@+id/errorTextYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/datamobil_thn_prod_line"
+            android:layout_toEndOf="@id/formmotor_mikro_merek_icon"
+            android:text="Silahkan isi data"
+            android:layout_marginStart="8dp"
+            android:textSize="12sp"
+            android:visibility="gone"
+            android:textColor="@color/red_burem"
+            android:textColorHint="@color/grey_medium" />
+        <ImageView
+            android:id="@+id/formmotor_mikro_year_chevron_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/formmotor_mikro_tahun_label"
+            android:layout_alignParentEnd="true"
+            app:srcCompat="@drawable/ic_baseline_keyboard_arrow_down_24" />
+        <View
+            android:id="@+id/datamobil_thn_prod_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="8dp"
+            android:layout_below="@+id/formmotor_mikro_tahun_produksi"
+            android:layout_toEndOf="@id/formmotor_mikro_merek_icon"
+            android:background="@color/grey_bg_border" />
+    </RelativeLayout>
+    <!-- end merek motor -->
+
+    <!-- start seri motor-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16">
+        <TextView
+            android:id="@+id/formmotor_mikro_merek_motor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/formmotor_mikro_merek_label"
+            android:layout_toEndOf="@id/formmotor_mikro_serimotor_icon"
+            android:gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/black_7f7f7f"
+            android:textColorHint="@color/grey_medium"
+            android:textStyle="bold"
+            android:enabled="false"
+            android:hint="Pilih Merek Motor"
+            tools:ignore="RtlSymmetry"/>
+        <TextView
+            android:id="@+id/formmotor_mikro_merek_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/formmotor_mikro_serimotor_icon"
+            android:text="@string/merk"
+            android:textColor="@color/grey_medium"
+            android:textSize="14sp" />
+        <ImageView
+            android:id="@+id/formmotor_mikro_serimotor_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin"
+            app:srcCompat="@drawable/ic_baseline_motorcycle_24px" />
+        <ImageView
+            android:id="@+id/formmotor_mikro_merek_chevron_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/formmotor_mikro_merek_label"
+            android:layout_alignParentEnd="true"
+            app:srcCompat="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+        <TextView
+            android:id="@+id/errorTextMerek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/formmotor_mikro_serimotor_line"
+            android:layout_toEndOf="@id/formmotor_mikro_serimotor_icon"
+            android:text="Silahkan isi data"
+            android:layout_marginStart="8dp"
+            android:textSize="12sp"
+            android:visibility="gone"
+            android:textColor="@color/red_burem"
+            android:textColorHint="@color/grey_medium" />
+        <View
+            android:id="@+id/formmotor_mikro_serimotor_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_below="@+id/formmotor_mikro_merek_motor"
+            android:layout_toEndOf="@id/formmotor_mikro_serimotor_icon"
+            android:background="@color/grey_bg_border" />
+
+    </RelativeLayout>
+    <!-- end seri motor-->
+
+    <!-- start kondisi motor-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16">
+
+
+        <TextView
+            android:id="@+id/formmotor_mikro_kondisimotor_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/formmotor_mikro_kondisimotor_icon"
+            android:text="@string/serimotor"
+            android:textColor="@color/grey_medium"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/formmotor_mikro_seri_motor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/formmotor_mikro_kondisimotor_label"
+            android:layout_toEndOf="@id/formmotor_mikro_kondisimotor_icon"
+            android:hint="Pilih Seri Motor"
+            android:layout_marginStart="8dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/black_7f7f7f"
+            android:textColorHint="@color/grey_medium"
+            android:textStyle="bold"
+            android:clickable="false"
+            android:enabled="false"
+            tools:ignore="RtlSymmetry"/>
+        <ImageView
+            android:id="@+id/formmotor_mikro_kondisimotor_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin"
+            app:srcCompat="@drawable/ic_baseline_motorcycle_24px" />
+        <ImageView
+            android:id="@+id/formmotor_mikro_seri_chevron_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/formmotor_mikro_kondisimotor_label"
+            android:layout_alignParentEnd="true"
+            app:srcCompat="@drawable/ic_baseline_keyboard_arrow_down_24" />
+        <TextView
+            android:id="@+id/errorTextSeries"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/formmotor_mikro_kondisimotor_line"
+            android:layout_toEndOf="@id/formmotor_mikro_kondisimotor_icon"
+            android:text="Silahkan isi data"
+            android:layout_marginStart="8dp"
+            android:textSize="12sp"
+            android:visibility="gone"
+            android:textColor="@color/red_burem"
+            android:textColorHint="@color/grey_medium" />
+        <View
+            android:id="@+id/formmotor_mikro_kondisimotor_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="8dp"
+            android:layout_below="@+id/formmotor_mikro_seri_motor"
+            android:layout_toEndOf="@id/formmotor_mikro_kondisimotor_icon"
+            android:background="@color/grey_bg_border" />
+
+    </RelativeLayout>
+    <!-- end kondisi motor-->
+
+    <!-- start plat nomor -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16">
+        <TextView
+            android:id="@+id/formmotor_mikro_platmotor_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/formmotor_mikro_platmotor_icon"
+            android:text="@string/platwilayah"
+            android:layout_marginStart="12dp"
+            android:textColor="@color/grey_medium"
+            android:textSize="14sp" />
+        <View
+            android:id="@+id/formmotor_mikro_platmotor_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:layout_below="@+id/formmotor_mikro_platmotor"
+            android:layout_toEndOf="@id/formmotor_mikro_platmotor_icon"
+            android:background="@color/grey_bg_border" />
+
+        <TextView
+            android:id="@+id/formmotor_mikro_platmotor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/formmotor_mikro_platmotor_label"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="-1dp"
+            android:layout_toStartOf="@id/formmotor_mikro_plat_chevron_down"
+            android:layout_toEndOf="@id/formmotor_mikro_platmotor_icon"
+            android:gravity="center_vertical"
+            android:hint="Pilih Plat Wilayah"
+            android:textColor="@color/black_7f7f7f"
+            android:textColorHint="@color/grey_medium"
+            android:textStyle="bold"
+            tools:ignore="RtlSymmetry" />
+
+        <ImageView
+            android:id="@+id/formmotor_mikro_platmotor_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin"
+            android:src="@drawable/ic_plat" />
+        <TextView
+            android:id="@+id/errorTextPlate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/formmotor_mikro_platmotor_line"
+            android:layout_toEndOf="@id/formmotor_mikro_platmotor_icon"
+            android:text="Silahkan isi data"
+            android:layout_marginStart="12dp"
+            android:textSize="12sp"
+            android:visibility="gone"
+            android:textColor="@color/red_burem"
+            android:textColorHint="@color/grey_medium" />
+        <ImageView
+            android:id="@+id/formmotor_mikro_plat_chevron_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_baseline_keyboard_arrow_down_24"
+            android:layout_below="@id/formmotor_mikro_platmotor_label"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+    <!-- end plat motor -->
+    <!-- start nominal pengemudi -->
+    <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16">
+                <TextView
+                    android:id="@+id/formmotor_mikro_driver_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/formmotor_mikro_driver_icon"
+                    android:text="Nominal Kecelakaan Pengemudi(optional)"
+                    android:layout_marginStart="12dp"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="14sp" />
+                <View
+                    android:id="@+id/formmotor_mikro_driver_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/formmotor_mikro_driver"
+                    android:layout_toEndOf="@id/formmotor_mikro_driver_icon"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/formmotor_mikro_driver"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/formmotor_mikro_driver_label"
+                    android:layout_toEndOf="@id/formmotor_mikro_driver_icon"
+                    android:hint="Pilih Nominal"
+                    android:layout_marginStart="12dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black_7f7f7f"
+                    android:textColorHint="@color/grey_medium"
+                    android:textStyle="bold"
+                    tools:ignore="RtlSymmetry"
+                    />
+
+                <ImageView
+                    android:id="@+id/formmotor_mikro_driver_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin"
+                    android:src="@drawable/ic_plat" />
+                <ImageView
+                    android:id="@+id/formmotor_mikro_driver_chevron_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_baseline_keyboard_arrow_down_24"
+                    android:layout_below="@id/formmotor_mikro_driver_label"
+                    android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+    <!-- End Nominal Pengemudi -->
+    <!-- start nominal penumpang -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16">
+        <TextView
+            android:id="@+id/formmotor_mikro_passenger_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/formmotor_mikro_passenger_icon"
+            android:text="Nominal Kecelakaan Penumpang(optional)"
+            android:layout_marginStart="12dp"
+            android:textColor="@color/grey_medium"
+            android:textSize="14sp" />
+        <View
+            android:id="@+id/formmotor_mikro_passenger_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:layout_below="@+id/formmotor_mikro_passenger"
+            android:layout_toEndOf="@id/formmotor_mikro_passenger_icon"
+            android:background="@color/grey_bg_border" />
+        <TextView
+            android:id="@+id/formmotor_mikro_passenger"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/formmotor_mikro_passenger_label"
+            android:layout_toEndOf="@id/formmotor_mikro_passenger_icon"
+            android:hint="Pilih Nominal"
+            android:layout_marginStart="12dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/black_7f7f7f"
+            android:textColorHint="@color/grey_medium"
+            android:textStyle="bold"
+            tools:ignore="RtlSymmetry"
+            />
+
+        <ImageView
+            android:id="@+id/formmotor_mikro_passenger_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin"
+            android:src="@drawable/ic_plat" />
+        <ImageView
+            android:id="@+id/formmotor_mikro_passenger_chevron_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_baseline_keyboard_arrow_down_24"
+            android:layout_below="@id/formmotor_mikro_passenger_label"
+            android:layout_alignParentEnd="true"/>
+
+
+    </RelativeLayout>
+    <!-- End Nominal Penumpang -->
+    <!-- start kondisi mobil-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_m"
+        android:visibility="gone"
+        android:layout_marginStart="@dimen/margin_16">
+
+        <ImageView
+            android:id="@+id/datamobil_kondisi_mobil_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin"
+            app:srcCompat="@drawable/ic_car_24_px" />
+
+        <TextView
+            android:id="@+id/datamobil_kondisi_mobil_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/datamobil_kondisi_mobil_icon"
+            android:text="@string/kondisimotor"
+            android:textColor="@color/grey_medium"
+            android:textSize="14sp" />
+
+        <Spinner
+            android:id="@+id/datamobil_kondisi_mobil"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spinner_height"
+            android:layout_below="@id/datamobil_kondisi_mobil_label"
+            android:layout_toEndOf="@id/datamobil_kondisi_mobil_icon"
+            android:hint="@string/serimobil"
+            android:layout_marginStart="8dp"
+            android:spinnerMode="dialog"
+            android:textColor="@color/grey_medium"
+            android:textColorHint="@color/grey_medium"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/datamobil_kondisi_mobil_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/datamobil_kondisi_mobil"
+            android:layout_toEndOf="@id/datamobil_kondisi_mobil_icon"
+            android:background="@color/grey_bg_border" />
+
+    </RelativeLayout>
+
+
+    <!-- end kondisi mobil-->
+
+
+
+        </LinearLayout>
+    </ScrollView>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/tipeasuransimotor_btn_lanjutkan"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginBottom="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_big"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:background="@drawable/border_red"
+        android:text="@string/lanjutkan"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:textSize="@dimen/font_normal" />
+</RelativeLayout>

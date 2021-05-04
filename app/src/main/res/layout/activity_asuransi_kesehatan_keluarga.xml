@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/view_back" />
+
+        <RelativeLayout
+            android:id="@+id/txt_tipe_asuransi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_m"
+            android:layout_marginRight="@dimen/margin_m"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_marginBottom="@dimen/margin">
+
+            <ImageView
+                android:id="@+id/tipeasuransi_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_m"
+                android:src="@drawable/ic_baseline_person_24px" />
+
+            <TextView
+                android:id="@+id/tipeasuransi_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tipeasuransi_icon"
+                android:text="@string/tipeasuransi"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_r" />
+
+            <EditText
+                android:id="@+id/formbelipolis_destinasi_perjalanan"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spinner_height"
+                android:layout_below="@+id/tipeasuransi_label"
+                android:layout_toRightOf="@+id/tipeasuransi_icon"
+                android:background="@null"
+                android:hint="@string/keluarga"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_b"
+                android:isScrollContainer="true"
+                android:textAlignment="textStart">
+            </EditText>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/formbelipolis_destinasi_perjalanan"
+                android:layout_toRightOf="@+id/tipeasuransi_icon"
+                android:background="@color/grey_bg_border" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_perokok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_m"
+            android:layout_marginRight="@dimen/margin_m"
+            android:layout_marginTop="@dimen/margin_m"
+            android:layout_marginBottom="@dimen/margin_13">
+
+            <ImageView
+                android:id="@+id/perokok_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginLeft="@dimen/margin"
+                android:src="@drawable/smokingarea" />
+
+            <TextView
+                android:id="@+id/anggota_keluarga_perokok_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/perokok_icon"
+                android:text="@string/anggotakeluargayangmerokok"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_r" />
+
+            <EditText
+                android:id="@+id/respon_perokok"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spinner_height"
+                android:layout_below="@+id/anggota_keluarga_perokok_label"
+                android:layout_toRightOf="@+id/perokok_icon"
+                android:background="@null"
+                android:hint="@string/ya"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_b">
+            </EditText>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/respon_perokok"
+                android:layout_toRightOf="@+id/perokok_icon"
+                android:background="@color/grey_bg_border" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_tgl_lahir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_m"
+            android:layout_marginRight="@dimen/margin_m"
+            android:layout_marginBottom="@dimen/margin">
+
+            <ImageView
+                android:id="@+id/tgllahir_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_m"
+                android:src="@drawable/ic_baseline_date_range_24px" />
+
+            <TextView
+                android:id="@+id/tgllahir_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tgllahir_icon"
+                android:text="@string/tanggallahirorangtertuadikeluargaanda"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_r" />
+
+            <EditText
+                android:id="@+id/formasuransikesehatan_tgllahir"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spinner_height"
+                android:layout_below="@+id/tgllahir_label"
+                android:layout_toRightOf="@+id/tgllahir_icon"
+                android:background="@null"
+                android:hint="@string/masukkantgllahir"
+                android:textColor="@drawable/border_grey_medium"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_b">
+            </EditText>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/formasuransikesehatan_tgllahir"
+                android:layout_toRightOf="@+id/tgllahir_icon"
+                android:background="@color/grey_bg_border" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_jumlah_penumpang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_m"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginRight="@dimen/margin_m"
+            android:layout_marginBottom="@dimen/margin">
+
+            <ImageView
+                android:id="@+id/jumlahpenumpang_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_m"
+                android:src="@drawable/ic_baseline_person_24px" />
+
+            <TextView
+                android:id="@+id/jumlahpenumpang_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/jumlahpenumpang_icon"
+                android:text="@string/jumlahpenumpang"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_r" />
+
+            <Spinner
+                android:id="@+id/jumlah_penumpang_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spinner_height"
+                android:layout_below="@+id/jumlahpenumpang_label"
+                android:layout_toRightOf="@+id/jumlahpenumpang_icon"
+                android:autofillHints="@string/pilihjumlahpenumpang"
+                android:isScrollContainer="true">
+
+            </Spinner>
+
+            <View
+                android:id="@+id/bengkelrekanan_proteksi_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/jumlah_penumpang_spinner"
+                android:layout_toRightOf="@+id/jumlahpenumpang_icon"
+                android:background="@color/grey_bg_border" />
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_lanjutkan_asuransi_kesehatan_keluarga"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginLeft="@dimen/margin_m"
+            android:layout_marginTop="@dimen/margin_big_m"
+            android:layout_marginRight="@dimen/margin_m"
+            android:background="@drawable/border_red"
+            android:text="@string/lanjutkan"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:fontFamily="@font/ubuntu_b"
+            android:textSize="@dimen/font_normal" />
+
+    </LinearLayout>
+
+</ScrollView>

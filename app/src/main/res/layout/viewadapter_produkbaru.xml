@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:id="@+id/cardWrapper"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="5dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:background="@color/grey"
+    app:cardCornerRadius="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgprodukbaru"
+            android:layout_width="297dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_image_product_terbaru"/>
+
+        <TextView
+            android:id="@+id/card_view_image_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:text="Waspada banjir sudah datang!"
+            android:fontFamily="@font/ubuntu_b"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="5dp"/>
+
+        <TextView
+            android:id="@+id/card_view_image_title2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:text="Lindungi perabotan rumah mulai dari sekarang!"
+            android:fontFamily="@font/ubuntu_b"
+            android:textSize="12sp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"/>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

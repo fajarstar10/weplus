@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".belipolis.DisclaimerOption">
+    <include
+        android:id="@+id/layoutHeader"
+        layout="@layout/view_back" />
+    <ImageView
+        android:id="@+id/imgNoPolis"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/layoutHeader"
+        app:srcCompat="@drawable/ic_no_polis"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"/>
+    <TextView
+        android:id="@+id/tvDisclaimerTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:fontFamily="@font/ubuntu_b"
+        android:layout_below="@id/imgNoPolis"
+        android:text="BCA Life Protection"/>
+
+    <TextView
+        android:id="@+id/tvDisclaimerDescription"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/tvAskAge"
+        android:layout_below="@id/tvDisclaimerTitle"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/ubuntu_r"
+        android:lineHeight="20dp"
+        android:text="Umur minimal untuk pemegang polis pada asuransi ini adalah 18 tahun. Apabila tertanggung berusia dibawah 18 tahun, harap hubungi saudara/kerabat tertanggung yang lebih tua sebagai pemegang polis"
+        android:textAlignment="center" />
+    <TextView
+        android:id="@+id/tvAskAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:fontFamily="@font/ubuntu_b"
+        android:layout_above="@id/btnAbove21thn"
+        android:text="Berapa usia tertanggung?"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAbove21thn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginBottom="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:background="@drawable/border_fill_red"
+        android:fontFamily="@font/ubuntu_b"
+        android:text="diatas atau sama dengan 18 tahun"
+        android:layout_above="@id/btnUnder21thn"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_normal"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnUnder21thn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginBottom="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:background="@drawable/border_fill_red"
+        android:fontFamily="@font/ubuntu_b"
+        android:layout_alignParentBottom="true"
+        android:text="Dibawah 18 tahun"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_normal"/>
+</RelativeLayout>

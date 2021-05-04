@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/riwayattransaksi_layout_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_small"
+    android:background="@color/white"
+    app:cardCornerRadius="@dimen/card_corner_radius">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margin_m"
+        android:paddingBottom="@dimen/margin_m">
+
+        <TextView
+            android:id="@+id/label_idtransaksi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/ubuntu_r"
+            android:text="@string/idtransaksi"
+            android:textColor="@color/grey_medium"
+            android:textSize="14sp"
+            android:lineHeight="16sp"/>
+
+        <TextView
+            android:id="@+id/riwayattransaksi_id_transaksi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/label_idtransaksi"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/ubuntu_b"
+            android:text="WE123456"
+            android:textColor="@color/black_7777"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/label_akanbatal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:fontFamily="@font/ubuntu_r"
+            android:text="@string/totalpembayaran"
+            android:textColor="@color/grey_medium"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/riwayattransaksi_totalpembayaran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/label_akanbatal"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:fontFamily="@font/ubuntu_b"
+            android:text="Rp. 200.000"
+            android:textColor="@color/black_7777"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/transaksi_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/riwayattransaksi_id_transaksi"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:background="@color/grey_bg_border" />
+
+        <ImageView
+            android:id="@+id/riwayattransaksi_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/transaksi_line"
+            android:layout_alignBaseline="@+id/transaksi_linear"
+            android:layout_alignTop="@+id/transaksi_line"
+            android:layout_alignBottom="@+id/transaksi_linear"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:src="@drawable/aca_insurance"
+            android:layout_marginTop="10dp"/>
+
+        <LinearLayout
+            android:id="@+id/transaksi_linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/transaksi_line"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/riwayattransaksi_img"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/riwayattransaksi_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_b"
+                android:text="@string/axacareprotection"
+                android:textColor="@color/grey_medium"
+                android:textSize="14sp"
+                android:lineHeight="16sp"/>
+
+            <TextView
+                android:id="@+id/riwayattransaksi_metode_pembayaran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_r"
+                android:text="BCA Virtual Account"
+                android:textColor="@color/grey_medium"
+                android:textSize="14sp"
+                android:lineHeight="16sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/riwayattransaksi_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/transaksi_line"
+            android:layout_alignTop="@id/transaksi_linear"
+            android:layout_alignBottom="@id/transaksi_linear"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24px" />
+
+        <TextView
+            android:id="@+id/riwayattransaksi_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/transaksi_linear"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="8dp"
+            android:layout_toRightOf="@+id/riwayattransaksi_img"
+            android:background="@drawable/border_green"
+            android:fontFamily="@font/ubuntu_b"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/margin_big"
+            android:paddingTop="3dp"
+            android:paddingRight="@dimen/margin_big"
+            android:paddingBottom="3dp"
+            android:text="Berhasil"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_midle" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

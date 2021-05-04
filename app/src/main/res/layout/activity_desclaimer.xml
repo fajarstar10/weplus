@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_background" />
+
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@+id/circle"
+        android:layout_width="@dimen/margin"
+        android:layout_height="1dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/margin_big"
+        app:ci_width="50dp"
+        android:background="@color/red"
+        android:layout_marginBottom="@dimen/margin_m" />
+
+
+    <!--<com.viewpagerindicator.CirclePageIndicator-->
+        <!--android:id="@+id/indicator"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:gravity="bottom"-->
+        <!--android:layout_marginBottom="20dp"-->
+        <!--android:padding="10dip"-->
+        <!--app:centered="true"-->
+        <!--app:fillColor="#df0623"-->
+        <!--app:pageColor="#a2a2a2"-->
+        <!--app:snap="false" />-->
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Produk"-->
+        <!--android:textColor="@color/red"-->
+        <!--android:textSize="@dimen/font_big"-->
+        <!--android:gravity="center_horizontal"-->
+        <!--android:layout_marginTop="@dimen/margin_big"-->
+        <!--android:layout_marginBottom="@dimen/margin_big"-->
+        <!--android:textStyle="bold"/>-->
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Kini WE+ hadir dengan tampilan yang lebih fresh untuk memudahkan kamu memilih produk asuransi"-->
+        <!--android:textColor="@color/grey_medium"-->
+        <!--android:textSize="@dimen/font_normal"-->
+        <!--android:gravity="center_horizontal"-->
+        <!--android:layout_marginTop="@dimen/margin_big"-->
+        <!--android:layout_marginBottom="@dimen/margin_big"/>-->
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_margin="@dimen/margin_m">-->
+        <!--<include-->
+            <!--android:id="@+id/slidebanner"-->
+            <!--layout="@layout/slide_banner"></include>-->
+
+    <!--</RelativeLayout>-->
+
+</RelativeLayout>

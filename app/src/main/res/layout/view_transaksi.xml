@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_grey">
+
+    <include
+        android:id="@+id/view_transaksi_top"
+        layout="@layout/view_back"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize" />
+
+
+    <TextView
+        android:id="@+id/transaksi_riwayat_pembelian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_transaksi_top"
+        android:layout_marginLeft="@dimen/margin_m"
+        android:layout_marginTop="@dimen/margin_big"
+        android:layout_marginRight="@dimen/margin_m"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/ic_baseline_history_24px"
+        android:drawablePadding="@dimen/margin"
+        android:fontFamily="@font/ubuntu_r"
+        android:padding="@dimen/margin_17"
+        android:text="@string/lihatriwayatpembelianasuransianda"
+        android:textColor="@color/grey_medium"
+        android:textSize="@dimen/font_normal" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/transaksi_recycleview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/transaksi_riwayat_pembelian"
+        android:background="@color/background_grey"
+        android:padding="@dimen/margin_m">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/tdk_ada_riwayat_transaksi"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/transaksi_riwayat_pembelian"
+        android:background="@color/background_grey"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_m"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_transaksi_saya" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_big"
+            android:fontFamily="@font/ubuntu_b"
+            android:gravity="center_horizontal"
+            android:text="@string/andabelummemilikitransaksi"
+            android:textColor="@color/grey_medium"
+            android:textSize="@dimen/font_medium" />
+
+        <Button
+            android:id="@+id/transaksi_btn_beli_sekarang"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:paddingRight="@dimen/margin_big_m"
+            android:paddingLeft="@dimen/margin_big_m"
+            android:background="@drawable/border_red"
+            android:text="@string/belisekarang"
+            android:layout_gravity="center_horizontal"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:fontFamily="@font/ubuntu_b"
+            android:layout_marginTop="@dimen/margin_big"/>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/emptyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_transaksi_top">
+        <ImageView
+            android:id="@+id/imgEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/ic_no_polis"/>
+        <TextView
+            android:id="@+id/tvEmpty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgEmpty"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/ubuntu_m"
+            android:textSize="16sp"
+            android:textColor="@color/grey_text"
+            android:text="Anda tidak memiliki polis yang aktif"/>
+        <TextView
+            android:id="@+id/buyNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvEmpty"
+            android:layout_marginTop="24dp"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/ubuntu_m"
+            android:textColor="@color/white"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:background="@drawable/rounded_red_primary"
+            android:text="Beli Sekarang"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/grey">
+
+    <include
+        android:id="@+id/perjalanan_top"
+        layout="@layout/view_back"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/perjalanan_top">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:visibility="invisible"
+                android:scaleType="fitXY"/>
+            <TextView
+                android:id="@+id/perjalanan_label_urutakan_by"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pilih asuransi yang anda inginkan"
+                android:padding="@dimen/margin_m"
+                android:layout_below="@+id/imgBanner"
+                android:layout_marginTop="24dp"
+                android:textSize="12sp"
+                android:fontFamily="@font/ubuntu_b"
+                android:textColor="@color/black_7777"
+                tools:ignore="HardcodedText" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPartnerCategory"
+                android:layout_below="@id/perjalanan_label_urutakan_by"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginTop="16dp"
+                android:paddingBottom="@dimen/margin_m"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:id="@+id/bannerWrapper"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_below="@id/rvPartnerCategory">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:textColor="@color/black_7777"
+                    android:text="Penawaran Khusus untuk Kamu"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvPartnerBanner"
+                    android:paddingBottom="@dimen/margin_m"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        app:mlpb_show_arrow="true"
+        app:mlpb_progress_color="@color/red_btn_bg_color"
+        app:mlpb_arrow_height="5dp"
+        app:mlpb_arrow_width="10dp"
+        app:mlpb_enable_circle_background="true"
+
+        app:mlpb_progress_stoke_width="5dp"/>
+</RelativeLayout>

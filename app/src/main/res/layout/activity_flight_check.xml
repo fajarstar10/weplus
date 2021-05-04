@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".belipolis.FormBeliPolisNew">
+    <include
+        android:id="@+id/layoutHeader"
+        layout="@layout/view_back" />
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layoutHeader">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/bookingCodeWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/bookingCodeIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7f7f7f"
+                    app:srcCompat="@drawable/ic_map_24_px" />
+
+                <TextView
+                    android:id="@+id/bookingCodeLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/bookingCodeIcon"
+                    android:text="Kode Booking"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/etBookingCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/bookingCodeLabel"
+                    android:layout_toEndOf="@+id/bookingCodeIcon"
+                    android:background="@null"
+                    android:hint="Masukkan kode booking"
+                    android:textColorHint="@color/grey_bg_border"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart">
+                </EditText>
+
+                <View
+                    android:id="@+id/bookingCodeLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/etBookingCode"
+                    android:layout_toEndOf="@+id/bookingCodeIcon"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/errorTextBookingCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/bookingCodeLine"
+                    android:layout_toEndOf="@id/bookingCodeIcon"
+                    android:text="Silahkan isi data"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/flightNoWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/flightNoIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7f7f7f"
+                    android:src="@drawable/ic_no_penerbangan" />
+
+                <TextView
+                    android:id="@+id/flightNoLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/flightNoIcon"
+                    android:text="No Penerbangan"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/etFlightNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/flightNoLabel"
+                    android:layout_toEndOf="@+id/flightNoIcon"
+                    android:background="@null"
+                    android:hint="Contoh : GA-441"
+                    android:textAllCaps="true"
+                    android:inputType="textCapCharacters"
+                    android:textColorHint="@color/grey_bg_border"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart">
+                </EditText>
+
+                <View
+                    android:id="@+id/flightNoLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/etFlightNo"
+                    android:layout_toEndOf="@+id/flightNoIcon"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/errorTextFlightNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/flightNoLine"
+                    android:layout_toEndOf="@id/flightNoIcon"
+                    android:text="Silahkan isi data"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/departureWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/departureDateIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7f7f7f"
+                    android:src="@drawable/ic_tgl_penerbangan" />
+
+                <TextView
+                    android:id="@+id/departureDateLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/departureDateIcon"
+                    android:text="Tanggal Penerbangan"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tvDepartureDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/departureDateLabel"
+                    android:layout_toEndOf="@+id/departureDateIcon"
+                    android:background="@null"
+                    android:hint="Masukkan Tanggal Penerbangan"
+                    android:textColorHint="@color/grey_bg_border"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart">
+                </TextView>
+
+                <View
+                    android:id="@+id/departureDateLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tvDepartureDate"
+                    android:layout_toEndOf="@+id/departureDateIcon"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/errorTextDeparture"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/departureDateLine"
+                    android:layout_toEndOf="@id/departureDateIcon"
+                    android:text="Silahkan isi data"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnNext"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginBottom="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:background="@drawable/border_fill_red"
+                android:fontFamily="@font/ubuntu_l"
+                android:text="Cari Penerbangan"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_normal"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <com.agrawalsuneet.dotsloader.loaders.AllianceLoader
+                android:id="@+id/loader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                app:alliance_animDuration="500"
+                app:alliance_distanceMultiplier="5"
+                android:visibility="gone"
+                app:alliance_dotsRadius="4dp"
+                app:alliance_drawOnlyStroke="true"
+                app:alliance_firstDotsColor="@color/colorPrimary"
+                app:alliance_secondDotsColor="@color/colorPrimary"
+                app:alliance_strokeWidth="8dp"
+                app:alliance_thirdDotsColor="@color/colorPrimary" />
+
+            <LinearLayout
+                android:id="@+id/flightDetailWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:visibility="gone"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pilih Penerbangan Anda"
+                    android:fontFamily="@font/ubuntu_r"
+                   />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:padding="16dp"
+                    android:background="@drawable/bg_flight">
+                    <TextView
+                        android:id="@+id/tvFlightNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="GA-411"
+                        android:fontFamily="@font/ubuntu_r"/>
+                    <TextView
+                        android:id="@+id/tvAirline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Garuda Indonesia"
+                        android:fontFamily="@font/ubuntu_b"
+                        android:layout_below="@id/tvFlightNo"/>
+                    <TextView
+                        android:id="@+id/tvDepartureTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="14:15 CEST"
+                        android:layout_below="@id/tvAirline"/>
+                    <TextView
+                        android:id="@+id/tvArrivalTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="15:15 CEST"
+                        android:fontFamily="@font/ubuntu_r"
+                        android:layout_below="@id/tvAirline"
+                        android:layout_alignParentEnd="true"/>
+                    <TextView
+                        android:id="@+id/tvDepartureCity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Jakarta"
+                        android:fontFamily="@font/ubuntu_r"
+                        android:layout_marginTop="4dp"
+                        android:layout_below="@id/tvArrivalTime"/>
+                    <TextView
+                        android:id="@+id/tvArrivalCity"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ubuntu_r"
+                        tools:text="Denpasar"
+                        android:layout_below="@id/tvArrivalTime"
+                        android:layout_alignParentEnd="true"/>
+                    <TextView
+                        android:id="@+id/tvDepartureIata"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        tools:text="14:15 CEST"
+                        android:layout_below="@id/tvArrivalCity"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/tvArrivalIata"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="15:15 CEST"
+                        android:layout_marginTop="4dp"
+                        android:layout_below="@id/tvArrivalCity"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/ubuntu_b"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/horizontal_dotted_line"
+                        android:layout_below="@id/tvArrivalCity"
+                        android:layout_toEndOf="@id/tvDepartureIata"
+                        android:layout_toStartOf="@id/flightIcon"/>
+                    <ImageView
+                        android:id="@+id/flightIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/tvArrivalCity"
+                        app:srcCompat="@drawable/ic_baseline_flight_takeoff_24px"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/horizontal_dotted_line"
+                        android:layout_below="@id/tvArrivalCity"
+                        android:layout_toEndOf="@id/flightIcon"
+                        android:layout_toStartOf="@id/tvArrivalIata"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

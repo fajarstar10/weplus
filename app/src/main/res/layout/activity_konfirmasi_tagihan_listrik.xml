@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/transaksionclik_top"
+            layout="@layout/view_back" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/ubuntu_m"
+            android:text="Tagihan yang akan dibayarkan"
+            android:textColor="@color/black_7070"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/productWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="8dp"
+            android:background="@drawable/border_grey_rounded">
+
+            <ImageView
+                android:id="@+id/productIcon"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                app:srcCompat="@drawable/ic_listrik_1"
+                app:tint="@color/yellow"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline"/>
+
+            <TextView
+                android:id="@+id/tvProductName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="PLN Pasca Bayar"
+                android:fontFamily="@font/ubuntu_b"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline"
+                />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.3" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="8dp">
+            <TextView
+                android:id="@+id/transaksionclik_label_id_transaksi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/transaksionclik_relatif"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:fontFamily="@font/ubuntu_b"
+                android:text="@string/idtransaksi"
+                android:textColor="@color/black_7f7f7f"
+                android:textSize="@dimen/font_midle" />
+
+            <TextView
+                android:id="@+id/transaksionclik_id_transaksi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/margin_m"
+                android:fontFamily="@font/ubuntu_b"
+                android:text="WE12345"
+                android:textColor="@color/black_7f7f7f"
+                android:textSize="@dimen/font_midle" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/transaksionclik_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/transaksionclik_id_transaksi"
+            android:layout_marginTop="@dimen/margin_m"
+            android:layout_marginBottom="@dimen/margin_m"
+            android:background="@color/grey_bg_border" />
+
+        <TextView
+            android:id="@+id/transaksionclik_statuspembayaran_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/transaksionclik_line"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:fontFamily="@font/ubuntu_m"
+            android:text="@string/statuspembayaran"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_midle" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp">
+            <TextView
+                android:id="@+id/transaksionclik_statuspembayaran_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:text="Sukses"
+                android:textColor="@color/green"
+                android:textSize="@dimen/font_midle"
+                android:fontFamily="@font/ubuntu_m"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/transaksionclik_status_pembayaran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:background="@drawable/border_yellow"
+                android:fontFamily="@font/ubuntu_b"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/margin_m"
+                android:paddingTop="2dp"
+                android:paddingRight="@dimen/margin_m"
+                android:paddingBottom="5dp"
+                android:text="@string/menunggupembayaran"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_midle" />
+
+            <cn.iwgang.countdownview.CountdownView
+                android:id="@+id/countdown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                app:timeBgColor="#f29d39"
+                app:isShowHour="true"
+                app:isShowMinute="true"
+                app:isShowSecond="true"
+                app:timeTextColor="#000000"
+                app:timeTextSize="14sp"
+                app:isTimeTextBold="true"
+                app:suffixGravity="bottom"
+                app:suffixTextColor="#000000"
+                app:suffixTextSize="9sp"
+                android:visibility="visible"/>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/transaksionclik_line_status"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="@dimen/margin_transaksisaya_detail"
+            android:background="@color/grey_bg_border" />
+
+        <RelativeLayout
+            android:id="@+id/transaksionclik_layout_detail_biaya"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_16"
+            android:layout_marginRight="@dimen/margin_16">
+
+            <LinearLayout
+                android:id="@+id/biayadetail_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_r"
+                    android:paddingTop="@dimen/margin"
+                    android:paddingBottom="@dimen/margin"
+                    android:text="Nomor/ Id Pelanggan"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_r"
+                    android:paddingTop="@dimen/margin"
+                    android:paddingBottom="@dimen/margin"
+                    android:text="Nama Pelanggan"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_r"
+                    android:paddingTop="@dimen/margin"
+                    android:paddingBottom="@dimen/margin"
+                    android:text="Jenis Layanan"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_r"
+                    android:paddingTop="@dimen/margin"
+                    android:paddingBottom="@dimen/margin"
+                    android:text="Periode Pembayaran"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_r"
+                    android:paddingTop="@dimen/margin"
+                    android:paddingBottom="@dimen/margin"
+                    android:text="Harga"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_r"
+                    android:paddingTop="@dimen/margin"
+                    android:paddingBottom="@dimen/margin"
+                    android:text="Biaya Layanan"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_r"
+                    android:paddingBottom="@dimen/margin"
+                    android:text="@string/biayaadmin"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_r"
+                    android:paddingBottom="@dimen/margin"
+                    android:text="@string/potonganvoucher"
+                    android:textColor="@color/grey_medium"
+                    android:visibility="gone"
+                    android:textSize="@dimen/font_normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:paddingBottom="@dimen/margin"
+                    android:text="@string/totalbiaya"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/biayadetail_rp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_m"
+                android:layout_alignParentEnd="true"
+                android:background="@color/white"
+                android:gravity="end"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvIdPelanggan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:paddingTop="@dimen/margin"
+                    android:paddingBottom="@dimen/margin"
+                    android:text="@string/rp"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal" />
+
+                <TextView
+                    android:id="@+id/tvNamaPelanggan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:paddingBottom="@dimen/margin"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/rp"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal" />
+
+                <TextView
+                    android:id="@+id/tvJenisLayanan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:paddingBottom="@dimen/margin"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/rp"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal" />
+                <TextView
+                    android:id="@+id/tvPeriodePembayaran"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:paddingBottom="@dimen/margin"
+                    android:text="@string/rp"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal" />
+                <TextView
+                    android:id="@+id/tvHarga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:paddingBottom="@dimen/margin"
+                    android:text="@string/rp"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal" />
+                <TextView
+                    android:id="@+id/tvBiayaLayanan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:paddingBottom="@dimen/margin"
+                    android:text="@string/rp"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal" />
+                <TextView
+                    android:id="@+id/tvBiayaAdmin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:paddingBottom="@dimen/margin"
+                    android:text="@string/rp"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal" />
+                <TextView
+                    android:id="@+id/tvTotalBiaya"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:paddingBottom="@dimen/margin"
+                    android:text="@string/rp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_normal" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/transaksionclik_line_biaya_detail"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin_m"
+            android:layout_marginBottom="@dimen/margin_m"
+            android:background="@color/grey_bg_border" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/transaksionclik_metode_pembayaran_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:fontFamily="@font/ubuntu_m"
+                android:text="@string/metodepembayaran"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_midle" />
+
+            <TextView
+                android:id="@+id/transaksionclik_metode_pembayaran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:fontFamily="@font/ubuntu_b"
+                android:text="BCA Virtual Account"
+                android:textColor="@color/black_7777"
+                android:textSize="@dimen/font_midle" />
+        </RelativeLayout>
+
+
+        <View
+            android:id="@+id/transaksionclik_line_metode_pembayaran"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin_m"
+            android:layout_marginBottom="@dimen/margin_m"
+            android:background="@color/grey_bg_border" />
+
+        <RelativeLayout
+            android:id="@+id/layout_petunjuk_trf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/transaksionclik_des_type_pemb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin"
+                android:drawableEnd="@drawable/ic_bca"
+                android:drawablePadding="@dimen/margin_big"
+                android:fontFamily="@font/ubuntu_m"
+                android:gravity="center_vertical"
+                android:text="Transfer ke virtual account "
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_midle" />
+
+            <TextView
+                android:id="@+id/transaksionclik_norek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/transaksionclik_des_type_pemb"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="@font/ubuntu_b"
+                android:gravity="center_vertical"
+                android:text="807777-08387321223"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_medium" />
+
+            <TextView
+                android:id="@+id/transaksionclik_salin_norek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/transaksionclik_norek"
+                android:fontFamily="@font/ubuntu_m"
+                android:gravity="center_vertical"
+                android:text="@string/salinnorek"
+                android:textColor="@color/blue_1"
+                android:textSize="@dimen/font_small" />
+
+            <View
+                android:id="@+id/transaksionclik_line_des_pemb"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/transaksionclik_salin_norek"
+                android:layout_marginTop="@dimen/margin_small"
+                android:background="@color/grey_bg_border" />
+
+            <View
+                android:id="@+id/transaksionclik_line_des_back_grey"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_m"
+                android:layout_below="@+id/transaksionclik_line_des_pemb"
+                android:background="@color/grey" />
+
+            <View
+                android:id="@+id/transaksionclik_line_des_pemb_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/transaksionclik_line_des_back_grey"
+                android:background="@color/grey_bg_border" />
+
+            <TextView
+                android:id="@+id/transaksionclik_petunjuk_pemb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/transaksionclik_line_des_pemb_bottom"
+                android:layout_marginTop="@dimen/margin_m"
+                android:layout_marginEnd="@dimen/margin_m"
+                android:layout_marginBottom="@dimen/margin_m"
+                android:fontFamily="@font/ubuntu_m"
+                android:text="@string/petunjukpembayaran"
+                android:textColor="@color/black_7777"
+                android:textSize="@dimen/font_normal" />
+
+            <ImageView
+                android:id="@+id/transaksionclik_icon_petunjuk_pemb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/transaksionclik_line_des_pemb_bottom"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_m_daftartransaksisaya"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginBottom="@dimen/margin_m"
+                app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24px" />
+
+            <View
+                android:id="@+id/transaksionclik_line_petunjuk_pembayaran"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/transaksionclik_petunjuk_pemb"
+                android:layout_marginBottom="@dimen/margin_m"
+                android:background="@color/grey_bg_border" />
+
+        </RelativeLayout>
+
+
+        <!-- start layout detail refund -->
+        <RelativeLayout
+            android:id="@+id/layout_detail_refund"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/label_detail_refund"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lihatdetailrefund"
+                android:layout_marginStart="@dimen/margin_m"
+                android:textColor="@color/black"
+                android:fontFamily="@font/ubuntu_m"
+                android:textSize="@dimen/font_midle"/>
+
+            <ImageView
+                android:id="@+id/detail_refund_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_down_arow"
+                android:layout_marginEnd="@dimen/margin_m"
+                android:layout_alignParentEnd="true"/>
+
+            <View
+                android:id="@+id/line_label_refund"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey_bg_border"
+                android:layout_below="@id/detail_refund_arrow"
+                android:layout_marginTop="@dimen/margin_m"
+                android:layout_marginBottom="@dimen/margin_m"/>
+
+            <RelativeLayout
+                android:id="@+id/detail_refund_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line_label_refund"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m">
+
+                <LinearLayout
+                    android:id="@+id/layout_provider_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ubuntu_b"
+                        android:paddingTop="@dimen/margin"
+                        android:paddingBottom="@dimen/margin_very_small"
+                        android:text="@string/bank"
+                        android:textColor="@color/grey_medium"
+                        android:textSize="@dimen/font_normal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ubuntu_b"
+                        android:paddingBottom="@dimen/margin_very_small"
+                        android:text="@string/cabang"
+                        android:textColor="@color/grey_medium"
+                        android:textSize="@dimen/font_normal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ubuntu_b"
+                        android:paddingBottom="@dimen/margin_very_small"
+                        android:text="@string/pemilikrekening"
+                        android:textColor="@color/grey_medium"
+                        android:textSize="@dimen/font_normal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ubuntu_b"
+                        android:paddingBottom="@dimen/margin_very_small"
+                        android:text="@string/nomorrekening"
+                        android:textColor="@color/grey_medium"
+                        android:textSize="@dimen/font_normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/detail_refund_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:fontFamily="@font/ubuntu_b"
+                        android:paddingTop="@dimen/margin"
+                        android:paddingBottom="@dimen/margin_very_small"
+                        android:text="BCA"
+                        android:textColor="@color/grey_medium"
+                        android:textSize="@dimen/font_normal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:fontFamily="@font/ubuntu_b"
+                        android:paddingBottom="@dimen/margin_very_small"
+                        android:text="Jelambar"
+                        android:textColor="@color/grey_medium"
+                        android:textSize="@dimen/font_normal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:fontFamily="@font/ubuntu_b"
+                        android:paddingBottom="@dimen/margin_very_small"
+                        android:text="Henry"
+                        android:textColor="@color/grey_medium"
+                        android:textSize="@dimen/font_normal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:fontFamily="@font/ubuntu_b"
+                        android:paddingBottom="@dimen/margin_very_small"
+                        android:text="5281236589"
+                        android:textColor="@color/grey_medium"
+                        android:textSize="@dimen/font_normal" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <!-- end layout detail refund -->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/transaksionclik_btn_selesai"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_m"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin"
+            android:background="@drawable/border_red"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/selesai"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="visible"
+            app:cornerRadius="3sp" />
+
+    </LinearLayout>
+
+</ScrollView>

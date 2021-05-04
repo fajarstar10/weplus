@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin"
+    android:layout_marginTop="@dimen/margin"
+    android:layout_marginRight="@dimen/margin"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin">
+
+        <ImageView
+            android:id="@+id/daftarkontakklaim_icon"
+            android:layout_width="@dimen/spinner_height"
+            android:layout_height="@dimen/spinner_height"
+            android:src="@drawable/aca_insurance"
+            android:layout_marginRight="@dimen/margin_m" />
+
+        <TextView
+            android:id="@+id/daftarkontakklaim_name"
+            android:layout_toRightOf="@+id/daftarkontakklaim_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/daftarkontakklaim_icon"
+            android:layout_alignBottom="@+id/daftarkontakklaim_icon"
+            android:text="Call Center"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/font_medium"
+            android:textColor="@color/grey_medium"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/daftarkontakklaim_email"
+            android:layout_below="@id/daftarkontakklaim_icon"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":  customer.care@gamil.com"
+            android:drawableLeft="@drawable/ic_round_mail_24px"
+            android:drawablePadding="@dimen/margin"
+            android:gravity="center_vertical"
+            android:textStyle="normal"
+            android:textColor="@color/grey_medium"
+            android:textSize="@dimen/font_normal"/>
+
+        <TextView
+            android:id="@+id/daftarkontakklaim_address"
+            android:layout_below="@id/daftarkontakklaim_email"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_baseline_location_on_24px"
+            android:text=":  Wisma Asia lantai 10 Jakarta"
+            android:textSize="@dimen/font_normal"
+            android:maxLines="2"
+            android:gravity="center_vertical"
+            android:textColor="@color/grey_medium"
+            android:drawablePadding="@dimen/margin"/>
+
+        <TextView
+            android:id="@+id/daftarkontakklaim_phone"
+            android:layout_below="@id/daftarkontakklaim_address"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_baseline_phone_24px"
+            android:text=":  0213456789"
+            android:textSize="@dimen/font_normal"
+            android:maxLines="1"
+            android:gravity="center_vertical"
+            android:textColor="@color/grey_medium"
+            android:drawablePadding="@dimen/margin"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/adapterbengkelrekanan_btn_call"
+            android:layout_below="@+id/daftarkontakklaim_address"
+            android:layout_toRightOf="@+id/daftarkontakklaim_phone"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/icon"
+            android:text="@string/hubungi"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_normal"
+            android:textStyle="bold"
+            android:background="@drawable/border_red"
+            android:textAllCaps="false"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

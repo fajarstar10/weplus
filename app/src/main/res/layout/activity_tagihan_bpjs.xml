@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".Tagihan.TagihanBpjsActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/view_back" />
+
+    <RelativeLayout
+        android:id="@+id/tagihan_layout_tagihan_bpjs"
+        android:layout_below="@id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_m"
+        android:layout_marginTop="@dimen/margin_25"
+        android:layout_marginRight="@dimen/margin_m"
+        android:layout_marginBottom="@dimen/margin_13">
+
+        <ImageView
+            android:id="@+id/bpjs_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_m_tagihan_listrik"
+            android:layout_marginLeft="@dimen/margin_m_tagihan_listrik"
+            android:src="@drawable/ic_bpjs2" />
+
+        <TextView
+            android:id="@+id/jenisbpjs_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@+id/bpjs_icon"
+            android:fontFamily="@font/ubuntu_r"
+            android:text="@string/pilihjenisbpjs"
+            android:textColor="@color/grey_medium"
+            android:textSize="@dimen/font_normal" />
+
+        <TextView
+            android:id="@+id/jenis_bpjs_spiner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:hint="Pilih Jenis Layanan BPJS"
+            android:textColor="@color/black_7f7f7f"
+            android:layout_below="@+id/jenisbpjs_label"
+            android:layout_toEndOf="@+id/bpjs_icon"
+            android:isScrollContainer="true"/>
+
+        <View
+            android:id="@+id/bengkelrekanan_search_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/jenis_bpjs_spiner"
+            android:layout_toEndOf="@+id/bpjs_icon"
+            android:layout_marginStart="16dp"
+            android:background="@color/grey_bg_border" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/va_keluarga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tagihan_layout_tagihan_bpjs"
+        android:layout_marginLeft="@dimen/margin_m"
+        android:layout_marginTop="@dimen/margin_m"
+        android:layout_marginRight="@dimen/margin_m"
+        android:layout_marginBottom="@dimen/margin_13">
+
+        <ImageView
+            android:id="@+id/vakeluarga_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_m"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:src="@drawable/ic_nomormeter" />
+
+        <TextView
+            android:id="@+id/va_keluarga_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/vakeluarga_icon"
+            android:fontFamily="@font/ubuntu_r"
+            android:layout_marginStart="16dp"
+            android:text="@string/nomorvirtualaccountkeluarga"
+            android:textColor="@color/grey_medium"
+            android:textSize="@dimen/font_normal" />
+
+        <EditText
+            android:id="@+id/nomor_va_keluarga_spiner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_below="@+id/va_keluarga_label"
+            android:layout_toEndOf="@+id/vakeluarga_icon"
+            android:layout_marginTop="8dp"
+            android:isScrollContainer="true"
+            android:hint="Contoh : 000000012313123123131"
+            android:background="@null"
+            tools:text="8801835307911"
+            android:inputType="number"
+            android:textSize="@dimen/font_normal"
+            android:fontFamily="@font/ubuntu_b"
+            tools:ignore="HardcodedText">
+        </EditText>
+
+        <TextView
+            android:id="@+id/errorTextVaNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:fontFamily="@font/ubuntu_r"
+            android:paddingStart="@dimen/margin_small"
+            android:text="@string/nomorvakeluargasalah"
+            android:layout_below="@+id/nomor_va_keluarga_spiner"
+            android:layout_toEndOf="@+id/vakeluarga_icon"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/red"
+            android:textSize="@dimen/font_midle"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/nomor_meter_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_below="@+id/nomor_va_keluarga_spiner"
+            android:layout_toEndOf="@+id/vakeluarga_icon"
+            android:background="@color/grey_bg_border" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/nomor_vakeluarga_transaksi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/va_keluarga"
+        android:layout_marginLeft="@dimen/margin_m"
+        android:layout_marginTop="@dimen/margin_m"
+        android:layout_marginRight="@dimen/margin_m"
+        android:layout_marginBottom="@dimen/margin_13">
+
+        <TextView
+            android:id="@+id/harga_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/margin_m"
+            android:layout_marginRight="@dimen/margin_m"
+            android:text="@string/harga_tagihan"
+            android:visibility="gone"
+            android:fontFamily="@font/ubuntu_r"
+            android:textColor="@color/grey_medium"
+            android:textSize="@dimen/font_normal" />
+
+
+        <TextView
+            android:id="@+id/nominal_id_transaksi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_m"
+            android:text="Rp 202.750"
+            android:visibility="gone"
+            android:textColor="@color/grey_medium"
+            android:textSize="@dimen/font_normal" />
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/transaksionclik_relatif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nomor_vakeluarga_transaksi"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_m"
+            android:background="@drawable/border_red_burem">
+
+            <LinearLayout
+                android:id="@+id/transaksi_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_m"
+                android:layout_toEndOf="@+id/transaksi_img"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/txt_nomor_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tagihan_layout_tagihan_listrik"
+                    android:layout_marginLeft="@dimen/margin_m"
+                    android:layout_marginTop="@dimen/margin_m"
+                    android:layout_marginRight="@dimen/margin_m"
+                    android:layout_marginBottom="@dimen/margin_13">
+
+                    <TextView
+                        android:id="@+id/nomor_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1."
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/ubuntu_r"
+                        android:textSize="@dimen/font_normal" />
+
+                    <TextView
+                        android:id="@+id/txt_informasi_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Informasi BPJS yang anda bayar akan dikirimkan maksimal 2x24jam"
+                        android:textColor="@color/white"
+                        android:layout_alignParentRight="true"
+                        android:fontFamily="@font/ubuntu_r"
+                        android:textSize="@dimen/font_normal"
+                        android:layout_toRightOf="@+id/nomor_1"
+                        android:layout_marginLeft="@dimen/margin_15"/>
+
+                    <TextView
+                        android:id="@+id/nomor_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2."
+                        android:layout_below="@+id/nomor_1"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/ubuntu_r"
+                        android:textSize="@dimen/font_normal"
+                        android:layout_marginTop="@dimen/margin_big"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pembayaran BPJS tidak dapat dilakukan pada jam 23:00 sampai 01:00"
+                        android:layout_below="@+id/txt_informasi_1"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/ubuntu_r"
+                        android:textSize="@dimen/font_normal"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="@dimen/margin"/>
+                </RelativeLayout>
+            </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_bayar_bpjs"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_big_m"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:background="@drawable/border_red"
+            android:fontFamily="@font/ubuntu_b"
+            android:text="Lanjutkan"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_normal" />
+        <com.agrawalsuneet.dotsloader.loaders.AllianceLoader
+            android:id="@+id/loader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_big_m"
+            android:layout_marginEnd="@dimen/margin_16"
+            app:alliance_animDuration="500"
+            app:alliance_distanceMultiplier="5"
+            app:alliance_dotsRadius="4dp"
+            app:alliance_drawOnlyStroke="true"
+            android:visibility="invisible"
+            app:alliance_firstDotsColor="@color/colorPrimary"
+            app:alliance_secondDotsColor="@color/colorPrimary"
+            app:alliance_strokeWidth="8dp"
+            app:alliance_thirdDotsColor="@color/colorPrimary" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

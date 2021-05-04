@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".transaksi.UploadTransferFileActivity">
+    <include
+        android:id="@+id/layoutHeader"
+        layout="@layout/view_back" />
+    <LinearLayout
+        android:id="@+id/contentWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:orientation="vertical"
+        android:layout_above="@id/buttonWrapper"
+        android:layout_below="@id/layoutHeader">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pastikan bukti pembayaran menampilkan"
+            android:fontFamily="@font/ubuntu_r"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_b"
+            android:layout_marginTop="16dp"
+            android:text="- Tanggal/Waktu Transfer"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_r"
+            android:layout_marginStart="8dp"
+            android:text="Contoh : tgl 17/08/2020 / jam 08:49:50"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_b"
+            android:layout_marginTop="16dp"
+            android:text="- Status Pembayaran Berhasil"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_r"
+            android:layout_marginStart="8dp"
+            android:text="Contoh : Transfer BERHASIL, SUKSES"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_b"
+            android:layout_marginTop="16dp"
+            android:text="- Detail Penerima"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_r"
+            android:layout_marginStart="8dp"
+            android:text="Contoh : Transfer ke PT. Kita Indonesia Plus"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_b"
+            android:layout_marginTop="16dp"
+            android:text="- Nominal Transfer"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_r"
+            android:layout_marginStart="8dp"
+            android:text="Contoh : Rp. 555.000,00"
+            tools:ignore="HardcodedText" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+            <TextView
+                android:id="@+id/tvUploadInstruction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:text="Unggah bukti pembayaran dapat mempercepat\nverifikasi pembayaran anda\n(format .JPG, .JPEG, .PNG maksimal 10 MB)"/>
+            <ImageView
+                android:id="@+id/imgTransferExample"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/bank_transfer_example"
+                android:layout_below="@id/tvUploadInstruction"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/buttonWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSelectImage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_margin="16dp"
+            android:background="@drawable/border_rounded_grey_medium"
+            android:text="Pilih Gambar"
+            android:textAllCaps="false"
+            android:fontFamily="@font/ubuntu_r"
+            android:textColor="@color/black_7f7f7f"
+            android:textSize="16sp"
+            android:visibility="visible"
+            app:cornerRadius="5dp" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_margin="16dp"
+            android:background="@drawable/border_fill_yellow_rounded"
+            android:text="@string/selesai"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_medium"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:cornerRadius="5dp" />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/loadingProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layoutHeader"
+        android:visibility="gone"
+        android:background="#80d5d5d5">
+        <com.agrawalsuneet.dotsloader.loaders.AllianceLoader
+            android:id="@+id/loader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            app:alliance_animDuration="500"
+            app:alliance_distanceMultiplier="5"
+            app:alliance_dotsRadius="4dp"
+            app:alliance_drawOnlyStroke="true"
+            app:alliance_firstDotsColor="@color/colorPrimary"
+            app:alliance_secondDotsColor="@color/colorPrimary"
+            app:alliance_strokeWidth="8dp"
+            app:alliance_thirdDotsColor="@color/colorPrimary" />
+    </RelativeLayout>
+</RelativeLayout>

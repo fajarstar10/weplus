@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grey">
+
+    <include
+        android:id="@+id/tambahan_top"
+        layout="@layout/view_back"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tambahanmobilrecycleview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tambahan_top"
+        android:layout_above="@+id/tambahan_lanjutkan_btn"
+        android:padding="@dimen/margin_m"
+        android:background="@color/grey">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/tambahan_lanjutkan_mobil_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:background="@drawable/border_red"
+        android:text="@string/lanjutkan"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:layout_margin="@dimen/margin_m"
+        android:layout_alignParentBottom="true"
+        android:textSize="@dimen/font_normal" />
+
+</RelativeLayout>

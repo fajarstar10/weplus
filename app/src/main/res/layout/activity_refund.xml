@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".transaksi.RefundActivity">
+
+    <include android:id="@+id/layoutHeader"
+        layout="@layout/view_back" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="16dp"
+        android:layout_below="@id/layoutHeader">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_m"
+            android:layout_marginRight="@dimen/margin_m"
+            android:layout_marginBottom="@dimen/margin_m"
+            android:layout_marginTop="@dimen/margin_m">
+
+            <TextView
+                android:id="@+id/kode_transaksi_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:fontFamily="@font/ubuntu_r"
+                android:text="@string/kodetransaksi"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_normal" />
+
+
+
+            <TextView
+                android:id="@+id/txt_kodetransaksi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/kode_transaksi_label"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:fontFamily="@font/ubuntu_b"
+                android:text="WE1239123"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_big"/>
+
+            <TextView
+                android:id="@+id/status_pembayaran_refund_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:fontFamily="@font/ubuntu_r"
+                android:text="@string/statuspembayaranrefund"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_normal"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/no_token_listrik"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/status_pembayaran_refund_label"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/margin_m"
+                android:layout_marginEnd="@dimen/margin_m"
+                android:fontFamily="@font/ubuntu_m"
+                android:text="Refund"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_big"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/layout_bank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/formbelipolis_top"
+            android:layout_marginLeft="@dimen/margin_m"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginRight="@dimen/margin_m"
+            android:layout_marginBottom="@dimen/margin">
+
+            <ImageView
+                android:id="@+id/bank_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_m"
+                app:srcCompat="@drawable/ic_baseline_person_24px" />
+
+            <TextView
+                android:id="@+id/bank_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/bank_icon"
+                android:text="@string/bank"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_r" />
+
+            <Spinner
+                android:id="@+id/bank_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spinner_height"
+                android:layout_below="@+id/bank_label"
+                android:layout_toEndOf="@+id/bank_icon"
+                android:layout_marginStart="8dp"
+                android:autofillHints="@string/pilihbank"
+                android:isScrollContainer="true">
+
+            </Spinner>
+
+            <View
+                android:id="@+id/bank_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_below="@+id/bank_spinner"
+                android:layout_toEndOf="@+id/bank_icon"
+                android:background="@color/grey_bg_border" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_pemilik_rekening"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_bank"
+            android:layout_marginLeft="@dimen/margin_m"
+            android:layout_marginRight="@dimen/margin_m"
+            android:layout_marginTop="@dimen/margin_m"
+            android:layout_marginBottom="@dimen/margin_13">
+
+            <ImageView
+                android:id="@+id/pemilikrekening_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/margin_m"
+                android:src="@drawable/ic_account_box_24px" />
+
+            <TextView
+                android:id="@+id/pemilikrekening_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/pemilikrekening_icon"
+                android:layout_marginStart="8dp"
+                android:text="@string/pemilikrekening"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_r" />
+
+            <EditText
+                android:id="@+id/nama_rekening"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spinner_height"
+                android:layout_below="@+id/pemilikrekening_label"
+                android:layout_toEndOf="@+id/pemilikrekening_icon"
+                android:background="@null"
+                android:layout_marginStart="8dp"
+                android:hint="@string/masukkannamapemilikrekening"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_b">
+            </EditText>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/nama_rekening"
+                android:layout_marginStart="8dp"
+                android:layout_toEndOf="@+id/pemilikrekening_icon"
+                android:background="@color/grey_bg_border" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_nomor_rekening"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_m"
+            android:layout_marginRight="@dimen/margin_m"
+            android:layout_marginTop="@dimen/margin_m"
+            android:layout_marginBottom="@dimen/margin_13">
+
+            <ImageView
+                android:id="@+id/nomorrekening_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/margin_m"
+                android:src="@drawable/ic_calendar_24px" />
+
+            <TextView
+                android:id="@+id/nomorrekening_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/nomorrekening_icon"
+                android:text="@string/nomorrekening"
+                android:textColor="@color/grey_medium"
+                android:layout_marginStart="8dp"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_r" />
+
+            <EditText
+                android:id="@+id/nomor_rekening"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spinner_height"
+                android:layout_below="@+id/nomorrekening_label"
+                android:layout_toEndOf="@+id/nomorrekening_icon"
+                android:background="@null"
+                android:inputType="number"
+                android:layout_marginStart="8dp"
+                android:hint="@string/masukkannomorrekening"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_b">
+            </EditText>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_below="@+id/nomor_rekening"
+                android:layout_toEndOf="@+id/nomorrekening_icon"
+                android:background="@color/grey_bg_border" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_kantor_cabang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_m"
+            android:layout_marginRight="@dimen/margin_m"
+            android:layout_marginTop="@dimen/margin_m"
+            android:layout_marginBottom="@dimen/margin_13">
+
+            <ImageView
+                android:id="@+id/kantorcabang_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/margin_m"
+                android:src="@drawable/ic_calendar_24px" />
+
+            <TextView
+                android:id="@+id/kantorcabang_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_toEndOf="@+id/kantorcabang_icon"
+                android:text="@string/kantorcabang"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_r" />
+
+            <EditText
+                android:id="@+id/kantor_cabang"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spinner_height"
+                android:layout_below="@+id/kantorcabang_label"
+                android:layout_toEndOf="@+id/kantorcabang_icon"
+                android:background="@null"
+                android:layout_marginStart="8dp"
+                android:hint="@string/masukkankantorcabang"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_b">
+            </EditText>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_below="@+id/kantor_cabang"
+                android:layout_toEndOf="@+id/kantorcabang_icon"
+                android:background="@color/grey_bg_border" />
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_refund"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:layout_marginLeft="@dimen/margin_m"
+        android:layout_marginTop="@dimen/margin_big_m"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="@dimen/margin_m"
+        android:background="@drawable/border_red"
+        android:text="@string/refund"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:fontFamily="@font/ubuntu_b"
+        android:layout_alignParentBottom="true"
+
+        android:textSize="@dimen/font_normal" />
+    <RelativeLayout
+        android:id="@+id/loadingProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layoutHeader"
+        android:visibility="gone"
+        android:background="#80d5d5d5">
+        <com.agrawalsuneet.dotsloader.loaders.AllianceLoader
+            android:id="@+id/loader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            app:alliance_animDuration="500"
+            app:alliance_distanceMultiplier="5"
+            app:alliance_dotsRadius="4dp"
+            app:alliance_drawOnlyStroke="true"
+            app:alliance_firstDotsColor="@color/colorPrimary"
+            app:alliance_secondDotsColor="@color/colorPrimary"
+            app:alliance_strokeWidth="8dp"
+            app:alliance_thirdDotsColor="@color/colorPrimary" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "799494060463",
+    "firebase_url": "https://weplus-45719.firebaseio.com",
+    "project_id": "weplus-45719",
+    "storage_bucket": "weplus-45719.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799494060463:android:45bd5052c28b3d11",
+        "android_client_info": {
+          "package_name": "com.weplus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "799494060463-pest81flfr7nctn3illlmv8rdjrqok89.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7ItJL23GKJem7HhC7wnieKewrmj0n_dw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "799494060463-pest81flfr7nctn3illlmv8rdjrqok89.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "799494060463-fc7bloul3m1m0uplpg2rrtackr2b6dv1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "weplus.id.WeplusApps",
+                "app_store_id": "1440574982"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

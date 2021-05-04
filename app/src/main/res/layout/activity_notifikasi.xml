@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey">
+
+    <include
+        android:id="@+id/notifikasi_top"
+        layout="@layout/view_back_no_description"/>
+
+    <RelativeLayout
+        android:id="@+id/notifikasi_layout_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey"
+        android:layout_below="@+id/notifikasi_top"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:id="@+id/notifikasi_icon"
+            android:src="@drawable/ic_placeholder_notifikasi"
+            android:layout_marginTop="@dimen/margin_30"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/andatidakmemilikinotifikasi"
+            android:textSize="@dimen/font_medium"
+            android:textColor="@color/grey_medium"
+            android:gravity="center_horizontal"
+            android:fontFamily="@font/ubuntu_b"
+            android:layout_below="@id/notifikasi_icon"
+            android:layout_marginTop="@dimen/margin_17"/>
+
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/notifikasi_rec"
+        android:layout_below="@id/notifikasi_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>

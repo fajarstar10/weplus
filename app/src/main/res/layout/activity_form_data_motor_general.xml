@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_back" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- start merek motor -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin"
+                android:layout_marginRight="@dimen/margin_m">
+
+                <ImageView
+                    android:id="@+id/formmotor_general_merek_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/motor_desc"
+                    android:layout_alignTop="@+id/formmotor_general_merek_label"
+                    android:layout_alignBottom="@+id/formmotor_general_merek_name"
+                    android:layout_marginRight="@dimen/margin"
+                    android:src="@drawable/ic_baseline_motorcycle_24px" />
+
+                <TextView
+                    android:id="@+id/formmotor_general_merek_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/formmotor_general_merek_icon"
+                    android:text="@string/merek"
+                    android:fontFamily="@font/ubuntu_r"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal" />
+
+                <EditText
+                    android:id="@+id/formmotor_general_merek_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spinner_height"
+                    android:layout_below="@id/formmotor_general_merek_label"
+                    android:layout_toRightOf="@id/formmotor_general_merek_icon"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="Scoopy"
+                    android:paddingLeft="0dp"
+                    android:textColor="@color/grey_medium"
+                    android:textColorHint="@color/grey_medium"
+                    android:fontFamily="@font/ubuntu_b" />
+
+                <View
+                    android:id="@+id/formmotor_general_merek_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/formmotor_general_merek_name"
+                    android:layout_toRightOf="@id/formmotor_general_merek_icon"
+                    android:background="@color/grey_bg_border" />
+            </RelativeLayout>
+            <!-- end merek motor -->
+
+            <!-- start seri motor-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin"
+                android:layout_marginRight="@dimen/margin_m">
+
+                <ImageView
+                    android:id="@+id/formmotor_general_serimotor_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/formmotor_general_serimotor_label"
+                    android:layout_alignBottom="@+id/formmotor_general_serimotor"
+                    android:layout_marginRight="@dimen/margin"
+                    android:src="@drawable/ic_baseline_motorcycle_24px" />
+
+                <TextView
+                    android:id="@+id/formmotor_general_serimotor_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/formmotor_general_serimotor_icon"
+                    android:text="@string/serimotor"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"/>
+
+                <EditText
+                    android:id="@+id/formmotor_general_serimotor"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spinner_height"
+                    android:layout_below="@id/formmotor_general_serimotor_label"
+                    android:layout_toRightOf="@id/formmotor_general_serimotor_icon"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="B 133343 UW"
+                    android:paddingLeft="0dp"
+                    android:textColor="@color/grey_medium"
+                    android:textColorHint="@color/grey_medium"
+                    android:fontFamily="@font/ubuntu_b" />
+
+                <View
+                    android:id="@+id/formmotor_general_serimotor_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/formmotor_general_serimotor"
+                    android:layout_toRightOf="@id/formmotor_general_serimotor_icon"
+                    android:background="@color/grey_bg_border" />
+
+            </RelativeLayout>
+            <!-- end seri motor-->
+
+            <!-- start kondisi motor-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin"
+                android:layout_marginRight="@dimen/margin_m">
+
+                <ImageView
+                    android:id="@+id/formmotor_general_kondisimotor_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/formmotor_general_kondisimotor_label"
+                    android:layout_alignBottom="@+id/formmotor_general_kondisimotor"
+                    android:layout_marginRight="@dimen/margin"
+                    android:src="@drawable/ic_baseline_motorcycle_24px" />
+
+                <TextView
+                    android:id="@+id/formmotor_general_kondisimotor_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/formmotor_general_kondisimotor_icon"
+                    android:text="@string/kondisimotor"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"/>
+
+                <Spinner
+                    android:id="@+id/formmotor_general_kondisimotor"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spinner_height"
+                    android:layout_below="@id/formmotor_general_kondisimotor_label"
+                    android:layout_toRightOf="@id/formmotor_general_kondisimotor_icon"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="0dp"
+                    android:textColor="@color/grey_medium"
+                    android:textColorHint="@color/grey_medium"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/formmotor_general_kondisimotor_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/formmotor_general_kondisimotor"
+                    android:layout_toRightOf="@id/formmotor_general_kondisimotor_icon"
+                    android:background="@color/grey_bg_border" />
+
+            </RelativeLayout>
+            <!-- end kondisi motor-->
+
+
+            <!-- start warna motor-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin"
+                android:layout_marginRight="@dimen/margin_m">
+
+                <ImageView
+                    android:id="@+id/formmotor_general_warnamotor_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/formmotor_general_warnamotor_label"
+                    android:layout_alignBottom="@+id/formmotor_general_warnamotor"
+                    android:layout_marginRight="@dimen/margin"
+                    android:src="@drawable/ic_invert_colors_24_px" />
+
+                <TextView
+                    android:id="@+id/formmotor_general_warnamotor_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/formmotor_general_warnamotor_icon"
+                    android:text="@string/warnamotor"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"/>
+
+                <Spinner
+                    android:id="@+id/formmotor_general_warnamotor"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spinner_height"
+                    android:layout_below="@id/formmotor_general_warnamotor_label"
+                    android:layout_toRightOf="@id/formmotor_general_warnamotor_icon"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="0dp"
+                    android:textColor="@color/grey_medium"
+                    android:textColorHint="@color/grey_medium"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/formmotor_general_warnamotor_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/formmotor_general_warnamotor"
+                    android:layout_toRightOf="@id/formmotor_general_warnamotor_icon"
+                    android:background="@color/grey_bg_border" />
+
+            </RelativeLayout>
+            <!-- end warna motor-->
+
+            <!-- start plat nomor -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin"
+                android:layout_marginRight="@dimen/margin_m">
+
+                <ImageView
+                    android:id="@+id/formmotor_general_platmotor_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/formmotor_general_platmotor_label"
+                    android:layout_alignBottom="@+id/formmotor_general_platmotor"
+                    android:layout_marginRight="@dimen/margin"
+                    android:src="@drawable/ic_plat" />
+
+                <TextView
+                    android:id="@+id/formmotor_general_platmotor_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/formmotor_general_platmotor_icon"
+                    android:text="@string/platmotor"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"/>
+
+                <EditText
+                    android:id="@+id/formmotor_general_platmotor"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spinner_height"
+                    android:layout_below="@id/formmotor_general_platmotor_label"
+                    android:layout_toRightOf="@id/formmotor_general_platmotor_icon"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:hint="Contoh: B 1234 CD"
+                    android:paddingLeft="0dp"
+                    android:textColor="@color/grey_medium"
+                    android:textColorHint="@color/grey_medium"
+                    android:fontFamily="@font/ubuntu_b" />
+
+                <View
+                    android:id="@+id/formmotor_general_platmotor_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/formmotor_general_platmotor"
+                    android:layout_toRightOf="@id/formmotor_general_platmotor_icon"
+                    android:background="@color/grey_bg_border" />
+
+            </RelativeLayout>
+            <!-- end plat motor -->
+
+            <!-- start nomor rangka -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin"
+                android:layout_marginRight="@dimen/margin_m">
+
+                <ImageView
+                    android:id="@+id/formmotor_general_nomor_rangka_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/formmotor_general_nomor_rangka_label"
+                    android:layout_alignBottom="@+id/formmotor_general_nomor_rangka"
+                    android:layout_marginRight="@dimen/margin"
+                    android:src="@drawable/ic_baseline_settings_20px" />
+
+                <TextView
+                    android:id="@+id/formmotor_general_nomor_rangka_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/formmotor_general_nomor_rangka_icon"
+                    android:text="@string/nomorrangka"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"/>
+
+                <EditText
+                    android:id="@+id/formmotor_general_nomor_rangka"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spinner_height"
+                    android:layout_below="@id/formmotor_general_nomor_rangka_label"
+                    android:layout_toRightOf="@id/formmotor_general_nomor_rangka_icon"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:hint="@string/masukkannomorrangka"
+                    android:paddingLeft="0dp"
+                    android:textColor="@color/grey_medium"
+                    android:textColorHint="@color/grey_medium"
+                    android:fontFamily="@font/ubuntu_b"/>
+
+                <View
+                    android:id="@+id/formmotor_general_nomor_rangka_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/formmotor_general_nomor_rangka"
+                    android:layout_toRightOf="@id/formmotor_general_nomor_rangka_icon"
+                    android:background="@color/grey_bg_border" />
+
+            </RelativeLayout>
+            <!-- end nomor rangka-->
+
+            <!-- start nomor mesin -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin"
+                android:layout_marginRight="@dimen/margin_m">
+
+                <ImageView
+                    android:id="@+id/formmotor_general_nomor_mesin_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/formmotor_general_nomor_mesin_label"
+                    android:layout_alignBottom="@+id/formmotor_general_nomor_mesin"
+                    android:layout_marginRight="@dimen/margin"
+                    android:src="@drawable/ic_baseline_settings_20px" />
+
+                <TextView
+                    android:id="@+id/formmotor_general_nomor_mesin_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/formmotor_general_nomor_mesin_icon"
+                    android:text="@string/nomormesin"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"/>
+
+                <EditText
+                    android:id="@+id/formmotor_general_nomor_mesin"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spinner_height"
+                    android:layout_below="@id/formmotor_general_nomor_mesin_label"
+                    android:layout_toRightOf="@id/formmotor_general_nomor_mesin_icon"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:hint="@string/masukkannomormesin"
+                    android:paddingLeft="0dp"
+                    android:textColor="@color/grey_medium"
+                    android:textColorHint="@color/grey_medium"
+                    android:fontFamily="@font/ubuntu_b"/>
+
+                <View
+                    android:id="@+id/formmotor_general_nomor_mesin_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/formmotor_general_nomor_mesin"
+                    android:layout_toRightOf="@id/formmotor_general_nomor_mesin_icon"
+                    android:background="@color/grey_bg_border" />
+
+            </RelativeLayout>
+            <!-- end nomor mesin-->
+
+
+            <!-- start nama STNK -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin"
+                android:layout_marginRight="@dimen/margin_m">
+
+                <ImageView
+                    android:id="@+id/formmotor_general_nama_stnk_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/formmotor_general_nama_stnk_label"
+                    android:layout_alignBottom="@+id/formmotor_general_nama_stnk"
+                    android:layout_marginRight="@dimen/margin"
+                    android:src="@drawable/ic_baseline_person_24px" />
+
+                <TextView
+                    android:id="@+id/formmotor_general_nama_stnk_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/formmotor_general_nama_stnk_icon"
+                    android:text="@string/namastnk"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"/>
+
+                <EditText
+                    android:id="@+id/formmotor_general_nama_stnk"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spinner_height"
+                    android:layout_below="@id/formmotor_general_nama_stnk_label"
+                    android:layout_toRightOf="@id/formmotor_general_nama_stnk_icon"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:hint="@string/masukkannamastnk"
+                    android:paddingLeft="0dp"
+                    android:textColor="@color/grey_medium"
+                    android:textColorHint="@color/grey_medium"
+                    android:fontFamily="@font/ubuntu_b" />
+
+                <View
+                    android:id="@+id/formmotor_general_nama_stnk_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/formmotor_general_nama_stnk_label"
+                    android:layout_toRightOf="@id/formmotor_general_nama_stnk_icon"
+                    android:background="@color/grey_bg_border" />
+
+            </RelativeLayout>
+            <!-- end nama STNK -->
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/formmotor_general_btn_lanjutkan"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height"
+                android:layout_below="@+id/layout_general"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_big"
+                android:layout_marginRight="@dimen/margin_m"
+                android:background="@drawable/border_red"
+                android:text="@string/lanjutkan"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:fontFamily="@font/ubuntu_b"
+                android:textSize="@dimen/font_normal" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

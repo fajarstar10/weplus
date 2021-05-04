@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="8dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    app:cardElevation="1dp"
+    app:cardUseCompatPadding="true"
+   >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+      >
+
+        <ImageView
+            android:id="@+id/voucher_image_icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:background="@color/grey"
+            android:src="@drawable/voucher_cut_1" />
+
+        <LinearLayout
+            android:id="@+id/voucher_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/voucher_image_icon"
+            android:orientation="vertical"
+            android:layout_marginLeft="16dp">
+            <TextView
+                android:id="@+id/text_voucher_tersedia_hingga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:background="@color/white"
+                android:fontFamily="@font/ubuntu_r"
+                android:paddingTop="@dimen/margin_m"
+                android:text="@string/tersediahingga"
+                android:textColor="@color/grey_medium"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/voucher_tersedia_hingga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginBottom="@dimen/margin_m"
+                android:background="@color/white"
+                android:fontFamily="@font/ubuntu_b"
+                android:paddingTop="@dimen/margin_very_small"
+                android:text="11 November 2020"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/voucher_image_icon"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_alignTop="@id/voucher_layout"
+            android:layout_alignBottom="@id/voucher_layout"
+            android:layout_marginRight="@dimen/margin_small">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_voucher_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/border_red"
+                android:fontFamily="@font/ubuntu_b"
+                android:gravity="center_vertical"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:text="Redeem"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:cornerRadius="1mm"
+                android:layout_marginRight="10dp"/>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

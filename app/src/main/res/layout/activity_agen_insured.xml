@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <include layout="@layout/view_back"
+        android:id="@+id/toolbar" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAgentInsured"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_grey"
+        android:padding="@dimen/margin_m"
+        android:layout_below="@id/toolbar">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/layout_no_polis"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_below="@id/toolbar">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:srcCompat="@drawable/ic_no_polis" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/andatidakmemilikipolisyangaktif"
+            android:textColor="@color/grey_medium"
+            android:textSize="@dimen/font_medium"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_beli_skrg"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/btn_height"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_m"
+            android:background="@drawable/border_red"
+            android:gravity="center_horizontal|center_vertical"
+            android:padding="@dimen/margin_m"
+            android:text="@string/belisekarang"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_medium"
+            android:textStyle="bold"
+            app:cornerRadius="1mm" />
+
+    </LinearLayout>
+
+    <com.agrawalsuneet.dotsloader.loaders.AllianceLoader
+        android:id="@+id/loader"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:alliance_animDuration="500"
+        app:alliance_distanceMultiplier="5"
+        app:alliance_dotsRadius="4dp"
+        app:alliance_drawOnlyStroke="true"
+        app:alliance_firstDotsColor="@color/colorPrimary"
+        app:alliance_secondDotsColor="@color/colorPrimary"
+        app:alliance_strokeWidth="8dp"
+        app:alliance_thirdDotsColor="@color/colorPrimary" />
+
+</RelativeLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/viewadapterprofillist_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingStart="@dimen/margin_16"
+        android:paddingTop="@dimen/margin_13"
+        android:paddingEnd="@dimen/margin_16"
+        android:paddingBottom="@dimen/margin_13">
+
+        <ImageView
+            android:id="@+id/viewadapterprofillist_img"
+            android:layout_width="@dimen/icon"
+            android:layout_height="@dimen/icon"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_baseline_person_24px" />
+
+        <TextView
+            android:id="@+id/viewadapterprofillist_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_toEndOf="@+id/viewadapterprofillist_img"
+            android:text="title"
+            android:fontFamily="@font/ubuntu_b"
+            android:textColor="@color/black_7f7f7f"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/viewadapterprofillist_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewadapterprofillist_title"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_very_small"
+            android:layout_toEndOf="@+id/viewadapterprofillist_img"
+            android:text="description"
+            android:textColor="@color/black_7f7f7f"
+            android:textSize="11sp"
+            android:fontFamily="@font/ubuntu_l"/>
+
+        <ImageView
+            android:id="@+id/viewadapterprofillist_next"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24px" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/profil_layout_hubungi_kami"
+        android:background="@color/background_grey" />
+
+</LinearLayout>

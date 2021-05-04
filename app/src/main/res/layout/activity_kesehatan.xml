@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <include
+        android:id="@+id/perjalanan_top"
+        layout="@layout/view_back"/>
+    <RelativeLayout
+        android:id="@+id/bg_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <View
+            android:id="@+id/bg_red"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@color/red" />
+
+<!--        <View-->
+<!--            android:id="@+id/bg_white"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="10dp"-->
+<!--            android:layout_below="@+id/bg_red"-->
+<!--            android:background="@color/white" />-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginBottom="@dimen/margin_small">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rec_kesehatan"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent">
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pilih Tipe Perlindungan"
+        android:fontFamily="@font/ubuntu_b"
+        android:textSize="16sp"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_marginStart="@dimen/margin_big"
+        tools:ignore="HardcodedText">
+    </TextView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <Button
+            android:id="@+id/menu_individual"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="8dp"
+            android:text="Individual"
+            android:fontFamily="@font/ubuntu_l"
+            android:textColor="@color/black_7f7f7f"
+            android:textAllCaps="false"
+            android:background="@drawable/border_grey_stroke_greymedium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+        <Button
+            android:id="@+id/menu_keluarga"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:layout_marginStart="8dp"
+            android:text="Keluarga"
+            android:fontFamily="@font/ubuntu_l"
+            android:textColor="@color/black"
+            android:textAllCaps="false"
+            android:background="@drawable/border_grey_stroke_greymedium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey_bg_border"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:layout_marginStart="@dimen/margin_16"/>
+
+    <LinearLayout
+        android:id="@+id/layoutSmokerWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="invisible">
+        <TextView
+        android:id="@+id/tvSmoker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Apakah ada anggota keluarga yang merokok?"
+        android:fontFamily="@font/ubuntu_b"
+        android:textSize="16sp"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        tools:ignore="HardcodedText">
+    </TextView>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <Button
+            android:id="@+id/menu_merokok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="8dp"
+            android:text="Ya"
+            android:fontFamily="@font/ubuntu_l"
+            android:textColor="@color/black"
+            android:textAllCaps="false"
+            android:background="@drawable/border_grey_stroke_greymedium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+        <Button
+            android:id="@+id/menu_tidak_merokok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:layout_marginStart="8dp"
+            android:text="Tidak"
+            android:fontFamily="@font/ubuntu_l"
+            android:textColor="@color/black"
+            android:textAllCaps="false"
+            android:background="@drawable/border_grey_stroke_greymedium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline2"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+        <Button
+            android:id="@+id/buttonNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:background="@drawable/border_grey_stroke_greymedium"
+            android:textColor="@color/grey_medium"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Lanjutkan"
+            android:enabled="false"
+            android:fontFamily="@font/ubuntu_l"
+            android:textAllCaps="false"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+
+</LinearLayout>

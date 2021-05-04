@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/clinicWrapper"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/border_rounded_grey_medium"
+    android:layout_margin="16dp"
+    android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/imgClinic"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                tools:ignore="ContentDescription" />
+            <TextView
+                android:id="@+id/clinicTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@id/imgClinic"
+                tools:text="Diagnisa by Prixa"
+                android:fontFamily="@font/ubuntu_b"/>
+            <TextView
+                android:id="@+id/clinicDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/imgClinic"
+                android:layout_toStartOf="@id/imgChevronRight"
+                android:layout_below="@id/clinicTitle"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                tools:text="Melakukan pengecekan kesehatan melalui website Prixa"/>
+            <ImageView
+                android:id="@+id/imgChevronRight"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                app:tint="@color/black_7f7f7f"
+                app:srcCompat="@drawable/ic_chevron_right_black_24dp"
+                tools:ignore="ContentDescription" />
+            <TextView
+                android:id="@+id/tvComingSoon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:text="Segera Hadir!"
+                android:padding="4dp"
+                android:textColor="@color/white"
+                android:background="@drawable/border_fill_red"
+                android:fontFamily="@font/ubuntu_m"
+                tools:ignore="HardcodedText" />
+
+</RelativeLayout>

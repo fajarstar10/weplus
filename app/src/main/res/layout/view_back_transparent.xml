@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/float_transparent">
+
+    <ImageView
+        android:id="@+id/viewback_buttonback"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/back"
+        android:paddingLeft="@dimen/margin_7"
+        android:paddingBottom="12dp"
+        tools:ignore="VectorDrawableCompat" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/viewback_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:fontFamily="@font/ubuntu_b"
+            android:textSize="14sp"
+            android:text="Login"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_horizontal"
+            android:lineHeight="16sp"
+            android:layout_marginBottom="2dp"/>
+
+        <TextView
+            android:id="@+id/viewback_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:textStyle="bold"
+            android:fontFamily="@font/ubuntu_l"
+            android:textSize="11sp"
+            android:text="Masuk untuk dapatkan proteksi anda!"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+
+</RelativeLayout>

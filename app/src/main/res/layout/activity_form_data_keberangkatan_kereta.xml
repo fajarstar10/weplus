@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".belipolis.FormBeliPolisNew">
+    <include
+        android:id="@+id/layoutHeader"
+        layout="@layout/view_back" />
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layoutHeader"
+        android:layout_above="@id/btnNext">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/tripReasonWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/tripReasonIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7f7f7f"
+                    app:srcCompat="@drawable/passport" />
+
+                <TextView
+                    android:id="@+id/tripReasonLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/tripReasonIcon"
+                    android:text="Alasan Perjalanan"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tvTripReasonCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/tripReasonLabel"
+                    android:layout_toEndOf="@+id/tripReasonIcon"
+                    android:background="@null"
+                    android:hint="Pilih Alasan Perjalanan"
+                    android:textColorHint="@color/grey_bg_border"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart">
+                </TextView>
+
+                <View
+                    android:id="@+id/tripReasonLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tvTripReasonCode"
+                    android:layout_toEndOf="@+id/tripReasonIcon"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/errorTextTripReason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tripReasonLine"
+                    android:layout_toEndOf="@id/tripReasonIcon"
+                    android:text="Silahkan isi data"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/bookingCodeWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/bookingCodeIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7f7f7f"
+                    app:srcCompat="@drawable/union_28" />
+
+                <TextView
+                    android:id="@+id/bookingCodeLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/bookingCodeIcon"
+                    android:text="Kode Booking"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/etbookingCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/bookingCodeLabel"
+                    android:layout_toEndOf="@+id/bookingCodeIcon"
+                    android:background="@null"
+                    android:hint="Masukkan Kode Booking"
+                    android:textColorHint="@color/grey_bg_border"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart">
+                </EditText>
+
+                <View
+                    android:id="@+id/bookingCodeLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/etbookingCode"
+                    android:layout_toEndOf="@+id/bookingCodeIcon"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/errorTextbookingCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/bookingCodeLine"
+                    android:layout_toEndOf="@id/bookingCodeIcon"
+                    android:text="Silahkan isi data"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/departureWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/departureDateIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7f7f7f"
+                    app:srcCompat="@drawable/group_5343" />
+
+                <TextView
+                    android:id="@+id/departureDateLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/departureDateIcon"
+                    android:text="Tanggal Keberangkatan"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tvDepartureDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/departureDateLabel"
+                    android:layout_toEndOf="@+id/departureDateIcon"
+                    android:background="@null"
+                    android:hint="Masukkan Tanggal Keberangkatan"
+                    android:textColorHint="@color/grey_bg_border"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart">
+                </TextView>
+
+                <View
+                    android:id="@+id/departureDateLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tvDepartureDate"
+                    android:layout_toEndOf="@+id/departureDateIcon"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/errorTextDeparture"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/departureDateLine"
+                    android:layout_toEndOf="@id/departureDateIcon"
+                    android:text="Silahkan isi data"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/cityWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/cityIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7f7f7f"
+                    app:srcCompat="@drawable/ic_baseline_location_on_24px" />
+
+                <TextView
+                    android:id="@+id/cityLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/cityIcon"
+                    android:text="Kota keberangkatan"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/etDepartureCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/cityLabel"
+                    android:layout_toEndOf="@+id/cityIcon"
+                    android:background="@null"
+                    android:hint="Contoh : Jakarta"
+                    android:textColorHint="@color/grey_bg_border"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart">
+                </EditText>
+
+                <View
+                    android:id="@+id/cityLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/etDepartureCity"
+                    android:layout_toEndOf="@+id/cityIcon"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/errorTextCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cityLine"
+                    android:layout_toEndOf="@id/cityIcon"
+                    android:text="Silahkan isi data"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/cityDestinationWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/cityDestinationIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7f7f7f"
+                    app:srcCompat="@drawable/ic_baseline_location_on_24px" />
+
+                <TextView
+                    android:id="@+id/cityDestinationLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/cityDestinationIcon"
+                    android:text="Kota Tujuan"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/etDestinationCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/cityDestinationLabel"
+                    android:layout_toEndOf="@+id/cityDestinationIcon"
+                    android:background="@null"
+                    android:hint="Contoh : Bali"
+                    android:textColorHint="@color/grey_bg_border"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart">
+                </EditText>
+
+                <View
+                    android:id="@+id/cityDestinationLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/etDestinationCity"
+                    android:layout_toEndOf="@+id/cityDestinationIcon"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/errorDestinationTextCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cityDestinationLine"
+                    android:layout_toEndOf="@id/cityDestinationIcon"
+                    android:text="Silahkan isi data"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <RelativeLayout
+        android:id="@+id/loader"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:layout_below="@id/layoutHeader"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <com.agrawalsuneet.dotsloader.loaders.AllianceLoader
+            android:id="@+id/loaderImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            app:alliance_animDuration="500"
+            app:alliance_distanceMultiplier="5"
+            app:alliance_dotsRadius="4dp"
+            app:alliance_drawOnlyStroke="true"
+            app:alliance_firstDotsColor="@color/colorPrimary"
+            app:alliance_secondDotsColor="@color/colorPrimary"
+            app:alliance_strokeWidth="8dp"
+            app:alliance_thirdDotsColor="@color/colorPrimary" />
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginBottom="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:background="@drawable/border_fill_red"
+        android:fontFamily="@font/ubuntu_l"
+        android:layout_alignParentBottom="true"
+        android:text="@string/lanjutkan"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_normal"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</RelativeLayout>

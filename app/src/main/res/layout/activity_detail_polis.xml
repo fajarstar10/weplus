@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grey">
+
+    <include
+        layout="@layout/view_back"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/grey">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/detailpolis"
+                android:textSize="@dimen/font_medium"
+                android:layout_margin="@dimen/margin_m"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/viewadapter_transaksi_saya"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/detailtertanggung"
+                android:textSize="@dimen/font_medium"
+                android:layout_margin="@dimen/margin_m"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/namatertanggung"
+                android:textSize="@dimen/font_normal"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:textStyle="normal"
+                android:textColor="@color/grey_medium"/>
+            <TextView
+                android:id="@+id/detailpolis_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Henry Chrystianto"
+                android:textSize="@dimen/font_normal"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:textStyle="bold"
+                android:textColor="@color/grey_medium"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nomoridentitas"
+                android:textSize="@dimen/font_normal"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_m"
+                android:textStyle="normal"
+                android:textColor="@color/grey_medium"/>
+            <TextView
+                android:id="@+id/detailpolis_nomor_identitas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3173-2839485271653"
+                android:textSize="@dimen/font_normal"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:textStyle="bold"
+                android:textColor="@color/grey_medium"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tgllahir"
+                android:textSize="@dimen/font_normal"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_m"
+                android:textStyle="normal"
+                android:textColor="@color/grey_medium"/>
+            <TextView
+                android:id="@+id/detailpolis_tgl_lahir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="20-09-1991"
+                android:textSize="@dimen/font_normal"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:textStyle="bold"
+                android:textColor="@color/grey_medium"/>
+
+            <TextView
+                android:id="@+id/detailpolis_benefit_asuransi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/detialbenefitasuransi"
+                android:textSize="@dimen/font_normal"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:drawablePadding="@dimen/margin"
+                android:gravity="center_vertical"
+                android:drawableRight="@drawable/ic_baseline_error_outline_24px"
+                android:textStyle="bold"
+                android:textColor="@color/blue"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/detailpolis_btn_klaim_asuransi"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height"
+                android:layout_marginTop="@dimen/btn_height"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_below="@+id/layout_general"
+                android:background="@drawable/border_red"
+                android:text="@string/klaimasuransi"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_normal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/margin"
+                android:gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="false"
+                    android:text="atau"
+                    android:textSize="@dimen/font_normal"
+                    android:textStyle="bold"
+                    android:textColor="@color/grey_medium"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hubungiasuransi"
+                    android:textSize="@dimen/font_normal"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:textStyle="bold"
+                    android:textColor="@color/red"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

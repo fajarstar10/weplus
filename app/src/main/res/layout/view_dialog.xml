@@ -1,0 +1,73 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:padding="@dimen/margin">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_white"
+        android:padding="@dimen/margin"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:textSize="@dimen/font_medium"
+            android:textColor="@color/grey_medium"
+            android:textStyle="bold"
+            android:text="Lanjut ke Pembayaran"
+            android:fontFamily="@font/ubuntu_b"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:id="@+id/dialog_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pastikan data yang Anda masukkan sudah benar!"
+            android:fontFamily="@font/ubuntu_b"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_below="@id/dialog_title"
+            android:textColor="@color/grey_medium"
+            android:textStyle="normal"/>
+
+        <View
+            android:id="@+id/dialog_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_medium"
+            android:layout_below="@id/dialog_desc"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginBottom="@dimen/margin"/>
+
+        <TextView
+            android:id="@+id/dialog_btn_periksa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_medium"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            android:layout_marginLeft="@dimen/margin_big_m"
+            android:text="Periksa"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_below="@id/dialog_line"
+            android:layout_alignParentLeft="true"/>
+        <TextView
+            android:id="@+id/dialog_btn_lanjut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_medium"
+            android:textColor="@color/blue"
+            android:layout_marginRight="@dimen/margin_big_m"
+            android:textStyle="bold"
+            android:text="Lanjut"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_below="@id/dialog_line"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+</RelativeLayout>

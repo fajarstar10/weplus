@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/view_back" />
+
+    <RelativeLayout
+        android:id="@+id/tagihan_layout_tagihan_listrik"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_marginStart="@dimen/margin_m"
+        android:layout_marginTop="@dimen/margin_m"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:layout_marginBottom="@dimen/margin_13">
+
+        <ImageView
+            android:id="@+id/listrik_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_16"
+            android:layout_marginLeft="@dimen/margin_16"
+            android:src="@drawable/ic_listrik" />
+
+        <TextView
+            android:id="@+id/jenistagihanlistrik_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/listrik_icon"
+            android:fontFamily="@font/ubuntu_r"
+            android:textStyle="bold"
+            android:text="Jenis Listrik PLN"
+            android:textColor="@color/grey_medium"
+            android:textSize="@dimen/font_normal" />
+
+        <TextView
+            android:id="@+id/jenis_tagihan_listrik_spiner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Pilih Jenis Listrik PLN"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/ubuntu_r"
+            android:textColorHint="@color/grey_text"
+            android:textColor="@color/grey_text_2"
+            android:layout_below="@+id/jenistagihanlistrik_label"
+            android:layout_toEndOf="@+id/listrik_icon"
+            android:isScrollContainer="true"/>
+
+        <View
+            android:id="@+id/bengkelrekanan_search_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="10dp"
+            android:layout_below="@+id/jenis_tagihan_listrik_spiner"
+            android:layout_toEndOf="@+id/listrik_icon"
+            android:background="@color/grey_bg_border" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/nomor_meter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tagihan_layout_tagihan_listrik"
+        android:layout_marginStart="@dimen/margin_m"
+        android:layout_marginTop="@dimen/margin_m"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:layout_marginBottom="@dimen/margin_13">
+
+        <ImageView
+            android:id="@+id/nomormeter_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_m"
+            android:layout_marginStart="@dimen/margin_m"
+            android:src="@drawable/ic_nomormeter" />
+
+        <TextView
+            android:id="@+id/nomor_meter_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/nomormeter_icon"
+            android:fontFamily="@font/ubuntu_r"
+            android:layout_marginStart="16dp"
+            android:textStyle="bold"
+            android:text="@string/nomormeter"
+            android:textColor="@color/grey_medium"
+            android:textSize="@dimen/font_normal" />
+
+
+        <EditText
+            android:id="@+id/nomor_meter_spiner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nomor_meter_label"
+            android:layout_toEndOf="@+id/nomormeter_icon"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:isScrollContainer="true"
+            android:hint="Contoh : 000000012313123123131"
+            android:background="@null"
+            android:inputType="number"
+            android:textSize="@dimen/font_normal"
+            android:textColor="@color/grey_text_2"
+            android:textColorHint="@color/grey_text"
+            android:fontFamily="@font/ubuntu_b"
+            tools:ignore="HardcodedText">
+        </EditText>
+
+        <TextView
+            android:id="@+id/errorTextNomor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:fontFamily="@font/ubuntu_r"
+            android:paddingStart="@dimen/margin_small"
+            android:paddingEnd="@dimen/margin_small"
+            android:text="@string/nomorpelanggansalah"
+            android:layout_below="@+id/nomor_meter_spiner"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@id/nomormeter_icon"
+            android:textColor="@color/red"
+            android:textSize="@dimen/font_midle"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/nomor_meter_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_below="@+id/nomor_meter_spiner"
+            android:layout_toEndOf="@+id/nomormeter_icon"
+            android:background="@color/grey_bg_border" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/jumlah_nominal_token_listrik"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nomor_meter"
+        android:visibility="gone"
+        android:layout_marginStart="@dimen/margin_m"
+        android:layout_marginTop="@dimen/margin_m"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:layout_marginBottom="@dimen/margin_13">
+
+        <ImageView
+            android:id="@+id/tokenlistrik_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_m"
+            android:layout_marginStart="@dimen/margin_m"
+            app:srcCompat="@drawable/ic_durasi" />
+
+        <TextView
+            android:id="@+id/jumlah_nominal_token_listrik_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/tokenlistrik_icon"
+            android:fontFamily="@font/ubuntu_r"
+            android:textStyle="bold"
+            android:text="Jenis Produk"
+            android:textColor="@color/grey_medium"
+            android:textSize="@dimen/font_normal"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/token_listrik_spiner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="10dp"
+            android:text="Pilih Jenis Produk"
+            android:layout_below="@+id/jumlah_nominal_token_listrik_label"
+            android:layout_toEndOf="@+id/tokenlistrik_icon"
+            android:isScrollContainer="true"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:id="@+id/token_listrik_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="10dp"
+            android:layout_below="@+id/token_listrik_spiner"
+            android:layout_toEndOf="@+id/tokenlistrik_icon"
+            android:background="@color/grey_bg_border" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/nominal_harga_transaksi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/jumlah_nominal_token_listrik"
+        android:layout_marginStart="@dimen/margin_m"
+        android:layout_marginTop="@dimen/margin_m"
+        android:layout_marginEnd="@dimen/margin_m"
+        android:layout_marginBottom="@dimen/margin_13">
+
+                <TextView
+                    android:id="@+id/harga_label_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="@dimen/margin_m"
+                    android:layout_marginRight="@dimen/margin_m"
+                    android:text="@string/harga_tagihan"
+                    android:visibility="invisible"
+                    android:fontFamily="@font/ubuntu_r"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal" />
+
+
+                <TextView
+                    android:id="@+id/nominal_id_transaksi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    android:text="Rp 200.000"
+                    android:visibility="invisible"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    tools:ignore="HardcodedText" />
+    </RelativeLayout>
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/transaksionclik_relatif"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/transaksionclik_label_top"-->
+<!--        android:layout_marginLeft="@dimen/margin_m"-->
+<!--        android:layout_marginRight="@dimen/margin_m"-->
+<!--        android:layout_marginBottom="@dimen/margin_m"-->
+<!--        android:background="@drawable/border_red">-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/transaksi_linear"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="@dimen/margin_m"-->
+<!--            android:layout_toRightOf="@+id/transaksi_img"-->
+<!--            android:orientation="vertical">-->
+
+
+<!--            <TextView-->
+<!--                android:id="@+id/transaksionclik_name"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Informasi kode token yang Anda bayar akan dikirimkan maksimal 2x24jam."-->
+<!--                android:textColor="@color/white"-->
+<!--                android:fontFamily="@font/ubuntu_r"-->
+<!--                android:textSize="@dimen/font_normal"-->
+<!--                android:layout_marginLeft="25dp"-->
+<!--                android:textStyle="bold" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/transaksionclick_duration"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Pembelian token listrik tidak dapat dilakukan pada jam 23:00 sampai 01:00."-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_marginLeft="25dp"-->
+<!--                android:textSize="@dimen/font_normal"-->
+<!--                android:fontFamily="@font/ubuntu_r"-->
+<!--                android:textStyle="bold" />-->
+
+<!--        </LinearLayout>-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleview_pembayaran"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nominal_harga_transaksi"
+            android:layout_marginBottom="@dimen/margin_m"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/margin_m"
+            android:paddingRight="@dimen/margin_m">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    <RelativeLayout
+        android:id="@+id/transaksionclik_relatif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recycleview_pembayaran"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:layout_marginBottom="@dimen/margin_m"
+        android:background="@drawable/border_red_burem">
+
+        <LinearLayout
+            android:id="@+id/transaksi_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_m"
+            android:layout_toEndOf="@+id/transaksi_img"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/txt_nomor_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tagihan_layout_tagihan_listrik"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginBottom="@dimen/margin_13">
+
+                <TextView
+                    android:id="@+id/nomor_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1."
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/ubuntu_r"
+                    android:textSize="@dimen/font_normal" />
+
+                <TextView
+                    android:id="@+id/txt_informasi_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Informasi tagihan listrik yang anda bayar akan dikirimkan maksimal 2x24jam"
+                    android:textColor="@color/white"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/ubuntu_r"
+                    android:textSize="@dimen/font_normal"
+                    android:layout_toRightOf="@+id/nomor_1"
+                    android:layout_marginLeft="@dimen/margin_15"/>
+
+                <TextView
+                    android:id="@+id/nomor_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2."
+                    android:layout_below="@+id/nomor_1"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/ubuntu_r"
+                    android:textSize="@dimen/font_normal"
+                    android:layout_marginTop="@dimen/margin_big"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pembayaran Tagihan listrik tidak dapat dilakukan pada jam 23:00 sampai 01:00"
+                    android:layout_below="@+id/txt_informasi_1"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/ubuntu_r"
+                    android:textSize="@dimen/font_normal"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="@dimen/margin"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+<!--    </RelativeLayout>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/tagihan_listrik_btn_bayar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginLeft="@dimen/margin_m"
+            android:layout_marginTop="@dimen/margin_big_m"
+            android:layout_marginRight="@dimen/margin_m"
+            android:background="@drawable/border_red"
+            android:fontFamily="@font/ubuntu_b"
+            android:text="Lanjutkan"
+            android:visibility="visible"
+            android:textAllCaps="false"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_normal" />
+
+        <com.agrawalsuneet.dotsloader.loaders.AllianceLoader
+            android:id="@+id/loader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            app:alliance_animDuration="500"
+            app:alliance_distanceMultiplier="5"
+            app:alliance_dotsRadius="4dp"
+            app:alliance_drawOnlyStroke="true"
+            android:visibility="invisible"
+            app:alliance_firstDotsColor="@color/colorPrimary"
+            app:alliance_secondDotsColor="@color/colorPrimary"
+            app:alliance_strokeWidth="8dp"
+            app:alliance_thirdDotsColor="@color/colorPrimary" />
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

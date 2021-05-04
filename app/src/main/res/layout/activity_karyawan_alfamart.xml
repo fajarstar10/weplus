@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Mitra.KaryawanAlfamartActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <include layout="@layout/view_back" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/logo_alfamart"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_25"
+                android:layout_marginBottom="@dimen/margin_25"
+                android:background="@drawable/border_grey_rounded"
+                android:padding="8dp"
+                android:src="@drawable/logo_alfamart" />
+
+            <TextView
+                android:id="@+id/no_induk_karyawan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_below="@+id/logo_alfamart"
+                android:text="@string/nomorindukkaryawan"
+                android:textSize="@dimen/font_big"
+                android:gravity="center">
+            </TextView>
+
+            <EditText
+                android:id="@+id/nikkaryawan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_17"
+                android:layout_below="@+id/no_induk_karyawan"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/ubuntu_m"
+                android:hint="@string/masukkannikdisini">
+            </EditText>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nikkaryawan"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginLeft="@dimen/margin_100"
+            android:layout_marginRight="@dimen/margin_100"
+            android:background="@drawable/border_red"
+            android:text="@string/lanjutkan"
+            android:textColor="@color/white"
+            android:textStyle="bold">
+
+        </Button>
+    </LinearLayout>
+    <com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        app:mlpb_show_arrow="true"
+        app:mlpb_progress_color="@color/red_btn_bg_color"
+        app:mlpb_arrow_height="5dp"
+        app:mlpb_arrow_width="10dp"
+        app:mlpb_enable_circle_background="true"
+
+        app:mlpb_progress_stoke_width="5dp"/>
+</RelativeLayout>

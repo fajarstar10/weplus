@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_back" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_17">
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvSubtitle1"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Nominal Kecelakaan Pengemudi dan Penumpang"-->
+<!--            android:fontFamily="@font/ubuntu_b"-->
+<!--            android:textSize="16sp"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:textColor="@color/black_7f7f7f"-->
+<!--            android:layout_marginTop="@dimen/margin_20"-->
+<!--            android:layout_marginStart="@dimen/margin_16"-->
+<!--            tools:ignore="HardcodedText">-->
+<!--        </TextView>-->
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/seekerWrapper1"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginEnd="8dp"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:layout_below="@id/tvSubtitle1">-->
+<!--            <ImageView-->
+<!--                android:id="@+id/img1"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentStart="true"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                app:tint="@color/black_7f7f7f"-->
+<!--                app:srcCompat="@drawable/ic_storage_black_24dp"-->
+<!--                tools:ignore="ContentDescription" />-->
+<!--            <TextView-->
+<!--                android:id="@+id/tv1"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_toEndOf="@id/img1"-->
+<!--                android:layout_alignParentTop="true"-->
+<!--                android:layout_marginStart="8dp"-->
+<!--                android:text="Nominal kecelakaan Pengemudi"-->
+<!--                android:fontFamily="@font/ubuntu_m"-->
+<!--                android:textColor="@color/grey_medium"-->
+<!--                tools:ignore="HardcodedText" />-->
+<!--            <com.xw.repo.BubbleSeekBar-->
+<!--                android:id="@+id/seekBar"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginEnd="16dp"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:layout_below="@id/tv1"-->
+<!--                android:layout_toEndOf="@id/img1"-->
+<!--                app:bsb_bubble_color="@color/colorPrimary"-->
+<!--                app:bsb_bubble_text_color="@color/colorPrimaryDark"-->
+<!--                app:bsb_max="1500"-->
+<!--                app:bsb_min="500"-->
+<!--                app:bsb_progress="0"-->
+<!--                app:bsb_second_track_color="@color/red"-->
+<!--                app:bsb_section_text_position="bottom_sides"-->
+<!--                app:bsb_show_progress_in_float="false"-->
+<!--                app:bsb_show_thumb_text="true"-->
+<!--                app:bsb_track_color="@color/red_btn_bg_color"/>-->
+<!--        </RelativeLayout>-->
+
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/seekerWrapper2"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:layout_below="@id/seekerWrapper1">-->
+<!--        <ImageView-->
+<!--            android:id="@+id/img2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            app:tint="@color/black_7f7f7f"-->
+<!--            app:srcCompat="@drawable/ic_storage_black_24dp"-->
+<!--            tools:ignore="ContentDescription" />-->
+<!--        <TextView-->
+<!--            android:id="@+id/tv2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_toEndOf="@id/img2"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:layout_marginStart="8dp"-->
+<!--            android:text="Nominal kecelakaan Penumpang"-->
+<!--            android:fontFamily="@font/ubuntu_m"-->
+<!--            android:textColor="@color/grey_medium"-->
+<!--            tools:ignore="HardcodedText" />-->
+<!--        <com.xw.repo.BubbleSeekBar-->
+<!--            android:id="@+id/seekBarPassenger"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginEnd="16dp"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:layout_below="@id/tv2"-->
+<!--            android:layout_toEndOf="@id/img2"-->
+<!--            app:bsb_bubble_color="@color/colorPrimary"-->
+<!--            app:bsb_bubble_text_color="@color/colorPrimaryDark"-->
+<!--            app:bsb_max="1500"-->
+<!--            app:bsb_min="500"-->
+<!--            app:bsb_progress="0"-->
+<!--            app:bsb_second_track_color="@color/red"-->
+<!--            app:bsb_section_text_position="bottom_sides"-->
+<!--            app:bsb_show_progress_in_float="false"-->
+<!--            app:bsb_show_thumb_text="true"-->
+<!--            app:bsb_track_color="@color/red_btn_bg_color"/>-->
+<!--    </RelativeLayout>-->
+<!--        <TextView-->
+<!--            android:id="@+id/tvSubtitle2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:layout_below="@id/seekerWrapper2"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:fontFamily="@font/ubuntu_m"-->
+<!--            android:textColor="@color/black_7f7f7f"-->
+<!--            android:textSize="16sp"-->
+<!--            android:text="Tambahan Perlindungan"-->
+<!--            tools:ignore="HardcodedText" />-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPerlindungan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="8dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLanjutkan"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/margin_m"
+            android:layout_marginTop="@dimen/margin_big"
+            android:layout_marginEnd="@dimen/margin_m"
+            android:background="@drawable/border_red"
+            android:text="@string/lanjutkan"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_centerInParent="true">
+    <id.weplus.utility.OneOne
+        android:id="@+id/img"
+        android:layout_width="80dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_belipolis" />
+
+</RelativeLayout>
+
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:id="@+id/profil"-->
+    <!--android:layout_width="@dimen/btn_height"-->
+    <!--android:layout_height="@dimen/btn_height"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:orientation="vertical"-->
+    <!--android:background="@drawable/border_red">-->
+    <!--<ImageView-->
+        <!--android:id="@+id/img"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:src="@drawable/ic_profil"/>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/label"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="center_horizontal"-->
+        <!--android:text="@string/profil"-->
+        <!--android:textColor="@color/grey_medium"-->
+        <!--android:textSize="@dimen/font_normal" />-->
+
+<!--</LinearLayout>-->

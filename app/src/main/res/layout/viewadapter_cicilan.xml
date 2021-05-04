@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey">
+
+        <TextView
+            android:id="@+id/pembayaran_total_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_b"
+            android:text="@string/detailCicilan"
+            android:textColor="@color/black_7070"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/margin_15"
+            android:layout_marginBottom="@dimen/margin_15"
+            android:layout_marginLeft="@dimen/margin_15"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tgl_cicilan_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/margin_15"
+            android:layout_marginBottom="@dimen/margin_15"
+            android:layout_marginRight="@dimen/margin_15"
+            android:fontFamily="@font/ubuntu_b"
+            android:text="Juli 2020"
+            android:visibility="gone"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_m"
+        android:layout_marginRight="@dimen/margin_m"
+        android:layout_marginBottom="@dimen/margin_m"
+        android:layout_below="@id/layoutHeader">
+
+        <TextView
+            android:id="@+id/id_transaksi_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginBottom="@dimen/margin"
+            android:layout_marginLeft="@dimen/margin_m"
+            android:layout_marginRight="@dimen/margin_m"
+            android:fontFamily="@font/ubuntu_m"
+            android:text="@string/idtransaksi"
+            android:textColor="@color/grey_medium"
+            android:textSize="14sp"  />
+
+        <TextView
+            android:id="@+id/jatuh_tempo_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_transaksi_label"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginBottom="@dimen/margin"
+            android:layout_marginLeft="@dimen/margin_m"
+            android:layout_marginRight="@dimen/margin_m"
+            android:fontFamily="@font/ubuntu_m"
+            android:text="@string/jatuhtempo"
+            android:textColor="@color/grey_medium"
+            android:textSize="14sp"  />
+
+        <TextView
+            android:id="@+id/total_tagihan_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/jatuh_tempo_label"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginBottom="@dimen/margin"
+            android:layout_marginLeft="@dimen/margin_m"
+            android:layout_marginRight="@dimen/margin_m"
+            android:fontFamily="@font/ubuntu_m"
+            android:text="@string/totaltagihan"
+            android:textColor="@color/grey_medium"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/status_pembayaran_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/total_tagihan_label"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginBottom="@dimen/margin"
+            android:layout_marginRight="@dimen/margin_m"
+            android:layout_marginLeft="@dimen/margin_m"
+            android:fontFamily="@font/ubuntu_b"
+            android:textColor="@color/grey_medium"
+            android:textSize="14sp"
+            android:text="@string/statuspembayaran">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/txt_nominal_id_transaksi_cicilan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginBottom="@dimen/margin"
+            android:layout_marginLeft="@dimen/margin_m"
+            android:layout_marginRight="@dimen/margin_m"
+            android:fontFamily="@font/ubuntu_m"
+            android:text="WE0123456"
+            android:textColor="@color/grey_medium"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tgl_jatuh_tempo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_nominal_id_transaksi_cicilan"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginBottom="@dimen/margin"
+            android:layout_marginLeft="@dimen/margin_m"
+            android:layout_marginRight="@dimen/margin_m"
+            android:fontFamily="@font/ubuntu_m"
+            android:text="20 Agustus 2020"
+            android:textColor="@color/grey_medium"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/txt_total_tagihan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tgl_jatuh_tempo"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginBottom="@dimen/margin"
+            android:layout_marginLeft="@dimen/margin_m"
+            android:layout_marginRight="@dimen/margin_m"
+            android:fontFamily="@font/ubuntu_m"
+            android:text="Rp 60.333"
+            android:textColor="@color/grey_medium"
+            android:textStyle="bold"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txt_status_pembayaran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_total_tagihan"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginBottom="@dimen/margin"
+            android:layout_marginLeft="@dimen/margin_m"
+            android:layout_marginRight="@dimen/margin_m"
+            android:fontFamily="@font/ubuntu_m"
+            android:text="Lunas"
+            android:textColor="@color/green"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+</RelativeLayout>

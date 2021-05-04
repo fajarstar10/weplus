@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".belipolis.FormDataTertanggung">
+    <include
+        android:id="@+id/layoutHeader"
+        layout="@layout/view_back" />
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layoutHeader"
+        android:layout_above="@id/btnNext">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/merekMobilWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin">
+
+                <ImageView
+                    android:id="@+id/merekMobilIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7f7f7f"
+                    app:srcCompat="@drawable/ic_car_24_px" />
+
+                <TextView
+                    android:id="@+id/merekMobilLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/merekMobilIcon"
+                    android:text="Merek Mobil"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tvMerekMobil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/merekMobilLabel"
+                    android:layout_toEndOf="@+id/merekMobilIcon"
+                    android:background="@null"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart">
+                </TextView>
+
+                <View
+                    android:id="@+id/merekMobilLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tvMerekMobil"
+                    android:layout_toEndOf="@+id/merekMobilIcon"
+                    android:background="@color/grey_bg_border" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/seriMobilWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin">
+
+                <ImageView
+                    android:id="@+id/imgSeriMobil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7f7f7f"
+                    app:srcCompat="@drawable/ic_car_24_px" />
+
+                <TextView
+                    android:id="@+id/seriMobilLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/imgSeriMobil"
+                    android:text="Seri Mobil"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tvSeriMobil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/seriMobilLabel"
+                    android:layout_toEndOf="@+id/imgSeriMobil"
+                    android:background="@null"
+                    android:hint="-"
+                    android:maxLength="16"
+                    android:textColor="@color/black_7f7f7f"
+                    android:textColorHint="@color/grey_bg_border"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart"
+                    tools:ignore="HardcodedText">
+                </TextView>
+
+                <View
+                    android:id="@+id/seriMobilLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tvSeriMobil"
+                    android:layout_toEndOf="@+id/imgSeriMobil"
+                    android:background="@color/grey_bg_border" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/tahunProduksiWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin">
+
+                <ImageView
+                    android:id="@+id/imgTahunProduksi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7f7f7f"
+                    app:srcCompat="@drawable/ic_baseline_settings_20px" />
+
+                <TextView
+                    android:id="@+id/tahunProduksiLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/imgTahunProduksi"
+                    android:text="Tahun Produksi"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tvTahunProduksi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/tahunProduksiLabel"
+                    android:layout_toEndOf="@+id/imgTahunProduksi"
+                    android:background="@null"
+                    android:textColorHint="@color/grey_bg_border"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart">
+                </TextView>
+
+                <View
+                    android:id="@+id/birthDataLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tvTahunProduksi"
+                    android:layout_toEndOf="@+id/imgTahunProduksi"
+                    android:background="@color/grey_bg_border" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/plateWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin">
+
+                <ImageView
+                    android:id="@+id/plateIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7f7f7f"
+                    app:srcCompat="@drawable/plat" />
+
+                <TextView
+                    android:id="@+id/plateLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/plateIcon"
+                    android:text="Plat Wilayah"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tvPlate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/plateLabel"
+                    android:layout_toEndOf="@+id/plateIcon"
+                    android:background="@null"
+                    android:textColorHint="@color/grey_bg_border"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart">
+                </TextView>
+
+                <View
+                    android:id="@+id/genderLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tvPlate"
+                    android:layout_toEndOf="@+id/plateIcon"
+                    android:background="@color/grey_bg_border" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/startDateWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin">
+
+                <ImageView
+                    android:id="@+id/startDateIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7f7f7f"
+                    app:srcCompat="@drawable/ic_calendar_24px" />
+
+                <TextView
+                    android:id="@+id/startDateLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/startDateIcon"
+                    android:text="Tanggal Mulai Perlindungan"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tvStartDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/startDateLabel"
+                    android:layout_toEndOf="@+id/startDateIcon"
+                    android:background="@null"
+                    android:text="Pilih Tanggal Perlindungan "
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart">
+                </TextView>
+
+                <View
+                    android:id="@+id/startDateLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tvStartDate"
+                    android:layout_toEndOf="@+id/startDateIcon"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/errorTextStartDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/startDateLine"
+                    android:layout_toEndOf="@id/startDateIcon"
+                    android:text="Silahkan isi data"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/transmissionWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin">
+
+                <ImageView
+                    android:id="@+id/transmissionIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7f7f7f"
+                    app:srcCompat="@drawable/ic_car_24_px" />
+
+                <TextView
+                    android:id="@+id/transmissionLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/transmissionIcon"
+                    android:text="Tranmisi Mobil"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tvTransmisi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/transmissionLabel"
+                    android:layout_toEndOf="@+id/transmissionIcon"
+                    android:background="@null"
+                    android:hint="Pilih Transmisi Mobil"
+                    android:textColorHint="@color/grey_bg_border"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart">
+                </TextView>
+
+                <View
+                    android:id="@+id/transmissionLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tvTransmisi"
+                    android:layout_toEndOf="@+id/transmissionIcon"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/errorTextTransmission"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/transmissionLine"
+                    android:layout_toEndOf="@id/transmissionIcon"
+                    android:text="Silahkan isi data"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/conditionWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin">
+
+                <ImageView
+                    android:id="@+id/conditionIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7f7f7f"
+                    app:srcCompat="@drawable/ic_car_24_px" />
+
+                <TextView
+                    android:id="@+id/conditionLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/conditionIcon"
+                    android:text="Kondisi Mobil"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tvConditionMotor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/conditionLabel"
+                    android:layout_toEndOf="@+id/conditionIcon"
+                    android:background="@null"
+                    android:hint="Pilih Kondisi Mobil"
+                    android:textColorHint="@color/grey_bg_border"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart">
+                </TextView>
+
+                <View
+                    android:id="@+id/conditionLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tvConditionMotor"
+                    android:layout_toEndOf="@+id/conditionIcon"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/errorTextCondition"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/conditionLine"
+                    android:layout_toEndOf="@id/conditionIcon"
+                    android:text="Silahkan isi data"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/colorWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin">
+
+                <ImageView
+                    android:id="@+id/colorIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7f7f7f"
+                    app:srcCompat="@drawable/ic_car_24_px" />
+
+                <TextView
+                    android:id="@+id/colorLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/colorIcon"
+                    android:text="Warna Mobil"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/etColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/colorLabel"
+                    android:layout_toEndOf="@+id/colorIcon"
+                    android:background="@null"
+                    android:hint="Contoh: Hitam"
+                    android:textColorHint="@color/grey_bg_border"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart"
+                    tools:ignore="HardcodedText">
+                </EditText>
+
+                <View
+                    android:id="@+id/colorLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/etColor"
+                    android:layout_toEndOf="@+id/colorIcon"
+                    android:background="@color/grey_bg_border"/>
+
+                <TextView
+                    android:id="@+id/errorTextColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/colorLine"
+                    android:layout_toEndOf="@id/colorIcon"
+                    android:text="Silahkan isi data"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/plateNumberWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin">
+
+                <ImageView
+                    android:id="@+id/plateNumberIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7f7f7f"
+                    app:srcCompat="@drawable/plat" />
+
+                <TextView
+                    android:id="@+id/plateNumberLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/plateNumberIcon"
+                    android:text="Nomor Plat"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/etPlateNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/plateNumberLabel"
+                    android:layout_toEndOf="@+id/plateNumberIcon"
+                    android:background="@null"
+                    android:hint="Contoh : B123jkt"
+                    android:textColorHint="@color/grey_bg_border"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart"
+                    tools:ignore="HardcodedText">
+                </EditText>
+
+                <View
+                    android:id="@+id/plateNumberLIne"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/etPlateNumber"
+                    android:layout_toEndOf="@+id/plateNumberIcon"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/errorTextPlateNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/plateNumberLIne"
+                    android:layout_toEndOf="@id/plateNumberIcon"
+                    android:text="Silahkan isi data"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rangkaWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin">
+
+                <ImageView
+                    android:id="@+id/rangkaIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7f7f7f"
+                    app:srcCompat="@drawable/ic_baseline_motorcycle_24px" />
+
+                <TextView
+                    android:id="@+id/rangkaLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/rangkaIcon"
+                    android:text="Nomor Rangka"
+                    android:maxLines="1"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/etRangka"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/rangkaLabel"
+                    android:layout_toEndOf="@+id/rangkaIcon"
+                    android:background="@null"
+                    android:hint="Masukkan Nomor Rangka"
+                    android:textColorHint="@color/grey_bg_border"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart"
+                    tools:ignore="HardcodedText">
+                </EditText>
+
+                <View
+                    android:id="@+id/rangkaLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/etRangka"
+                    android:layout_toEndOf="@+id/rangkaIcon"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/errorTextRangka"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rangkaLine"
+                    android:layout_toEndOf="@id/rangkaIcon"
+                    android:text="Silahkan isi data"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/engineWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin">
+
+                <ImageView
+                    android:id="@+id/engineIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7f7f7f"
+                    app:srcCompat="@drawable/ic_baseline_motorcycle_24px" />
+
+                <TextView
+                    android:id="@+id/engineLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/engineIcon"
+                    android:text="Nomor Mesin"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/etEngine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/engineLabel"
+                    android:layout_toEndOf="@+id/engineIcon"
+                    android:background="@null"
+                    android:hint="Masukkan Nomor Mesin"
+                    android:textColorHint="@color/grey_bg_border"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart"
+                    tools:ignore="HardcodedText">
+                </EditText>
+
+                <View
+                    android:id="@+id/engineLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/etEngine"
+                    android:layout_toEndOf="@+id/engineIcon"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/errorTextEngine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/engineLine"
+                    android:layout_toEndOf="@id/engineIcon"
+                    android:text="Silahkan isi data"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/stnkWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin">
+
+                <ImageView
+                    android:id="@+id/stnkIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7f7f7f"
+                    app:srcCompat="@drawable/ic_baseline_motorcycle_24px" />
+
+                <TextView
+                    android:id="@+id/stnkLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/stnkIcon"
+                    android:text="Nama STNK"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/etStnk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/stnkLabel"
+                    android:layout_toEndOf="@+id/stnkIcon"
+                    android:background="@null"
+                    android:hint="Masukkan Nama STNK"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart">
+                </EditText>
+
+                <View
+                    android:id="@+id/stnkLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/etStnk"
+                    android:layout_toEndOf="@+id/stnkIcon"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/errorTextStnk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/stnkLine"
+                    android:layout_toEndOf="@id/stnkIcon"
+                    android:text="Silahkan isi data"
+                    android:layout_marginStart="8dp"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginBottom="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:background="@drawable/border_fill_red"
+        android:fontFamily="@font/ubuntu_l"
+        android:layout_alignParentBottom="true"
+        android:text="@string/lanjutkan"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_normal"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</RelativeLayout>

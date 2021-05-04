@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey">
+
+    <include
+        android:id="@+id/formbelipolis_top"
+        layout="@layout/view_back" />
+
+    <RelativeLayout
+        android:id="@+id/formbelipolis_layout_tipe_perjalanan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/formbelipolis_top"
+        android:layout_marginRight="@dimen/margin_m"
+        android:layout_marginLeft="@dimen/margin_m"
+        android:layout_marginBottom="@dimen/margin"
+        android:layout_marginTop="@dimen/margin">
+
+        <ImageView
+            android:id="@+id/tipeperjalanan_icon"
+            android:layout_width="@dimen/spinner_height"
+            android:layout_height="@dimen/spinner_height"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_m"
+            android:src="@drawable/ic_baseline_person_24px" />
+
+        <TextView
+            android:id="@+id/tipeperjalanan_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tipeperjalanan_icon"
+            android:text="@string/tipeperjalanan"
+            android:textColor="@color/grey_medium"
+            android:textSize="@dimen/font_medium"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/formbelipolis_tipe_perjalanan_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spinner_height"
+            android:layout_below="@+id/tipeperjalanan_label"
+            android:layout_toRightOf="@+id/tipeperjalanan_icon"
+            android:autofillHints="@string/pilihpartnerasuransi"
+            android:entries="@array/tipe_perjalanan"
+            android:isScrollContainer="true"
+            android:tooltipText="@string/pilihpartnerasuransi">
+
+        </Spinner>
+
+        <View
+            android:id="@+id/bengkelrekanan_proteksi_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/formbelipolis_tipe_perjalanan_spinner"
+            android:layout_toRightOf="@+id/tipeperjalanan_icon"
+            android:background="@color/grey_bg_border" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/formbelipolis_layout_tgl_keberangkatan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/formbelipolis_layout_tipe_perjalanan"
+        android:layout_marginRight="@dimen/margin_m"
+        android:layout_marginLeft="@dimen/margin_m"
+        android:layout_marginBottom="@dimen/margin">
+
+        <ImageView
+            android:id="@+id/tglkeberangkatan_icon"
+            android:layout_width="@dimen/spinner_height"
+            android:layout_height="@dimen/spinner_height"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_m"
+            android:src="@drawable/ic_calendar" />
+
+        <TextView
+            android:id="@+id/tglkeberangkatan_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tglkeberangkatan_icon"
+            android:text="@string/tglkeberangkatan"
+            android:textColor="@color/grey_medium"
+            android:textSize="@dimen/font_medium"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/formbelipolis_tglkeberangkatan"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spinner_height"
+            android:layout_below="@+id/tglkeberangkatan_label"
+            android:layout_toRightOf="@+id/tglkeberangkatan_icon"
+            android:background="@null"
+            android:hint="@string/pilihtanggal"
+            android:textColor="@drawable/border_grey_medium"
+            android:textSize="@dimen/font_normal"
+            android:textStyle="bold"></EditText>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/formbelipolis_tglkeberangkatan"
+            android:layout_toRightOf="@+id/tglkeberangkatan_icon"
+            android:background="@color/grey_bg_border" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/formbelipolis_layout_tgl_kedatangan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/formbelipolis_layout_tgl_keberangkatan"
+        android:layout_marginRight="@dimen/margin_m"
+        android:layout_marginLeft="@dimen/margin_m"
+        android:layout_marginBottom="@dimen/margin">
+
+        <ImageView
+            android:id="@+id/tglkedatangan_icon"
+            android:layout_width="@dimen/spinner_height"
+            android:layout_height="@dimen/spinner_height"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_m"
+            android:src="@drawable/ic_calendar" />
+
+        <TextView
+            android:id="@+id/tglkedatangan_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tglkedatangan_icon"
+            android:text="@string/tglkedatangan"
+            android:textColor="@color/grey_medium"
+            android:textSize="@dimen/font_medium"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/formbelipolis_tglkedatangan"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spinner_height"
+            android:layout_below="@+id/tglkedatangan_label"
+            android:layout_toRightOf="@+id/tglkedatangan_icon"
+            android:background="@null"
+            android:hint="@string/pilihtanggal"
+            android:textColor="@drawable/border_grey_medium"
+            android:textSize="@dimen/font_normal"
+            android:textStyle="normal"></EditText>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/formbelipolis_tglkedatangan"
+            android:layout_toRightOf="@+id/tglkedatangan_icon"
+            android:background="@color/grey_bg_border" />
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/formbelipolis_layout_durasi_perjalanan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/formbelipolis_layout_tgl_kedatangan"
+        android:layout_marginRight="@dimen/margin_m"
+        android:layout_marginLeft="@dimen/margin_m"
+        android:layout_marginBottom="@dimen/margin">
+
+        <ImageView
+            android:id="@+id/durasiperjalanan_icon"
+            android:layout_width="@dimen/spinner_height"
+            android:layout_height="@dimen/spinner_height"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_m"
+            android:src="@drawable/ic_durasi" />
+
+        <TextView
+            android:id="@+id/durasiperjalanan_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/durasiperjalanan_icon"
+            android:text="@string/durasiperjalanan"
+            android:textColor="@color/grey_medium"
+            android:textSize="@dimen/font_medium"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/formbelipolis_durasi_perjalanan_spiner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spinner_height"
+            android:layout_below="@+id/durasiperjalanan_label"
+            android:layout_toRightOf="@+id/durasiperjalanan_icon"
+            android:entries="@array/tipe_perjalanan"
+            android:isScrollContainer="true"
+            android:textAlignment="textStart"
+            android:tooltipText="@string/pilihpartnerasuransi"></Spinner>
+
+        <View
+            android:id="@+id/bengkelrekanan_search_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/formbelipolis_durasi_perjalanan_spiner"
+            android:layout_toRightOf="@+id/durasiperjalanan_icon"
+            android:background="@color/grey_bg_border" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/formbelipolis_layout_destinasi_perjalanan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/formbelipolis_layout_durasi_perjalanan"
+        android:layout_marginRight="@dimen/margin_m"
+        android:layout_marginLeft="@dimen/margin_m"
+        android:layout_marginBottom="@dimen/margin">
+
+        <ImageView
+            android:id="@+id/destinasiperjalanan_icon"
+            android:layout_width="@dimen/spinner_height"
+            android:layout_height="@dimen/spinner_height"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_m"
+            android:src="@drawable/ic_destination" />
+
+        <TextView
+            android:id="@+id/destinasiperjalanan_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/destinasiperjalanan_icon"
+            android:text="@string/destinasiperjalanan"
+            android:textColor="@color/grey_medium"
+            android:textSize="@dimen/font_medium"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/formbelipolis_destinasi_perjalanan_spiner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spinner_height"
+            android:layout_below="@+id/destinasiperjalanan_label"
+            android:layout_toRightOf="@+id/destinasiperjalanan_icon"
+            android:entries="@array/tipe_perjalanan"
+            android:isScrollContainer="true"
+            android:textAlignment="textStart"
+            android:tooltipText="@string/pilihpartnerasuransi"></Spinner>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/formbelipolis_destinasi_perjalanan_spiner"
+            android:layout_toRightOf="@+id/destinasiperjalanan_icon"
+            android:background="@color/grey_bg_border" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/formbelipolis_layout_harga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/formbelipolis_layout_destinasi_perjalanan"
+        android:layout_marginRight="@dimen/margin_m"
+        android:layout_marginLeft="@dimen/margin_m"
+        android:layout_marginBottom="@dimen/margin">
+
+        <ImageView
+            android:id="@+id/harga_icon"
+            android:layout_width="@dimen/spinner_height"
+            android:layout_height="@dimen/spinner_height"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_m"
+            android:src="@drawable/ic_destination" />
+
+        <TextView
+            android:id="@+id/harga_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/harga_icon"
+            android:text="@string/filterharga"
+            android:textColor="@color/grey_medium"
+            android:textSize="@dimen/font_medium"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/harga_spiner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spinner_height"
+            android:layout_below="@+id/harga_label"
+            android:layout_toRightOf="@+id/harga_icon"
+            android:entries="@array/filter_harga"
+            android:isScrollContainer="true"
+            android:textAlignment="textStart"
+            android:tooltipText="@string/pilihpartnerasuransi"></Spinner>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/harga_spiner"
+            android:layout_toRightOf="@+id/harga_icon"
+            android:background="@color/grey_bg_border" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/formbelipolis_layout_passenger"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/formbelipolis_layout_harga"
+        android:layout_marginRight="@dimen/margin_m"
+        android:layout_marginLeft="@dimen/margin_m"
+        android:layout_marginBottom="@dimen/margin">
+
+        <ImageView
+            android:id="@+id/passenger_icon"
+            android:layout_width="@dimen/spinner_height"
+            android:layout_height="@dimen/spinner_height"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_m"
+            android:src="@drawable/ic_destination" />
+
+        <TextView
+            android:id="@+id/passenger_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/passenger_icon"
+            android:text="@string/jumlahpenumpang"
+            android:textColor="@color/grey_medium"
+            android:textSize="@dimen/font_medium"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/passenger_spiner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spinner_height"
+            android:layout_below="@+id/passenger_label"
+            android:layout_toRightOf="@+id/passenger_icon"
+            android:entries="@array/filter_passenger"
+            android:isScrollContainer="true"
+            android:textAlignment="textStart"
+            android:tooltipText="@string/pilihpartnerasuransi"></Spinner>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/passenger_spiner"
+            android:layout_toRightOf="@+id/passenger_icon"
+            android:background="@color/grey_bg_border" />
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/formbelipolis_btn_lanjutkan"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:background="@drawable/border_red"
+        android:layout_margin="@dimen/margin_big"
+        android:text="@string/lanjutkan"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_medium"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

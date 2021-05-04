@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <include
+        android:id="@+id/header"
+        layout="@layout/view_back"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_margin="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_m"
+                android:fontFamily="@font/ubuntu_m"
+                android:text="Tagihan yang akan dibayarkan"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/productWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:background="@drawable/border_rounded_grey_medium"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/productIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_listrik_1"
+                    app:tint="@color/yellow"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/guideline"/>
+
+                <TextView
+                    android:id="@+id/tvProductName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="PLN Pasca Bayar"
+                    android:fontFamily="@font/ubuntu_b"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/guideline"
+                    />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.25" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detail Pembayaran"
+                android:fontFamily="@font/ubuntu_b"
+                android:textSize="16sp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                tools:ignore="HardcodedText" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_m">
+
+                <TextView
+                    android:id="@+id/nomor_pelanggan_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_m"
+                    android:layout_marginRight="@dimen/margin_m"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:text="@string/nomorpelanggan"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal" />
+                <TextView
+                    android:id="@+id/nama_pelanggan_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nomor_pelanggan_label"
+                    android:layout_marginLeft="@dimen/margin_m"
+                    android:layout_marginRight="@dimen/margin_m"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:layout_marginTop="8dp"
+                    android:text="Nama Pelanggan"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/nomor_meter_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@id/nama_pelanggan_label"
+                    android:layout_marginLeft="@dimen/margin_m"
+                    android:layout_marginRight="@dimen/margin_m"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:text="Jenis Layanan"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tvPaymentPeriod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@id/nomor_meter_label"
+                    android:layout_marginLeft="@dimen/margin_m"
+                    android:layout_marginRight="@dimen/margin_m"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:text="Periode Pembayaran"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    tools:ignore="HardcodedText" />
+                <TextView
+                    android:id="@+id/tvPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@id/tvPaymentPeriod"
+                    android:layout_marginLeft="@dimen/margin_m"
+                    android:layout_marginRight="@dimen/margin_m"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:text="Harga"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    tools:ignore="HardcodedText" />
+                <TextView
+                    android:id="@+id/tvServiceFee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@id/tvPrice"
+                    android:layout_marginLeft="@dimen/margin_m"
+                    android:layout_marginRight="@dimen/margin_m"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:text="Biaya Layanan"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    tools:ignore="HardcodedText" />
+                <TextView
+                    android:id="@+id/tvAdminFee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@id/tvServiceFee"
+                    android:layout_marginLeft="@dimen/margin_m"
+                    android:layout_marginRight="@dimen/margin_m"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:text="Biaya Admin"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    tools:ignore="HardcodedText" />
+                <!-- Start of left side -->
+                <TextView
+                    android:id="@+id/tvCustomerNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="@dimen/margin_m"
+                    android:layout_marginRight="@dimen/margin_m"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/ubuntu_m"
+                    android:text="523686391272"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tvCustomerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvCustomerNumber"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="@dimen/margin_m"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="@dimen/margin_m"
+                    android:fontFamily="@font/ubuntu_m"
+                    android:text="Token Listrik Rp 200.000"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tvServiceType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvCustomerName"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="@dimen/margin_m"
+                    android:layout_marginRight="@dimen/margin_m"
+                    android:fontFamily="@font/ubuntu_m"
+                    android:text="PLN Prabayar 500"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:layout_marginTop="8dp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+                <TextView
+                    android:id="@+id/tvPaymentPeriodeVal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvServiceType"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="@dimen/margin_m"
+                    android:layout_marginRight="@dimen/margin_m"
+                    android:fontFamily="@font/ubuntu_m"
+                    android:text=""
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:layout_marginTop="8dp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+                <TextView
+                    android:id="@+id/tvPriceVal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvPaymentPeriodeVal"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="@dimen/margin_m"
+                    android:layout_marginRight="@dimen/margin_m"
+                    android:fontFamily="@font/ubuntu_m"
+                    android:text=""
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:layout_marginTop="8dp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+                <TextView
+                    android:id="@+id/tvServiceFeeVal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvPriceVal"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="@dimen/margin_m"
+                    android:layout_marginRight="@dimen/margin_m"
+                    android:fontFamily="@font/ubuntu_m"
+                    android:text=""
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:layout_marginTop="8dp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+                <TextView
+                    android:id="@+id/tvAdminFeeVal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvServiceFeeVal"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="@dimen/margin_m"
+                    android:layout_marginRight="@dimen/margin_m"
+                    android:fontFamily="@font/ubuntu_m"
+                    android:text=""
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:layout_marginTop="8dp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_m"
+                android:fontFamily="@font/ubuntu_m"
+                android:text="@string/pilihmetodepembayaran"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_normal"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleview_pembayaran"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_m"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/margin_m"
+                android:paddingRight="@dimen/margin_m">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="73dp"
+                android:background="@color/grey"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/pembayaran_total_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_m"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:text="@string/total"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal" />
+
+                <TextView
+                    android:id="@+id/pembayaran_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pembayaran_total_label"
+                    android:layout_marginLeft="@dimen/margin_m"
+                    android:layout_marginBottom="@dimen/margin_m"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:text="Rp 2.000.000"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/font_normal" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/pembayaran_btn_beli_skrg"
+                    android:layout_width="213dp"
+                    android:layout_height="56dp"
+                    android:layout_alignTop="@id/pembayaran_total_label"
+                    android:layout_alignBottom="@id/pembayaran_total"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="@dimen/margin_m"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="-14dp"
+                    android:background="@drawable/border_red"
+                    android:fontFamily="@font/ubuntu_m"
+                    android:paddingLeft="@dimen/margin_big_m"
+                    android:paddingRight="@dimen/margin_big_m"
+                    android:text="@string/belisekarang"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_normal" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:id="@+id/loading_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header"
+        android:visibility="gone"
+        android:background="#80d5d5d5">
+        <com.agrawalsuneet.dotsloader.loaders.AllianceLoader
+            android:id="@+id/loader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            app:alliance_animDuration="500"
+            app:alliance_distanceMultiplier="5"
+            app:alliance_dotsRadius="4dp"
+            app:alliance_drawOnlyStroke="true"
+            app:alliance_firstDotsColor="@color/colorPrimary"
+            app:alliance_secondDotsColor="@color/colorPrimary"
+            app:alliance_strokeWidth="8dp"
+            app:alliance_thirdDotsColor="@color/colorPrimary" />
+    </RelativeLayout>
+</RelativeLayout>

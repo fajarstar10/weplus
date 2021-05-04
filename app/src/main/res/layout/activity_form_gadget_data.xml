@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".belipolis.gadget.FormGadgetData">
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:background="@drawable/border_fill_red"
+        android:text="Lanjutkan"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_margin="16dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/gadgetOptionWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/gadgetOptionIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/margin_16"
+                app:srcCompat="@drawable/icon_awesome_barcode"
+                app:tint="@color/black_7f7f7f" />
+
+            <TextView
+                android:id="@+id/gadgetOptionLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/gadgetOptionIcon"
+                android:fontFamily="@font/ubuntu_r"
+                android:text="Serial Number"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_normal"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/etSerialNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gadgetOptionLabel"
+                android:layout_marginTop="4dp"
+                android:layout_toEndOf="@+id/gadgetOptionIcon"
+                android:background="@null"
+                android:fontFamily="@font/ubuntu_b"
+                android:hint="Masukkan serial number Gadget"
+                android:isScrollContainer="true"
+                android:textAlignment="textStart"
+                android:textColor="@color/toogle_enabled"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText"/>
+
+            <TextView
+                android:id="@+id/errorTextGadgetSerialNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/gadgetLine"
+                android:layout_toEndOf="@id/gadgetOptionIcon"
+                android:text="Silahkan isi data"
+                android:textColor="@color/red_burem"
+                android:textSize="12sp"
+                android:visibility="gone"
+                tools:ignore="HardcodedText" />
+
+            <View
+                android:id="@+id/gadgetLine"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/etSerialNumber"
+                android:layout_toEndOf="@+id/gadgetOptionIcon"
+                android:background="@color/grey_bg_border" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/gadgetBrandWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <ImageView
+                android:id="@+id/gadgetBrandIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/margin_16"
+                app:srcCompat="@drawable/icon_awesome_barcode"
+                app:tint="@color/black_7f7f7f" />
+
+            <TextView
+                android:id="@+id/gadgetBrandLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/gadgetBrandIcon"
+                android:fontFamily="@font/ubuntu_r"
+                android:text="IMEI"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_normal"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/etGadgetImei"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gadgetBrandLabel"
+                android:layout_marginTop="4dp"
+                android:layout_toEndOf="@+id/gadgetBrandIcon"
+                android:background="@null"
+                android:fontFamily="@font/ubuntu_b"
+                android:hint="Masukkan IMEI"
+                android:isScrollContainer="true"
+                android:textAlignment="textStart"
+                android:textColor="@color/toogle_enabled"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/errorTextGadgetImei"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/gadgetBrandLine"
+                android:layout_toEndOf="@id/gadgetBrandIcon"
+                android:text="Silahkan pilih data"
+                android:textColor="@color/red_burem"
+                android:textSize="12sp"
+                android:visibility="gone"
+                tools:ignore="HardcodedText" />
+
+            <View
+                android:id="@+id/gadgetBrandLine"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/etGadgetImei"
+                android:layout_toEndOf="@+id/gadgetBrandIcon"
+                android:background="@color/grey_bg_border" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/view_back"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+</RelativeLayout>

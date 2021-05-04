@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".belipolis.kesehatan.MohonMenunggu">
+
+    <include layout="@layout/view_back" />
+
+    <TextView
+        android:id="@+id/tv_katasandi_ygdikirim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_m"
+        android:layout_marginTop="@dimen/margin_300"
+        android:layout_marginRight="@dimen/margin_m"
+        android:gravity="center_horizontal"
+        android:text="@string/mohontunggusebentar"
+        android:textColor="@color/grey_medium"
+        android:textSize="@dimen/font_normal"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tdk_menerima_kata_sandi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sedangmengumpulkandatayangdiperlukan"
+        android:textColor="@color/grey_medium"
+        android:gravity="center_horizontal"
+        android:textSize="@dimen/font_normal"/>
+
+</LinearLayout>

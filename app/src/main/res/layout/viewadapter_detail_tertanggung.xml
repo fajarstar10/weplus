@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin"
+    android:background="@color/white"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:paddingLeft="@dimen/margin_m"
+    android:paddingTop="@dimen/margin"
+    android:paddingRight="@dimen/margin_m"
+    android:paddingBottom="@dimen/margin">
+
+    <ImageView
+        android:id="@+id/detailpolis_img_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="16dp"
+        app:srcCompat="@drawable/ic_baseline_verified_user_24" />
+
+    <TextView
+        android:id="@+id/detailpolis_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_m"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@+id/detailpolis_img_icon"
+        android:fontFamily="@font/ubuntu_b"
+        android:text="title"
+        android:textColor="@color/black_7070"
+        android:textSize="@dimen/font_normal" />
+
+    <TextView
+        android:id="@+id/detailpolis_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/detailpolis_title"
+        android:layout_marginStart="@dimen/margin_m"
+        android:layout_toStartOf="@id/viewadapterprofillist_next"
+        android:layout_toEndOf="@+id/detailpolis_img_icon"
+        android:fontFamily="@font/ubuntu_r"
+        android:text="description"
+        android:textColor="@color/grey_medium"
+        android:textSize="@dimen/font_normal" />
+
+    <TextView
+        android:id="@+id/detailpolis_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/detailpolis_desc"
+        android:layout_marginStart="@dimen/margin_m"
+        android:layout_toStartOf="@id/viewadapterprofillist_next"
+        android:layout_toEndOf="@+id/detailpolis_img_icon"
+        android:fontFamily="@font/ubuntu_r"
+        android:text="description"
+        android:textColor="@color/grey_medium"
+        android:textSize="@dimen/font_normal"
+        android:visibility="gone" />
+
+
+    <TextView
+        android:id="@+id/detailpolis_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/detailpolis_email"
+        android:layout_marginStart="@dimen/margin_m"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_toEndOf="@+id/detailpolis_img_icon"
+        android:background="@color/green"
+        android:fontFamily="@font/ubuntu_b"
+        android:paddingLeft="@dimen/margin_big"
+        android:paddingTop="3dp"
+        android:paddingRight="@dimen/margin_big"
+        android:paddingBottom="3dp"
+        android:text="Aktif"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_normal" />
+
+    <ImageView
+        android:id="@+id/viewadapterprofillist_next"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        app:srcCompat="@drawable/ic_chevron_right_black_24dp"
+        app:tint="@color/grey_medium" />
+
+</RelativeLayout>

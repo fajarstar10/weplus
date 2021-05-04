@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey">
+
+    <include
+        android:id="@+id/informasi_top"
+        layout="@layout/view_back"/>
+
+    <TextView
+        android:id="@+id/informasi_title_mikro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:text="@string/asuransimikro"
+        android:fontFamily="@font/ubuntu_b"
+        android:textSize="@dimen/font_super_big"
+        android:layout_below="@id/informasi_top"
+        android:layout_margin="@dimen/margin_m"/>
+
+    <TextView
+        android:id="@+id/informasi_desc_mikro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey_medium"
+        android:text="@string/asuransimikroadalah"
+        android:fontFamily="@font/ubuntu_r"
+        android:textSize="@dimen/font_normal"
+        android:justificationMode="inter_word"
+        android:layout_below="@id/informasi_title_mikro"
+        android:layout_marginLeft="@dimen/margin_m"
+        android:layout_marginRight="@dimen/margin_m"/>
+    <TextView
+        android:id="@+id/informasi_title_general"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:text="@string/asuransigeneral"
+        android:fontFamily="@font/ubuntu_b"
+        android:textSize="@dimen/font_super_big"
+        android:layout_below="@id/informasi_desc_mikro"
+        android:layout_margin="@dimen/margin_m"/>
+    <TextView
+        android:id="@+id/informasi_desc_general"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey_medium"
+        android:text="@string/asuransgeneraladalah"
+        android:fontFamily="@font/ubuntu_r"
+        android:textSize="@dimen/font_normal"
+        android:justificationMode="inter_word"
+        android:layout_below="@id/informasi_title_general"
+        android:layout_marginLeft="@dimen/margin_m"
+        android:layout_marginRight="@dimen/margin_m"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/informasi_btn_kembali"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/margin_m"
+        android:background="@drawable/border_red"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/kembali"
+        android:fontFamily="@font/ubuntu_b"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_normal" />
+
+</RelativeLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingVertical="24dp"
+            android:paddingHorizontal="18dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/kategoribelipolis_recycleview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false">
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+
+
+    <!--</android.support.v4.widget.NestedScrollView>-->
+
+    <RelativeLayout
+        android:id="@+id/kategoribelipolis_layout_semua"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/transparent"
+        android:visibility="gone">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="200dp"
+            android:background="@color/white"
+            app:cardCornerRadius="5dp"
+            app:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/semuakategori_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="@dimen/margin"
+                    android:text="@string/semuakategori"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_big"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/semuakategori_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/semuakategori_title"
+                    android:text="@string/asuransiygkamuperlukansemua"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/semuakategori_btn_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/margin"
+                    android:background="@color/red"
+                    android:paddingLeft="@dimen/margin_m"
+                    android:paddingTop="2dp"
+                    android:paddingRight="@dimen/margin_m"
+                    android:paddingBottom="2dp"
+                    android:text="@string/tutup"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_normal"
+                    android:textStyle="normal" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/semuakategori_recycleview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/semuakategori_description"
+                    android:layout_marginTop="@dimen/margin"
+                    android:background="@color/white">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+</RelativeLayout>

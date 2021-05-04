@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@+id/toolbarWrapper"
+        layout="@layout/view_back" />
+    <LinearLayout
+        android:layout_below="@id/toolbarWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        app:cardElevation="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/transaksi_riwayat_pembayaran"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:background="@color/white"
+                android:drawableStart="@drawable/ic_riwayatpembayaran"
+                android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24px"
+                android:drawablePadding="@dimen/margin_17"
+                android:fontFamily="@font/ubuntu_r"
+                android:paddingTop="@dimen/margin_17"
+                android:paddingBottom="@dimen/margin_17"
+                android:layout_gravity="center"
+                android:text="@string/lihattransaksiriwayatpembayaran"
+                android:textColor="@color/grey_medium"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+<!--    <View-->
+<!--        android:id="@+id/line1"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:background="@color/grey_medium"-->
+<!--        android:layout_below="@id/dialog_desc"-->
+<!--        android:layout_marginTop="12dp" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_big">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rec_tagihan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:clipToPadding="false">
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/loader_bg"
+        android:orientation="vertical"
+        android:layout_below="@id/toolbarWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey">
+    <com.agrawalsuneet.dotsloader.loaders.AllianceLoader
+        android:id="@+id/loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:alliance_animDuration="500"
+        app:alliance_distanceMultiplier="5"
+        app:alliance_dotsRadius="4dp"
+        app:alliance_drawOnlyStroke="true"
+        app:alliance_firstDotsColor="@color/colorPrimary"
+        app:alliance_secondDotsColor="@color/colorPrimary"
+        app:alliance_strokeWidth="8dp"
+        app:alliance_thirdDotsColor="@color/colorPrimary" />
+    </RelativeLayout>
+</RelativeLayout>
+

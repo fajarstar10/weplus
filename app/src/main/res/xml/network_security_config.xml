@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">147.139.133.1</domain>
+        <domain includeSubdomains="true">uat.weplus.id</domain>
+        <domain includeSubdomains="true">weplus.id</domain>
+        <domain includeSubdomains="true">prixa.ai</domain>
+    </domain-config>
+</network-security-config>

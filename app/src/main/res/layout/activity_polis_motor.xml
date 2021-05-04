@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/motor_top"
+        layout="@layout/view_back" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/motor_top">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/grey"
+            android:padding="@dimen/margin_m">
+
+            <ImageView
+                android:id="@+id/motor_plan_asuransi_icon"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/motor_plan_asuransi_label"
+                android:layout_alignBottom="@+id/motor_mikro_general"
+                android:paddingRight="@dimen/margin"
+                android:src="@drawable/ic_baseline_beach_access_24px" />
+
+            <TextView
+                android:id="@+id/motor_plan_asuransi_label"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/icon"
+                android:layout_toRightOf="@id/motor_plan_asuransi_icon"
+                android:layout_alignParentTop="true"
+                android:gravity="center_vertical"
+                android:text="@string/planasuransi"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_normal" />
+
+            <LinearLayout
+                android:id="@+id/motor_mikro_general"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/motor_plan_asuransi_icon"
+                android:layout_below="@+id/motor_plan_asuransi_label"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/btn_mikro"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@drawable/border_grey"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="@dimen/margin_small"
+                    android:paddingBottom="@dimen/margin_small"
+                    android:text="@string/mikro"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_medium"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/btn_general"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_big"
+                    android:layout_weight="1"
+                    android:background="@drawable/border_grey_stroke_greymedium"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="@dimen/margin_small"
+                    android:paddingBottom="@dimen/margin_small"
+                    android:text="@string/general"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_medium"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/motor_line_mikro_general"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/motor_mikro_general"
+                android:layout_marginTop="@dimen/margin"
+                android:layout_alignLeft="@id/motor_mikro_general"
+                android:background="@color/grey_bg_border" />
+
+            <TextView
+                android:id="@+id/motor_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/motor_line_mikro_general"
+                android:layout_alignLeft="@id/motor_mikro_general"
+                android:drawableRight="@drawable/ic_baseline_error_outline_24px"
+                android:drawablePadding="@dimen/margin_small"
+                android:gravity="center_vertical"
+                android:paddingTop="@dimen/margin_small"
+                android:paddingBottom="@dimen/margin_m"
+                android:text="@string/apaituplanasuransimikro"
+                android:textColor="@color/blue_2"
+                android:textSize="@dimen/font_midle"
+                android:fontFamily="@font/ubuntu_b" />
+
+            <!-- start tahun produksi -->
+            <ImageView
+                android:id="@+id/motor_thn_produksi_icon"
+                android:layout_width="24dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/motor_desc"
+                android:layout_alignTop="@+id/polismotor_thn_prod_label"
+                android:layout_alignBottom="@+id/motor_thn_produksi"
+                android:layout_marginRight="@dimen/margin"
+                android:src="@drawable/ic_build_24_px" />
+
+            <TextView
+                android:id="@+id/polismotor_thn_prod_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/motor_desc"
+                android:layout_toRightOf="@+id/motor_thn_produksi_icon"
+                android:text="@string/tahunproduksi"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_r"/>
+
+            <EditText
+                android:id="@+id/motor_thn_produksi"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spinner_height"
+                android:layout_below="@id/polismotor_thn_prod_label"
+                android:layout_toRightOf="@id/motor_thn_produksi_icon"
+                android:background="@null"
+                android:focusable="false"
+                android:hint="@string/pilihtahunproduksi"
+                android:paddingLeft="0dp"
+                android:textColor="@color/grey_medium"
+                android:textColorHint="@color/grey_medium"
+                android:fontFamily="@font/ubuntu_b"/>
+
+            <View
+                android:id="@+id/motor_line_thn_produksi"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/motor_thn_produksi"
+                android:layout_toRightOf="@id/motor_thn_produksi_icon"
+                android:background="@color/grey_bg_border" />
+            <!-- END tahun produksi-->
+
+            <!-- START merek-->
+            <ImageView
+                android:id="@+id/motor_merek_icon"
+                android:layout_width="24dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/motor_line_thn_produksi"
+                android:layout_alignTop="@+id/motor_merek_label"
+                android:layout_alignBottom="@+id/motor_merek"
+                android:layout_marginRight="@dimen/margin"
+                android:src="@drawable/ic_baseline_motorcycle_24px" />
+
+            <TextView
+                android:id="@+id/motor_merek_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/motor_line_thn_produksi"
+                android:layout_marginTop="@dimen/margin"
+                android:layout_toRightOf="@+id/motor_merek_icon"
+                android:text="@string/merek"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_r"/>
+
+            <EditText
+                android:id="@+id/motor_merek"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spinner_height"
+                android:layout_below="@id/motor_merek_label"
+                android:layout_toRightOf="@id/motor_merek_icon"
+                android:background="@null"
+                android:hint="@string/pilihmerekmotor"
+                android:paddingLeft="0dp"
+                android:textColor="@color/grey_medium"
+                android:textColorHint="@color/grey_medium"
+                android:fontFamily="@font/ubuntu_b" />
+
+            <View
+                android:id="@+id/motor_line_merek"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/motor_merek"
+                android:layout_toRightOf="@id/motor_merek_icon"
+                android:background="@color/grey_bg_border" />
+            <!-- END merek -->
+
+            <!-- START seri motor -->
+            <ImageView
+                android:id="@+id/motor_seri_motor_icon"
+                android:layout_width="24dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/motor_line_merek"
+                android:layout_alignTop="@+id/motor_seri_motor_label"
+                android:layout_alignBottom="@+id/motor_seri_motor"
+                android:layout_marginRight="@dimen/margin"
+                android:src="@drawable/ic_baseline_motorcycle_24px" />
+
+            <TextView
+                android:id="@+id/motor_seri_motor_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/motor_line_merek"
+                android:layout_marginTop="@dimen/margin"
+                android:layout_toRightOf="@+id/motor_seri_motor_icon"
+                android:text="@string/serimotor"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_r"/>
+
+            <Spinner
+                android:id="@+id/motor_seri_motor"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spinner_height"
+                android:layout_below="@id/motor_seri_motor_label"
+                android:layout_toRightOf="@id/motor_seri_motor_icon"
+                android:background="@null"
+                android:entries="@array/daftar_seri_motor"
+                android:paddingLeft="0dp"
+                android:textColor="@color/grey_medium"
+                android:textColorHint="@color/grey_medium"
+                style="@style/MySpinner" />
+
+            <View
+                android:id="@+id/motor_seri_motor_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/motor_seri_motor"
+                android:layout_toRightOf="@id/motor_seri_motor_icon"
+                android:background="@color/grey_bg_border" />
+            <!-- END seri motor -->
+
+            <!-- START plat wilayah -->
+            <ImageView
+                android:id="@+id/motor_plat_icon"
+                android:layout_width="24dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/motor_seri_motor_line"
+                android:layout_alignTop="@+id/motor_plat_label"
+                android:layout_alignBottom="@+id/motor_plat"
+                android:layout_marginRight="@dimen/margin"
+                android:src="@drawable/ic_plat" />
+
+            <TextView
+                android:id="@+id/motor_plat_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/motor_seri_motor_line"
+                android:layout_marginTop="@dimen/margin"
+                android:layout_toRightOf="@+id/motor_plat_icon"
+                android:text="@string/platwilayah"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_r"/>
+
+            <Spinner
+                android:id="@+id/motor_plat"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spinner_height"
+                android:layout_below="@id/motor_plat_label"
+                android:layout_toRightOf="@id/motor_plat_icon"
+                android:background="@null"
+                android:entries="@array/daftar_plat_wilayah"
+                android:paddingLeft="0dp"
+                android:textColor="@color/grey_medium"
+                android:textColorHint="@color/grey_medium"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/motor_plat_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/motor_plat"
+                android:layout_toRightOf="@id/motor_plat_icon"
+                android:background="@color/grey_bg_border" />
+            <!-- END plat wilayah -->
+
+            <!-- START tipe asuransi -->
+            <ImageView
+                android:id="@+id/motor_type_asuransi_icon"
+                android:layout_width="24dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/motor_plat_line"
+                android:layout_alignTop="@+id/motor_type_asuransi_label"
+                android:layout_alignBottom="@+id/motor_type_asuransi"
+                android:layout_marginRight="@dimen/margin"
+                android:src="@drawable/ic_type_asuransi" />
+
+            <TextView
+                android:id="@+id/motor_type_asuransi_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/motor_plat_line"
+                android:layout_marginTop="@dimen/margin"
+                android:layout_toRightOf="@+id/motor_type_asuransi_icon"
+                android:text="@string/tipeasuransi"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_r"/>
+
+            <EditText
+                android:id="@+id/motor_type_asuransi"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spinner_height"
+                android:layout_below="@id/motor_type_asuransi_label"
+                android:layout_toRightOf="@id/motor_type_asuransi_icon"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="Total Loss Only"
+                android:paddingLeft="0dp"
+                android:textColor="@color/grey_medium"
+                android:textColorHint="@color/grey_medium"
+                android:fontFamily="@font/ubuntu_b"/>
+
+            <View
+                android:id="@+id/motor_tipe_asuransi_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/motor_type_asuransi"
+                android:layout_toRightOf="@id/motor_type_asuransi_icon"
+                android:background="@color/grey_bg_border" />
+            <!--END tipe asuransi -->
+
+
+
+            <RelativeLayout
+                android:id="@+id/motor_layout_general"
+                android:layout_below="@+id/motor_tipe_asuransi_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <!-- start nominal -->
+                <ImageView
+                    android:id="@+id/pemegangpolis_nonimal_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/pemegangpolis_label_nominal"
+                    android:layout_alignBottom="@+id/motor_nominal"
+                    android:layout_marginRight="@dimen/margin"
+                    android:src="@drawable/ic_nominal" />
+
+                <TextView
+                    android:id="@+id/pemegangpolis_label_nominal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/pemegangpolis_nonimal_icon"
+                    android:text="@string/nominalkecelakaanpengemudi"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal" />
+
+                <EditText
+                    android:id="@+id/motor_nominal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spinner_height"
+                    android:layout_below="@id/pemegangpolis_label_nominal"
+                    android:layout_toRightOf="@id/pemegangpolis_nonimal_icon"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:hint="@string/nominalkecelakaanpengemudi"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="0dp"
+                    android:textColor="@color/grey_medium"
+                    android:textColorHint="@color/grey_medium"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/line_nominal"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/motor_nominal"
+                    android:layout_toRightOf="@id/pemegangpolis_nonimal_icon"
+                    android:background="@color/grey_bg_border" />
+                <!-- END nominal-->
+
+                <!-- START premi-->
+                <ImageView
+                    android:id="@+id/pemegangpolis_premi_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/line_nominal"
+                    android:layout_alignTop="@+id/pemegangpolis_label_premi"
+                    android:layout_alignBottom="@+id/motor_premi"
+                    android:layout_marginRight="@dimen/margin"
+                    android:src="@drawable/ic_nominal" />
+
+                <TextView
+                    android:id="@+id/pemegangpolis_label_premi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/line_nominal"
+                    android:layout_marginTop="@dimen/margin"
+                    android:layout_toRightOf="@+id/pemegangpolis_premi_icon"
+                    android:text="@string/premikecelakaanpenumpang"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal" />
+
+                <EditText
+                    android:id="@+id/motor_premi"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spinner_height"
+                    android:layout_below="@id/pemegangpolis_label_premi"
+                    android:layout_toRightOf="@id/pemegangpolis_premi_icon"
+                    android:background="@null"
+                    android:hint="@string/premikecelakaanpenumpang"
+                    android:paddingLeft="0dp"
+                    android:textColor="@color/grey_medium"
+                    android:textColorHint="@color/grey_medium"
+                    android:gravity="center_vertical"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/line_premi"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/motor_premi"
+                    android:layout_toRightOf="@id/pemegangpolis_premi_icon"
+                    android:background="@color/grey_bg_border" />
+                <!-- END premi -->
+
+                <!-- START tambahan -->
+                <ImageView
+                    android:id="@+id/pemegangpolis_tambahan_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/line_premi"
+                    android:layout_alignTop="@+id/pemegangpolis_label_tambahan"
+                    android:layout_alignBottom="@id/motor_tambahan"
+                    android:layout_marginRight="@dimen/margin"
+                    android:src="@drawable/ic_beach_access_24" />
+
+                <TextView
+                    android:id="@+id/pemegangpolis_label_tambahan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin"
+                    android:layout_below="@+id/line_premi"
+                    android:layout_toRightOf="@+id/pemegangpolis_tambahan_icon"
+                    android:text="@string/tambahanperlindungan"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal" />
+
+                <TextView
+                    android:id="@+id/motor_tambahan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/spinner_height"
+                    android:layout_below="@id/pemegangpolis_label_tambahan"
+                    android:layout_toRightOf="@id/pemegangpolis_tambahan_icon"
+                    android:background="@null"
+                    android:hint="@string/pilihtambahanperlindungan"
+                    android:paddingLeft="0dp"
+                    android:textColor="@color/grey_medium"
+                    android:textColorHint="@color/grey_medium"
+                    android:gravity="center_vertical"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/motor_arrow_tambahan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_baseline_arrow_forward_ios_24px"
+                    android:layout_below="@id/pemegangpolis_label_tambahan"
+                    android:layout_alignParentRight="true"/>
+
+                <View
+                    android:id="@+id/line_tambahan"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/motor_tambahan"
+                    android:layout_toRightOf="@id/pemegangpolis_tambahan_icon"
+                    android:background="@color/grey_bg_border" />
+                <!-- END tambahan -->
+
+            </RelativeLayout>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/motor_btn_lanjutkan"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height"
+                android:layout_below="@+id/motor_layout_general"
+                android:layout_marginTop="@dimen/margin_m"
+                android:background="@drawable/border_red"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/lanjutkan"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="@dimen/font_normal" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

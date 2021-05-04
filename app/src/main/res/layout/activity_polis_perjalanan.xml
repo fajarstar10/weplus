@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey">
+
+    <include
+        android:id="@+id/perjalanan_top"
+        layout="@layout/view_back"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/perjalanan_top">
+
+            <ImageView
+                android:id="@+id/perjalanan_image_icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/layer_0"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"/>
+
+            <TextView
+                android:id="@+id/perjalanan_label_urutakan_by"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/urutkanberdasarkan"
+                android:padding="@dimen/margin_m"
+                android:layout_below="@+id/perjalanan_image_icon"
+                android:textSize="12sp"
+                android:fontFamily="@font/ubuntu_b"
+                android:textColor="@color/black_7777"
+                android:background="@color/white"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/perjalanan_partner_rec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/perjalanan_label_urutakan_by"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/margin_m"
+                android:paddingRight="@dimen/margin_m"
+                android:paddingBottom="@dimen/margin_m">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/perjalanan_partner_rec_by_filter"
+                android:layout_below="@id/perjalanan_partner_rec"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="@dimen/margin_m"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </RelativeLayout>
+
+</RelativeLayout>

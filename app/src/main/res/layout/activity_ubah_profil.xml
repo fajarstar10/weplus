@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/grey">
+
+    <RelativeLayout
+        android:id="@+id/satu"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/red"
+        android:paddingLeft="@dimen/margin_m"
+        android:paddingRight="@dimen/margin_m">
+
+        <TextView
+            android:id="@+id/ubahprofil_btn_batal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/ubuntu_b"
+            android:text="@string/batal"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/ubuntu_b"
+            android:text="@string/ubahprofil"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/ubahprofil_btn_simpan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/ubuntu_b"
+            android:text="@string/simpan"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/dua"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/satu"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_m"
+        android:layout_marginBottom="@dimen/margin_m"
+        android:fontFamily="@font/ubuntu_b"
+        android:text="@string/namadanfotoprofil"
+        android:textColor="@color/black_7777"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:id="@+id/tiga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dua"
+        android:background="@color/white"
+        android:paddingStart="@dimen/margin_16"
+        android:paddingTop="@dimen/margin"
+        android:paddingEnd="@dimen/margin_16"
+        android:paddingBottom="@dimen/margin">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/ubahprofil_img_profil"
+            android:layout_width="72dp"
+            android:layout_height="71dp"
+            app:srcCompat="@drawable/ic_baseline_person_24px" />
+
+        <ImageView
+            android:id="@+id/ubahprofil_ic_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/ubahprofil_img_profil"
+            android:layout_alignBottom="@+id/ubahprofil_img_profil"
+            app:srcCompat="@drawable/ic_plus" />
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12dp"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_toEndOf="@+id/ubahprofil_img_profil"
+            android:fontFamily="@font/ubuntu_m"
+            android:text="@string/aturprofilwe"
+            android:textColor="@color/grey_medium"
+            android:textSize="11sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/empat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tiga"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_m"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:layout_marginBottom="@dimen/margin_m"
+        android:background="@color/grey"
+        android:fontFamily="@font/ubuntu_b"
+        android:text="@string/informasipribadi"
+        android:textColor="@color/black_7777"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:id="@+id/lima"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/empat"
+        android:background="@color/white"
+        android:paddingTop="@dimen/margin_13">
+
+        <TextView
+            android:id="@+id/enam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:fontFamily="@font/ubuntu_b"
+            android:paddingStart="@dimen/margin_16"
+            android:text="@string/namalengkap"
+            android:textColor="@color/grey_medium"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/ubahprofil_btn_ubah_nama_lengkap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@color/white"
+            android:fontFamily="@font/ubuntu_b"
+            android:paddingEnd="@dimen/margin_16"
+            android:text="@string/ubah"
+            android:textAllCaps="true"
+            android:textColor="@color/red"
+            android:textSize="12sp" />
+
+        <View
+            android:id="@+id/tujuh"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/ubahprofil_btn_ubah_nama_lengkap"
+            android:layout_marginTop="@dimen/margin_m"
+            android:background="@color/grey_bg_border" />
+
+        <TextView
+            android:id="@+id/ubahprofil_nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tujuh"
+            android:layout_marginTop="@dimen/margin_m"
+            android:layout_marginBottom="@dimen/margin_m"
+            android:fontFamily="@font/ubuntu_m"
+            android:paddingStart="@dimen/margin_16"
+            android:paddingEnd="@dimen/margin_16"
+            android:text="Henry Chrystianto"
+            android:textColor="@color/grey_medium"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/delapan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lima"
+        android:layout_marginTop="@dimen/margin_m"
+        android:background="@color/white"
+        android:paddingTop="@dimen/margin_m">
+
+        <TextView
+            android:id="@+id/sembilan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:fontFamily="@font/ubuntu_b"
+            android:paddingStart="@dimen/margin_16"
+            android:text="@string/alamatemail"
+            android:textColor="@color/grey_medium"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/ubahprofil_btn_ubah_alamat_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@color/white"
+            android:fontFamily="@font/ubuntu_b"
+            android:paddingEnd="@dimen/margin_16"
+            android:text="@string/ubah"
+            android:textAllCaps="true"
+            android:textColor="@color/red"
+            android:textSize="12sp"
+            android:visibility="gone"/>
+
+        <View
+            android:id="@+id/sepuluh"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/sembilan"
+            android:layout_marginTop="@dimen/margin_m"
+            android:background="@color/grey_bg_border" />
+
+        <TextView
+            android:id="@+id/ubahprofil_alamat_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sepuluh"
+            android:layout_marginTop="@dimen/margin_m"
+            android:fontFamily="@font/ubuntu_m"
+            android:paddingStart="@dimen/margin_16"
+            android:paddingEnd="@dimen/margin_16"
+            android:text="henry@gmail.com"
+            android:textColor="@color/grey_medium"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ubahprofil_alamat_email"
+            android:layout_marginBottom="@dimen/margin_m"
+            android:fontFamily="@font/ubuntu_r"
+            android:paddingStart="@dimen/margin_16"
+            android:paddingEnd="@dimen/margin_16"
+            android:text="@string/alamatemailuntukmenerima"
+            android:textColor="@color/blue_2"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sebelas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/delapan"
+        android:layout_marginTop="@dimen/margin_m"
+        android:background="@color/white"
+        android:paddingTop="@dimen/margin_m">
+
+        <TextView
+            android:id="@+id/duabelas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:fontFamily="@font/ubuntu_b"
+            android:paddingStart="@dimen/margin_16"
+            android:text="@string/nomortelepon"
+            android:textColor="@color/grey_medium"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/ubahprofil_btn_ubah_nomor_telp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@color/white"
+            android:fontFamily="@font/ubuntu_b"
+            android:paddingEnd="@dimen/margin_16"
+            android:text="@string/ubah"
+            android:textAllCaps="true"
+            android:textColor="@color/red"
+            android:textSize="12sp" />
+
+        <View
+            android:id="@+id/tigabelas"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/ubahprofil_btn_ubah_nomor_telp"
+            android:layout_marginTop="@dimen/margin_m"
+            android:background="@color/grey_bg_border" />
+
+        <TextView
+            android:id="@+id/ubahprofil_nomor_telepon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tigabelas"
+            android:layout_marginTop="@dimen/margin_m"
+            android:fontFamily="@font/ubuntu_m"
+            android:paddingStart="@dimen/margin_16"
+            android:paddingEnd="@dimen/margin_16"
+            android:text="+628123456789"
+            android:textColor="@color/black_7070"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ubahprofil_nomor_telepon"
+            android:layout_marginBottom="@dimen/margin_m"
+            android:fontFamily="@font/ubuntu_r"
+            android:paddingStart="@dimen/margin_16"
+            android:paddingEnd="@dimen/margin_16"
+            android:text="@string/sudahterferivikasi"
+            android:textColor="@color/grey_medium"
+            android:textSize="10sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/loading_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/satu"
+        android:visibility="gone"
+        android:background="#80d5d5d5">
+        <com.agrawalsuneet.dotsloader.loaders.AllianceLoader
+            android:id="@+id/loader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            app:alliance_animDuration="500"
+            app:alliance_distanceMultiplier="5"
+            app:alliance_dotsRadius="4dp"
+            app:alliance_drawOnlyStroke="true"
+            app:alliance_firstDotsColor="@color/colorPrimary"
+            app:alliance_secondDotsColor="@color/colorPrimary"
+            app:alliance_strokeWidth="8dp"
+            app:alliance_thirdDotsColor="@color/colorPrimary" />
+    </RelativeLayout>
+
+</RelativeLayout>

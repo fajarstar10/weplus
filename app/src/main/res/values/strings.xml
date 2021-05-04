@@ -1,0 +1,489 @@
+<resources>
+    <string name="app_name">WE+</string>
+    <string name="beranda">Beranda</string>
+    <string name="transaksi">Transaksi</string>
+    <string name="affiliasi">Affiliasi</string>
+    <string name="profil">Profil</string>
+    <string name="sampletext">Loli\nKami sudah terproteksi oleh Axa insurance</string>
+    <string name="bayartagihanataulainlain">Bayar Tagihan atau lain-lain</string>
+    <string name="telusuriweplus">Telusuri WE+</string>
+    <string name="promoterbaruuntukkamu">Promo terbaru untuk kamu</string>
+    <string name="belipolis">Beli Polis</string>
+    <string name="product_asuransi">Product Asuransi</string>
+    <string name="product_asuransi_desc">Pilih berbagai asuransi yang tersedia</string>
+    <string name="pilihberbagaijenisasuransiyangtersedia">Pilih berbagai jenis asuransi yang tersedia</string>
+    <string name="lengkapidatamobilyangdiasuransikan">Lengkapi data mobil yang diasuransikan</string>
+    <string name="kategori">Kategori</string>
+    <string name="perusahaan">Perusahaan</string>
+    <string name="produkfavorit">Produk Favorit</string>
+    <string name="selamatdatang">Selamat Datang di WE+</string>
+    <string name="rasakanmudahnyamembeliasuransi">Rasakan mudahnya membeli asuransi\ndalam smartphone milik Anda!</string>
+    <string name="login">Login</string>
+    <string name="signup">Sign Up</string>
+    <string name="atau">Atau</string>
+    <string name="email">Email</string>
+    <string name="katasandi">Kata Sandi</string>
+    <string name="lupakatasandi">Lupa Kata Sandi?</string>
+    <string name="ataulogindengan">Atau login dengan</string>
+    <string name="namalengkap">Nama Lengkap</string>
+    <string name="alamatemail">Alamat Email</string>
+    <string name="nomortelepon">Nomor Telepon</string>
+    <string name="daftar">Daftar</string>
+    <string name="kodeverifikasisudahdikirim">Kode Verifikasi Sudah dikirim !</string>
+    <string name="kamitelahmengirimkode">Kami telah mengirim kode verifikasi ke nomor telepon Anda. Masukkan kode untuk memverifikasi perangkat ini.</string>
+    <string name="tidakmenerimakode">Tidak menerima kode?</string>
+    <string name="konfirmasi">Konfirmasi</string>
+    <string name="profilsaya">Profil Saya</string>
+    <string name="ubahprofil">Ubah Profil</string>
+    <string name="keluar">Keluar</string>
+    <string name="empty_field">Data tidak boleh kosong</string>
+    <string name="error_not_valid_email">Email tidak benar</string>
+    <string name="masuk">Masuk</string>
+    <string name="maafkodesalah">Maaf, kode yang Anda masukkan salah</string>
+    <string name="verifikasi">Verifikasi</string>
+    <string name="namayangandamasukkan">Nama yang Anda masukkan akan disimpan sebagai kontak</string>
+    <string name="simpan">Simpan</string>
+    <string name="emailakandigunakanuntukmenerima">Email akan digunakan untuk menerima e-polis yang dibeli</string>
+    <string name="emaillengkap">Email Lengkap</string>
+    <string name="ubahnamalengkap">Ubah Nama Lengkap</string>
+    <string name="ubahalamatemail">Ubah Alamat Email</string>
+    <string name="batal">Batal</string>
+    <string name="namadanfotoprofil"><![CDATA[Nama & Foto Profil]]></string>
+    <string name="aturprofilwe">Atur profil WE+ Anda dengan menambahkan gambar Anda</string>
+    <string name="informasipribadi">Informasi Pribadi</string>
+    <string name="ubah">Ubah</string>
+    <string name="alamatemailuntukmenerima">Alamat email untuk menerima pemberitahuan e-polis yang dibeli</string>
+    <string name="sudahterferivikasi">Sudah Terverifikasi</string>
+    <string name="nomorponselakandigunakanuntuk">Nomor ponsel akan digunakan untuk masuk, menerima pemberitahuan, dan mengatur ulang kata sandi</string>
+    <string name="negara">Negara</string>
+    <string name="negaraperjalanan">Klik disini untuk mencari negara perjalanan</string>
+    <string name="provinsiperjalanan">Klik disini untuk mencari provinsi perjalanan</string>
+    <string name="kotaperjalanan">Klik disini untuk mencari kota perjalanan</string>
+    <string name="individual">Individual</string>
+    <string name="keluarga">Keluarga</string>
+    <string name="lupapassword">Lupa Password?</string>
+    <string name="konfirmasitagihanlistrik">Konfirmasi</string>
+    <string name="partneryangbekerjasamadenganweplus">Partner yang bekerjasama dengan WE+</string>
+    <string name="transaksisaya">Transaksi Saya</string>
+    <string name="melihatdaftartransaksiygdilakukan">Melihat Daftar Transaksi yang dilakukan</string>
+    <string name="lakukanpembayarandenganmetodepembayaran">Lakukan pembayaran sesuai metode pembayaran</string>
+    <string name="mohontunggusebentar">Mohon Tunggu Sebentar</string>
+    <string name="sedangmengumpulkandatayangdiperlukan">Sedang mengumpulkan data yang diperlukan</string>
+    <string name="konvensional">Konvensional</string>
+    <string name="mikroasuransi">Mikro</string>
+    <string name="urutkansesuaidatamotor">Urutkan sesuai data motor</string>
+    <string name="merk">Merk</string>
+    <string name="totallossonly">Total Loss Only</string>
+    <string name="idtransaksi">ID Transaksi</string>
+    <string name="harga_tagihan">Harga</string>
+    <string name="totalharga">Total Harga</string>
+    <string name="metodepembayarantagihanlistrik">Metode Pembayaran</string>
+    <string name="akanbatalsetelah">Akan batal setelah</string>
+    <string name="axacareprotection">AXA Care Protection</string>
+    <string name="tagihantokenlistrik">Token Listrik</string>
+    <string name="pembayaran">Pembayaran</string>
+    <string name="asuransikesehatan">Asuransi Kesehatan</string>
+    <string name="urutkansesuaidatakeluarga">Urutkan sesuai data keluarga</string>
+    <string name="tagihan">Tagihan</string>
+    <string name="bayar">Bayar</string>
+    <string name="bayartagihanbpjs">Bayar Bpjs</string>
+    <string name="bayartagihanlistrik">Bayar Tagihan Listrik</string>
+    <string name="tagihanlistrik">Tagihan Listrik</string>
+    <string name="asurasiygdiajukan">Asuransi yang diajukan</string>
+    <string name="detailtransaksi">Detail Transaksi</string>
+    <string name="listrikpln">Listrik PLN</string>
+    <string name="affiliasidarisemuapartner">Affiliasi dari semua partner WE+</string>
+    <string name="tab_kontak_klaim">Kontak Klaim</string>
+    <string name="tab_bengkel_rekanan">Bengkel Rekanan</string>
+    <string name="tab_voucher_discount">Voucher Diskon</string>
+    <string name="tab_transaksipembelian">Transaksi</string>
+    <string name="tab_promo">Promo</string>
+    <string name="tab_riwayat">Riwayat</string>
+    <string name="pilihpartnerasuransi">Pilih Partner Asuransi</string>
+    <string name="cari">Cari</string>
+    <string name="daftarbengkelrekanan">Daftar Bengkel Rekanan</string>
+    <string name="memudahkanandamenghubungi">Memudahkan Anda menghubungi bengkel yang tersedia</string>
+    <string name="hubungi">Hubungi</string>
+    <string name="masukkannamalengkap">Masukkan Nama Lengkap</string>
+    <string name="daftarkontaklayananpelangganasuransi">Daftar kontak layanan pelanggan asuransi</string>
+    <string name="katasandisekarang">Kata sandi sekarang</string>
+    <string name="katasandiygbaru">Kata sandi yang baru</string>
+    <string name="ulangikatasandiygbaru">Ulangi kata sandi yang baru</string>
+    <string name="produkterbaru">Produk Terbaru</string>
+    <string name="jangansampailupamengasuransikan">Jangan sampai lupa mengasuransikan diri Anda!</string>
+    <string name="detail">Detail</string>
+    <string name="tglkeberangkatan">Tanggal Keberangkatan</string>
+    <string name="perokok">Perokok</string>
+    <string name="anggotakeluargayangmerokok">Anggota keluarga yang merokok</string>
+    <string name="masukkannamapemilikrekening">Masukkan Nama Pemilik Rekening</string>
+    <string name="masukkannomorrekening">Masukkan Nomor Rekening</string>
+    <string name="masukkankantorcabang">Masukkan Kantor Cabang</string>
+    <string name="pilihtanggal">Pilih Tanggal</string>
+    <!--    <string name="masukkantgllahir">Masukkan Tanggal Lahir</string>-->
+    <string name="ya">Ya</string>
+    <string name="tglkedatangan">Tanggal Kedatangan</string>
+    <!--    <string name="tgllahir">Tanggal Lahir</string>-->
+    <string name="tipeperjalanan">Tipe Perjalanan</string>
+    <string name="pilihjumlahpenumpang">Pilih Jumlah Penumpang</string>
+    <string name="pilihjeniskelamin">Pilih Jenis Kelamin</string>
+    <string name="pulangpergi">Pulang - Pergi</string>
+    <string name="durasiperjalanan">Durasi Perjalanan</string>
+    <string name="pilihjenistagihanlistrik">Pilih Jenis Tagihan Listrik</string>
+    <string name="pilihjenisbpjs">Pilih Jenis BPJS</string>
+    <string name="nomormeter">Nomor Meter/ID Pelanggan</string>
+    <string name="nomorvirtualaccountkeluarga">Nomor Virtual Account Keluarga</string>
+    <string name="tokenlistrik">Jumlah Nominal Token Listrik</string>
+    <string name="destinasiperjalanan">Destinasi Perjalanan</string>
+    <!--    <string name="tipeasuransi">Tipe Asuransi</string>-->
+    <string name="asalperjalanan">Asal Perjalanan</string>
+    <string name="lanjutkan">Lanjutkan</string>
+    <string name="belilagi">Beli Lagi</string>
+    <string name="bayarbpjs">Bayar BPJS</string>
+    <string name="semuakategori">Semua Kategori</string>
+    <string name="asuransiygkamuperlukansemua">Asuransi yang kamu perlukan semua ada di sini!</string>
+    <string name="tutup">Tutup</string>
+    <string name="detailproduk">Detail Produk</string>
+    <string name="ajukansekarang">Ajukan Sekarang</string>
+    <string name="filterharga">Filter Harga</string>
+    <string name="jumlahpenumpang">Jumlah penumpang</string>
+    <string name="jumlahpeserta">Jumlah Peserta</string>
+    <string name="pilihbank">Pilih Bank</string>
+    <string name="statuspembayaran">Status Pembayaran</string>
+    <string name="menunggupembayaran">Menunggu pembayaran</string>
+    <string name="biayaproduksiasuransi">Biaya Produksi Asuransi</string>
+    <string name="biayaprodukasuransi">Biaya Produk Asuransi</string>
+    <string name="biayatokenlistrik">Biaya Token Listrik</string>
+    <string name="biayatagihanbpjs">Biaya Tagihan BPJS</string>
+    <string name="nomorpelanggan">Nomor / ID Pelanggan</string>
+    <string name="nomorvakeluarga">Nomor VA Keluarga</string>
+    <string name="detailbpjs">Detail</string>
+    <string name="kodetransaksi">Kode Transaksi</string>
+    <string name="biayaadmin">Biaya Admin</string>
+    <string name="jatuhtempo">Jatuh Tempo</string>
+    <string name="totaltagihan">Total Tagihan</string>
+    <string name="statuspembayaranrefund">Status Pembayaran</string>
+
+    <string name="nometer">No.Meter/Idpel</string>
+    <string name="detailtagihanlistrik">Detail</string>
+    <string name="potonganvoucher">Potongan Voucher</string>
+    <string name="totalbiaya">Total Biaya : </string>
+    <string name="rp">Rp</string>
+    <string name="metodepembayaran">Metode Pembayaran</string>
+    <string name="salinnorek">Salin nomor rekening</string>
+    <string name="petunjukpembayaran">Petunjuk Pembayaran</string>
+    <string name="lihatdetailcicilan">Lihat detail cicilan</string>
+    <string name="selesai">Selesai</string>
+    <string name="nomorktp">Nomor KTP</string>
+    <string name="masukkannomorktp">Masukkan Nomor KTP</string>
+    <string name="tgllahir">Tanggal Lahir</string>
+    <string name="tanggallahirorangtertuadikeluargaanda">Tanggal lahir orang tertua di keluarga anda</string>
+    <string name="masukkantgllahir">Masukkan Tanggal Lahir</string>
+    <string name="nomorindukkaryawan">Nomor Induk Karyawan</string>
+    <string name="masukkannikdisini">Masukkan NIK disini</string>
+    <string name="pilihmitraweplus">Pilih Mitra We+</string>
+    <string name="jeniskelamin">Jenis Kelamin</string>
+    <string name="pria">Pria</string>
+    <string name="wanita">Wanita</string>
+    <string name="masukkannomortelepon">Masukkan Nomor Telepon</string>
+    <string name="masukkanalamatemail">Masukkan alamat E-mail</string>
+    <string name="alamatlengkap">Alamat Lengkap</string>
+    <string name="masukkanalamatlengkap">Masukkan Alamat Lengkap</string>
+    <string name="provinsi">Provinsi</string>
+    <string name="kota">Kota</string>
+    <string name="pemegangpolis">Pemegang Polis</string>
+    <string name="isidataahliwarisperjalanan">Isi Data Ahli Waris</string>
+    <string name="isidatatertanggung">Isi Data Tertanggung</string>
+    <string name="lakukanpengisiandatauntukmelanjutkandata">Lakukan pengisian data untuk melanjutkan</string>
+    <string name="ubahnomortelepon">Ubah Nomor Telepon</string>
+    <string name="tahunproduksi">Tahun Produksi</string>
+    <string name="pilihtahunproduksi">Pilih Tahun Produksi</string>
+    <string name="merek">Merek</string>
+    <string name="pilihmerekmotor">Pilih Merek Motor</string>
+    <string name="serimotor">Seri Motor</string>
+    <string name="pilihserimotor">Pilih Seri Motor</string>
+    <string name="planasuransi">Plan Asuransi</string>
+    <string name="mikro">Mikro</string>
+    <string name="general">General</string>
+    <string name="apaituplanasuransimikro">Apa itu plan asuransi mikro dan general?</string>
+    <string name="asuransiMotorGeneral">Asuransi General adalah asuransi kendaraan bermotor (motor) yang dipertanggungkan terhadap kerugian/kerusakan total minimal 75% dan lebih atau hilang akibat pencurian, serta tersedia perluasan jaminan seperti: jaminan kecelakaan diri pengemudi, pengemudi dan penumpang, kerusuhan huru-hara, dan sebagainya.</string>
+    <string name="asuransiMotorMikro">Asuransi Mikro adalah produk asuransi yang \ndiperuntukkan bagi masyarakat yang memiliki\npenghasilan rendah, di mana asuransi ini dikemas\nsecara sederhana fitur dan proses administrasinya,\nmudah didapat, dengan harga yang ekonomis serta\n mampu memberikan penyelesaian pemberian \nsantunan secepat mungkin. Dalam hal ini, asuransi\n mikro menyediakan jaminan santunan kecelakaan</string>
+    <string name="platwilayah">Plat Wilayah</string>
+    <string name="estimasiharga">Estimasi Harga</string>
+    <string name="hargamobil">Harga</string>
+    <string name="pilihplatwilayah">Pilih Plat Wilayah</string>
+    <string name="tipeasuransi">Tipe Asuransi</string>
+    <string name="totallostonly">Total Lost Only</string>
+    <string name="andatidakmemilikinotifikasi">Anda tidak memiliki notifikasi</string>
+    <string name="menunggukodeotpygsedangdikirim">Menunggu kode OTP yang sedang dikirim</string>
+    <string name="ubahkatasandi">Ubah Kata Sandi</string>
+    <string name="notifikasi">Notifikasi</string>
+    <string name="nominalkecelakaanpengemudi">Nominal Kecelakaan Pengemudi</string>
+    <string name="premikecelakaanpenumpang">Premi Kecelakaan Penumpang</string>
+    <string name="tambahanperlindungan">Tambahan Perlindungan</string>
+    <string name="tambahanperlindunganmobil">Tambahan Perlindungan Mobil</string>
+    <string name="kembali">Kembali</string>
+    <string name="asuransimikro">Asuransi Mikro</string>
+    <string name="asuransigeneral">Asuransi General</string>
+    <string name="asuransimikroadalah">Asuransi Mikro adalah produk asuransi yang diperuntukkan bagi masyarakan yang memiliki penghasilan rendah, dimana asuransi ini dikemas secara sederhana</string>
+    <string name="asuransgeneraladalah">Asuransi General adalah asuransi kendaraan bermotor(motor) yang dipertanggungkan terhadap kerugian/kerusakan total minimal 75% dan lebih ato hilang akibat pencurian, serta tersedia perluasan jaminan seperti: jaminan kecelakann diri pengemudi, pengemudi dan penumpang, kerusuhan huru-hara, dan sebagainya</string>
+    <string name="informasi">Informasi</string>
+    <string name="huruhara">Huru hara, kerusuhan, terorisme dan sabotase</string>
+    <string name="gempabumi">Gempa bumi, tsunami dan letusan gunung berapi</string>
+    <string name="banjir">Banjir, angin topan, hujan es dan tanah longsor</string>
+    <string name="option">Option</string>
+    <string name="tambahanperlindunganbisalebihdarisatu">Tambahan Perlindunagn bisa lebih dari 1</string>
+    <string name="urutkanberdasarkan">Urutkan Berdasarkan Partner Asuransi</string>
+    <string name="asuransiperjalanan">Asuransi Perjalanan</string>
+    <string name="pilihberbagaijenisasuransiygtersedia">Pilih berbagai jenis asuransi yang tersedia</string>
+    <string name="lihatseluruhtransaksidanriwayatpembelian">Lihat seluruh transaksi dan riwayat pembelian</string>
+    <string name="semua">Semua</string>
+    <string name="aktif">Aktif</string>
+    <string name="Aktif">Aktif</string>
+    <string name="kadaluarsa">Kadaluarsa</string>
+    <string name="polissaya">Polis Saya</string>
+    <string name="daftarsemuapolisygandamiliki">Daftar semua polis yang Anda miliki</string>
+    <string name="detailpolis">Detail Polis</string>
+    <string name="detailtertanggung">Detail Tertanggung</string>
+    <string name="namatertanggung">Nama Tertanggung</string>
+    <string name="nomoridentitas">Nomor Identitas</string>
+    <string name="detialbenefitasuransi">Detail Benefit Asuransi</string>
+    <string name="klaimasuransi">Klaim Asuransi</string>
+    <string name="hubungiasuransi">Hubungi Asuransi</string>
+    <string name="datapemesan">Data Pemesan</string>
+    <string name="semuadetailtransaksiakan">*Semua detail transaksi akan dikirimkan ke data Pemesan</string>
+    <string name="datapemegangpolis">Data Pemegang Polis</string>
+    <string name="samadgndatapemesan">Sama dengan data Pemesan</string>
+    <string name="masukkandatapemegangpolis">Masukkan Data Pemegang Polis</string>
+    <string name="datamobil">Data Mobil</string>
+    <string name="lakukanpembayaran">Lakukan Pembayaran</string>
+    <string name="lengkapidatamobil">Lengkapi Data Mobil</string>
+    <string name="isidata2ygdiperlukan">Isi data-data yang diperlukan</string>
+    <string name="merekmobil">Merek Mobil</string>
+    <string name="pilihmerekmobil">Pilih Merek Mobil</string>
+    <string name="serimobil">Seri Mobil</string>
+    <string name="kondisimobil">Kondisi Mobil</string>
+    <string name="warnamobil">Warna Mobil</string>
+    <string name="nomorrangka">Nomor Rangka</string>
+    <string name="nomormesin">Nomor Mesin</string>
+    <string name="namastnk">Nama STNK</string>
+    <string name="aksesorismobil">Aksesoris Mobil</string>
+    <string name="urutkanhargaberdasarkan">Urutkan Harga Berdasarkan</string>
+    <string name="deskripsiproduk">Deskripsi Produk</string>
+    <string name="informasiumum">Informasi Umum</string>
+    <string name="erorkatasandiidaksesuai">Error, kata sandi tidak sesuai</string>
+    <string name="erorformatemail">Format e-mail tidak sesuai</string>
+    <string name="manfaatdasarproduk">Manfaat Dasar Produk</string>
+    <string name="datatertanggung">Data Tertanggung</string>
+    <string name="datatertanggunglain">Data Tertanggung Lain</string>
+    <string name="masukkandatatertanggung2">Masukkan data tertanggung 2</string>
+    <string name="masukkandataanakke1">Masukkan Data Anak ke 1</string>
+    <string name="masukkandataanakke2">Masukkan Data Anak ke 2</string>
+    <string name="masukkandataanakke3">Masukkan Data Anak ke 3</string>
+    <string name="dataahliwaris">Data Ahli Waris</string>
+    <string name="masukkandataahliwaris">Masukkan Data Ahli Waris</string>
+    <string name="selanjutnya">Selanjutnya</string>
+    <string name="beliasuransi">Beli Asuransi</string>
+    <string name="masukkandatatertanggung">Masukkan Data Tertanggung</string>
+    <string name="punyakodevoucher">Punya Code Voucher? Gunakan disini</string>
+    <string name="masukkancodedisini">Masukkan code disini</string>
+    <string name="maafkodevouchertdkditemukan">Maaf, kode voucher tidak ditemukan</string>
+    <string name="nomorpelanggansalah">Nomor pelanggan salah</string>
+    <string name="nomorvakeluargasalah">Nomor Virtual Account Keluarga Salah</string>
+    <string name="masukkanalamatemailanda">Masukkan alamat email Anda dan kami akan mengirimkan link reset password untuk mengembalikan akun anda.</string>
+    <string name="sampledesc">Detail Produk dari Zurich Travel Insurance</string>
+    <string name="kembalikehalamanlogin">Kembali ke halaman Login</string>
+    <string name="katasandiberhasildiubah">Kata Sandi Berhasil diubah!</string>
+    <string name="masukkankatasandiyangkamikirimkanke">Masukkan kata sandi yang kami kirimkan ke</string>
+    <string name="tidakmenerimakatasandi">Tidak menerima kata sandi?</string>
+    <string name="kehalamanlogin">Ke Halaman Login</string>
+    <string name="aturulangkatasandi">Atur Ulang Kata Sandi</string>
+    <string name="katasanditelahdikirimulang">Kata Sandi telah dikirim ulang,silahkan cek kembali email Anda.</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="iya">Iya</string>
+    <string name="apakahandainginkeluar">Apakah Anda ingin keluar?</string>
+    <string name="andatidakmemilikipolisyangaktif">Anda tidak memiliki polis yang aktif</string>
+    <string name="belisekarang">Beli Sekarang</string>
+    <string name="masukuntukmendapatkanproteksianda">Masuk untuk mendapatkan proteksi Anda!</string>
+    <string name="history">History</string>
+    <string name="nomorpolis">Nomor Polis</string>
+    <string name="detailpembelian">Detail Pembelian</string>
+    <string name="tglpembelian">Tanggal Pembelian</string>
+    <string name="masaakitipolis">Masa Aktif Polis</string>
+    <string name="lihatrincian">Lihat Rincian</string>
+    <string name="harga">Harga</string>
+    <string name="potonganharga">Potongan Harga</string>
+    <string name="totalpembelian">Total Pembelian</string>
+    <string name="detailprodukklaim"><![CDATA[Detail Produk (Klaim & Top Up Polis)]]></string>
+    <string name="hubungiwe">Hubungi WE+</string>
+    <string name="melihatdetailpolisyangdibeli">Melihat Detail Polis yang dibeli</string>
+    <string name="tersediahingga">Tersedia Hingga</string>
+    <string name="voucher">Voucher</string>
+    <string name="trasaksidanriwayat">Transaksi dan Riwayat</string>
+    <string name="khususprodukzurich">Khusus Produk Zurich</string>
+    <string name="kodevoucher">Kode Voucher</string>
+    <string name="syaratdanketentuan">Syarat dan Ketentuan</string>
+    <string name="gunakan">Gunakan</string>
+    <string name="asuransiyangdiajukan">Asuransi yang diajukan</string>
+    <string name="datamotor">Data Motor</string>
+    <string name="kondisimotor">Kondisi Motor</string>
+    <string name="platmotor">Plat Motor</string>
+    <string name="masukkannomorrangka">Masukkan Nomor Rangka</string>
+    <string name="warnamotor">Warna Motor</string>
+    <string name="masukkannamastnk">Masukkan Nama STNK</string>
+    <string name="pilihmetodepembayaran">Pilih Metode Pembayaran</string>
+    <string name="total">Total</string>
+    <string name="detailCicilan">Detail Cicilan (1/3)</string>
+    <string name="detailcicilan2">Detail Cicilan (2/3)</string>
+    <string name="detailcicilan3">Detail Cicilan (3/3)</string>
+    <string name="lipsum">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+    <string name="silahkanpilihmetodepembayarananda">Silahkan pilih metode pembayaran Anda!</string>
+    <string name="lakukanberbagaipembayaranmelaluiweplus">Lakukan berbagai pembayaran melalui WE+</string>
+    <string name="lakukanberbagaipembayaranbpjsmelaluiweplus">Lakukan berbagai pembayaran BPJS melalui WE+</string>
+    <string name="terimakasi">Terima Kasih\nSilahkan Cek Halaman Polis</string>
+    <string name="untukmelihatstatustransaksi">Untuk melihat status transaksi Polis yang aktif,silahkan cek dari beranda</string>
+    <string name="pilihtambahanperlindungan">Pilih Tambahan Perlindungan</string>
+    <string name="masukkannomormesin">Masukkan Nomor Mesin</string>
+    <string name="perjalanan">Perjalanan</string>
+    <string name="detailcicilan">Detail Cicilan</string>
+    <string name="refund">Refund</string>
+    <string name="urutkansesuaidataperjalanan">Urutkan sesuai data perjalanan</string>
+    <string name="melihatdetailcicilansaatini">Melihat detail cicilan saat ini</string>
+    <string name="mengajukanprosespengembaliandan">Mengajukan proses pengembalian dana</string>
+    <string name="voucherpotonganharga">Voucher Potongan Harga</string>
+    <string name="salinkodedanlakukanpembelianasuransi">Salin kode dan lakukan pembelian asuransi</string>
+    <string name="hubunganrelasi">Hubungan Relasi</string>
+    <string name="pilihhubunganrelasi">Pilih hubungan relasi</string>
+    <string name="isidataahliwaris">Isi Data Ahli Waris</string>
+    <string name="lakukanpengisiandatauntukmelanjutkan">Lakukan pengisian data untuk melanjutkan</string>
+    <string name="lihatriwayatpembelianasuransianda">Lihat riwayat pembelian asuransi Anda</string>
+    <string name="lihattransaksiriwayatpembayaran">Lihat transaksi dan riwayat pembayaran</string>
+    <string name="riwayattransaksi">Riwayat Transaksi</string>
+    <string name="unsuccess">Unsuccess</string>
+    <string name="splash_title">Smart Insurance\nMarketplace</string>
+    <string name="network_error">Tidak Ada Jaringan Internet</string>
+    <string name="source">android</string>
+    <string name="timeout">Time Out</string>
+    <string name="lengkapidatadiriandadibawahformini">Lengkapi data diri Anda di bawah form ini</string>
+    <string name="denganmelakukanregistrasi">Dengan melakukan registrasi maka Anda sudah</string>
+    <string name="dariweplus">dari WE+</string>
+    <string name="aturulangkatasandianda">Atur ulang kata sandi Anda</string>
+    <string name="adaygterbarunich">Ada yang terbaru nih buat kamu</string>
+    <string name="kodeproteksi">Kode Proteksi</string>
+    <string name="weplusklinik">WE+ Clinic</string>
+    <string name="mitra">Mitra</string>
+    <string name="karyawanalfamart">Karyawan Alfamart</string>
+    <string name="andabelummemilikiriwayattransaksi">Anda belum memiliki riwayat transaksi</string>
+    <string name="andabelummemilikitransaksi">Anda belum memiliki transaksi</string>
+    <string name="totalpembayaran">Total Pembayaran</string>
+    <string name="lihatdetailrefund">Lihat Detail Refund</string>
+    <string name="bank">Bank</string>
+    <string name="cabang">Cabang</string>
+    <string name="pemilikrekening">Pemilik Rekening</string>
+    <string name="kantorcabang">Kantor Cabang</string>
+    <string name="nomorrekening">Nomor Rekening</string>
+    <string name="lihatdatapemegangpolisdisini">Lihat Data Pemegang Polis disini</string>
+    <string name="hubungikami">Hubungi Kami</string>
+    <string name="untilinformasilebihlanjut">Untuk informasi lebih lanjut</string>
+    <string name="gantikatasandi">Ganti Kata Sandi</string>
+    <string name="tab_ketentuan">Ketentuan</string>
+    <string name="tab_cara_pakai">Cara Pakai</string>
+    <string name="kodevoucheranda">Kode Voucher Anda </string>
+    <string name="lanjutkankepembayaran">Lanjutkan ke pembayaran</string>
+    <string name="databaseName">weplus.db</string>
+    <string name="detaildesctertanggung">Detail Tertanggung Pemilik Asuransi</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="daftar_bengkel_rekanan">
+        <item>Surya Jaya Motor</item>
+        <item>Sinar Jaya Motor</item>
+    </string-array>
+    <string-array name="tipe_perjalanan">
+        <item>Pilih tipe perjalanan</item>
+    </string-array>
+
+    <string-array name="filter_harga">
+        <item>Harga termurah</item>
+        <item>Harga termahal</item>
+    </string-array>
+
+    <string-array name="filter_passenger">
+        <item>Dewasa</item>
+        <item>1 Dewasa + 1 Anak</item>
+    </string-array>
+
+    <string-array name="daftar_seri_motor">
+        <item>Pilih Seri Motor</item>
+    </string-array>
+
+    <string-array name="daftar_plat_wilayah">
+        <item>Pilih Plat Wilayah</item>
+    </string-array>
+
+
+    <string-array name="county_code">
+        <item>+62</item>
+        <item>01</item>
+    </string-array>
+
+    <string-array name="daftar_propinsi">
+        <item>Aceh</item>
+        <item>Bali</item>
+        <item>Bangka Belitung</item>
+        <item>Banten</item>
+        <item>Bengkulu</item>
+        <item>DKI Jakarta</item>
+        <item>Gorontalo</item>
+        <item>Jambi</item>
+        <item>Jawa Barat</item>
+        <item>Jawa Tengah</item>
+        <item>Jawa Timur</item>
+        <item>Kalimantan Utara</item>
+        <item>Kalimantan Barat</item>
+        <item>Kalimantan Tengah</item>
+        <item>Kalimantan Selatan</item>
+        <item>Kalimantan Timur</item>
+        <item>Kepulauan Riau</item>
+        <item>Lampung</item>
+        <item>Maluku</item>
+        <item>Maluku Utara</item>
+        <item>Nusa Tenggara Barat</item>
+        <item>Nusa Tenggara Timur</item>
+        <item>Papua</item>
+        <item>Papua Barat</item>
+        <item>Riau</item>
+        <item>Sulawesi Utara</item>
+        <item>Sulawesi Barat</item>
+        <item>Sulawesi Tengah</item>
+        <item>Sulawesi Tenggara</item>
+        <item>Sulawesi Selatan</item>
+        <item>Sumatera Utara</item>
+        <item>Sumatera Barat</item>
+        <item>Sumatera Selatan</item>
+        <item>Yogyakarta</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string-array name="hubunganrelasi">
+        <item>Kakak</item>
+        <item>Adik</item>
+        <item>Sepupu</item>
+        <item>Tante</item>
+        <item>Paman</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>Pilih Jenis Kelamin</item>
+        <item>Pria</item>
+        <item>Wanita</item>
+    </string-array>
+    <string-array name="country_code">
+        <item>Pilih Jenis Kelamin</item>
+        <item>+62</item>
+        <item>+70</item>
+        <item>+86</item>
+    </string-array>
+
+
+
+</resources>

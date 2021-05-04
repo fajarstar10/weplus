@@ -1,0 +1,88 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="otpViewStyle">@style/OtpWidget.OtpView</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- For the resting Spinner style -->
+        <item name="android:spinnerItemStyle">
+            @style/spinnerItemStyle
+        </item>
+
+        <!-- For each individual Spinner list item once clicked on -->
+        <item name="android:spinnerDropDownItemStyle">
+            @style/spinnerDropDownItemStyle
+        </item>
+    </style>
+
+    <style name="spinnerItemStyle">
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:fontFamily">@font/ubuntu_b</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/black_7f7f7f</item>
+    </style>
+
+    <style name="spinnerDropDownItemStyle">
+        <item name="android:padding">2dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/ubuntu_b</item>
+        <item name="android:textColor">@color/black_7f7f7f</item>
+    </style>
+
+
+    <style name="TextLabel" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:textColorHint">@color/grey_text</item>
+        <item name="android:textSize">20sp</item>
+        <item name="colorControlNormal">@color/grey_text_2</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+    </style>
+
+    <style name="font.bold.blue" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textColor">@color/white</item>
+        <!--<item name="android:fontFamily" tools:ignore="NewApi">@font/montserrat_bold</item>-->
+    </style>
+
+    <style name="WhiteCheck" parent="Theme.AppCompat">
+        <item name="colorAccent">#000</item>
+    </style>
+
+    <style name="MyChkTextColor">
+        <item name="android:color">#ffffff</item>4
+    </style>
+
+    <style name="HoloDialog" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="OtpWidget" />
+
+    <style name="OtpWidget.OtpView" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@null</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="TabLayoutTextStyle" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textSize">@dimen/font_normal</item>
+        <item name="android:fontFamily">@font/ubuntu_b</item>
+        <item name="android:textColor">@color/grey_medium</item>
+    </style>
+
+    <style name="MySpinner" parent="@android:style/Widget.TextView.SpinnerItem">
+        <item name="android:textSize">@dimen/font_normal</item>
+        <item name="android:textColor">@color/grey_medium</item>
+        <item name="android:fontFamily">@font/ubuntu_r</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:paddingLeft">0dp</item>
+    </style>
+
+    <style name="DialogStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+
+</resources>

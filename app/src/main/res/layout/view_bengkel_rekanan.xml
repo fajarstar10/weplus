@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:id="@+id/bengkelrekanan_layout_proteksi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/bengkelrekanan_icon"
+            android:layout_width="@dimen/icon"
+            android:layout_height="@dimen/icon"
+            android:src="@drawable/proteksi"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:layout_toRightOf="@+id/bengkelrekanan_icon"
+            android:id="@+id/bengkelrekanan_proteksi_partner_asuransi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pilihpartnerasuransi"
+            android:textSize="@dimen/font_normal"
+            android:textColor="@color/grey_medium"
+            android:fontFamily="@font/ubuntu_r"
+            android:layout_marginLeft="@dimen/margin"/>
+
+        <Spinner
+            android:id="@+id/bengkelrekanan_proteksi_partner_asuransi_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spinner_height"
+            android:autofillHints="@string/pilihpartnerasuransi"
+            android:tooltipText="@string/pilihpartnerasuransi"
+            android:isScrollContainer="true"
+            android:layout_marginLeft="@dimen/margin"
+            android:entries="@array/daftar_bengkel_rekanan"
+            android:layout_toRightOf="@+id/bengkelrekanan_icon"
+            android:layout_below="@+id/bengkelrekanan_proteksi_partner_asuransi"
+            style="@style/MySpinner">
+
+        </Spinner>
+
+        <View
+            android:id="@+id/bengkelrekanan_proteksi_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_bg_border"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_toRightOf="@+id/bengkelrekanan_icon"
+            android:layout_below="@+id/bengkelrekanan_proteksi_partner_asuransi_spinner"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bengkelrekanan_layout_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bengkelrekanan_layout_proteksi">
+        <ImageView
+            android:id="@+id/bengkelrekanan__search_icon"
+            android:layout_marginTop="@dimen/margin_m"
+            android:layout_marginRight="@dimen/margin"
+            android:layout_width="@dimen/icon"
+            android:layout_height="@dimen/icon"
+            android:src="@drawable/ic_search"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_marginTop="@dimen/margin_m"
+            android:id="@+id/bengkelrekanan_search_partner_asuransi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pilihpartnerasuransi"
+            android:fontFamily="@font/ubuntu_r"
+            android:textSize="@dimen/font_normal"
+            android:textColor="@color/grey_medium"
+            android:layout_toRightOf="@+id/bengkelrekanan__search_icon"/>
+        <Spinner
+            style="@style/MySpinner"
+            android:id="@+id/bengkelrekanan_search_partner_asuransi_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spinner_height"
+            android:autofillHints="@string/pilihpartnerasuransi"
+            android:tooltipText="@string/pilihpartnerasuransi"
+            android:isScrollContainer="true"
+            android:entries="@array/daftar_bengkel_rekanan"
+            android:layout_toRightOf="@+id/bengkelrekanan__search_icon"
+            android:layout_below="@+id/bengkelrekanan_search_partner_asuransi">
+        </Spinner>
+
+        <View
+            android:id="@+id/bengkelrekanan_search_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_bg_border"
+            android:layout_toRightOf="@+id/bengkelrekanan__search_icon"
+            android:layout_below="@+id/bengkelrekanan_search_partner_asuransi_spinner"/>
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bengkelrekanan_btn_search"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:layout_below="@+id/bengkelrekanan_layout_search"
+        android:layout_marginTop="@dimen/margin_big"
+        android:fontFamily="@font/ubuntu_b"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_medium"
+        android:text="@string/cari"
+        android:textAllCaps="false"
+        android:background="@drawable/border_red"/>
+</RelativeLayout>

@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        layout="@layout/view_back"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- start merek mobil-->
+            <RelativeLayout
+                android:id="@+id/nameWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_m"
+                android:layout_marginEnd="@dimen/margin_m"
+                android:visibility="gone"
+                android:layout_marginStart="8dp">
+
+                <ImageView
+                    android:id="@+id/datamobil_merek_mobil_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    app:tint="@color/black_7070"
+                    app:srcCompat="@drawable/ic_person_pin_black_24dp"/>
+
+                <TextView
+                    android:id="@+id/datamobil_merek_mobil_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/datamobil_merek_mobil_icon"
+                    android:text="Nama Lengkap"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/datamobil_merek_mobil_label"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@id/datamobil_merek_mobil_icon"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:textSize="14sp"
+                    android:background="@color/float_transparent"
+                    android:textColor="@color/toogle_enabled"
+                    android:hint="Masukkan Nama Lengkap"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/datamobil_merek_mobil_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_below="@+id/etName"
+                    android:layout_toEndOf="@id/datamobil_merek_mobil_icon"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/errorTextName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/datamobil_merek_mobil_line"
+                    android:layout_toEndOf="@id/datamobil_merek_mobil_icon"
+                    android:text="Silahkan isi data"
+                    android:layout_marginStart="8dp"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    android:textColorHint="@color/grey_medium" />
+            </RelativeLayout>
+            <!-- end merek mobil-->
+            <RelativeLayout
+                android:id="@+id/tipePropertyWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_m"
+                android:layout_marginEnd="@dimen/margin_m"
+                android:layout_marginStart="8dp">
+
+                <ImageView
+                    android:id="@+id/iconTipeProperty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    app:tint="@color/black_7070"
+                    app:srcCompat="@drawable/ic_home"/>
+
+                <TextView
+                    android:id="@+id/tvPropertyLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/iconTipeProperty"
+                    android:text="Tipe Property"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvProperty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvPropertyLabel"
+                    android:layout_marginStart="12dp"
+                    android:layout_toEndOf="@id/iconTipeProperty"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:textSize="14sp"
+                    android:background="@color/float_transparent"
+                    android:textColor="@color/toogle_enabled"
+                    android:hint="Masukkan Tipe Properti"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/propertyLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="14dp"
+                    android:layout_below="@+id/tvProperty"
+                    android:layout_toEndOf="@id/iconTipeProperty"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/errorTextTipeProperty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/propertyLine"
+                    android:layout_toEndOf="@id/iconTipeProperty"
+                    android:text="Silahkan isi data"
+                    android:layout_marginStart="8dp"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    android:textColorHint="@color/grey_medium" />
+            </RelativeLayout>
+
+            <!-- start seri mobil-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="@dimen/margin_m"
+                android:layout_marginStart="8dp">
+
+                <ImageView
+                    android:id="@+id/datamobil_seri_mobil_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    app:tint="@color/black_7070"
+                    app:srcCompat="@drawable/ic_round_mail_24px"/>
+
+
+                <TextView
+                    android:id="@+id/datamobil_seri_mobil_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/datamobil_seri_mobil_icon"
+                    android:text="Alamat"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="@color/float_transparent"
+                    android:layout_below="@id/datamobil_seri_mobil_label"
+                    android:layout_toEndOf="@id/datamobil_seri_mobil_icon"
+                    android:hint="Masukkan Alamat"
+                    android:textSize="14sp"
+                    android:textColor="@color/toogle_enabled"
+                    android:textColorHint="@color/grey_medium"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/datamobil_seri_mobil_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_below="@+id/etAddress"
+                    android:layout_toEndOf="@id/datamobil_seri_mobil_icon"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/errorTextAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/datamobil_seri_mobil_line"
+                    android:layout_toEndOf="@id/datamobil_seri_mobil_icon"
+                    android:text="Silahkan isi data"
+                    android:layout_marginStart="8dp"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    android:textColorHint="@color/grey_medium" />
+            </RelativeLayout>
+            <!-- end seri mobil-->
+            <!-- start plat wilayah -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="@dimen/margin_m"
+                android:layout_marginStart="8dp">
+
+                <ImageView
+                    android:id="@+id/datamobil_plat_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ic_map_24_px" />
+
+                <TextView
+                    android:id="@+id/datamobil_plat_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/datamobil_plat_icon"
+                    android:text="Provinsi"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvProvince"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/datamobil_plat_label"
+                    android:layout_toEndOf="@id/datamobil_plat_icon"
+                    android:focusable="true"
+                    android:text="Pilih Provinsi"
+                    android:textColor="@color/black_7f7f7f"
+                    android:textColorHint="@color/grey_medium"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/datamobil_plat_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tvProvince"
+                    android:layout_toEndOf="@id/datamobil_plat_icon"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/errorTextProvince"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/datamobil_plat_line"
+                    android:layout_toEndOf="@id/datamobil_plat_icon"
+                    android:text="Silahkan isi data"
+                    android:layout_marginStart="8dp"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    android:textColorHint="@color/grey_medium" />
+            </RelativeLayout>
+            <!-- end merek mobil-->
+            <!-- start nomor mesin -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginLeft="@dimen/margin_m">
+
+                <ImageView
+                    android:id="@+id/imgCarPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ic_map_24_px"/>
+
+                <TextView
+                    android:id="@+id/tvCarFrame"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/imgCarPrice"
+                    android:text="Kota"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/tvCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_below="@id/tvCarFrame"
+                    android:background="@android:color/transparent"
+                    android:layout_toEndOf="@id/imgCarPrice"
+                    android:hint="Pilih Kota"
+                    android:textSize="14sp"
+                    android:textColor="@color/toogle_enabled"
+                    android:textStyle="bold" />
+                <View
+                    android:id="@+id/carPriceSeparator"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_below="@+id/tvCity"
+                    android:layout_toEndOf="@id/imgCarPrice"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/errorTextCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/carPriceSeparator"
+                    android:layout_toEndOf="@id/imgCarPrice"
+                    android:text="Silahkan isi data"
+                    android:layout_marginStart="8dp"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    android:textColorHint="@color/grey_medium" />
+            </RelativeLayout>
+            <!-- end nomor mesin-->
+            <!-- start nomor mesin -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginLeft="@dimen/margin_m">
+
+                <ImageView
+                    android:id="@+id/imgCarEngine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ic_map_24_px"/>
+
+                <TextView
+                    android:id="@+id/tvCarEngine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/imgCarEngine"
+                    android:text="Kode Pos"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="14sp" />
+                <EditText
+                    android:id="@+id/etZipCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_below="@id/tvCarEngine"
+                    android:background="@android:color/transparent"
+                    android:layout_toEndOf="@id/imgCarEngine"
+                    android:hint="Masukkan Kode Pos"
+                    android:textSize="14sp"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:textColor="@color/toogle_enabled"
+                    android:textStyle="bold" />
+                <View
+                    android:id="@+id/carEngineSeparator"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_below="@+id/etZipCode"
+                    android:layout_toEndOf="@id/imgCarEngine"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/errorTextZipCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/carEngineSeparator"
+                    android:layout_toEndOf="@id/imgCarEngine"
+                    android:text="Harap isi dengan 5 karakter"
+                    android:layout_marginStart="8dp"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    android:textColorHint="@color/grey_medium" />
+            </RelativeLayout>
+            <!-- end nomor mesin-->
+
+
+
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSimpan"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginTop="@dimen/margin_big"
+            android:background="@drawable/border_red"
+            android:layout_marginLeft="@dimen/margin_m"
+            android:layout_marginRight="@dimen/margin_m"
+            android:layout_marginBottom="@dimen/margin_polismobil"
+            android:text="@string/simpan"
+            android:textAllCaps="false"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_normal" />
+    </RelativeLayout>
+
+</LinearLayout>

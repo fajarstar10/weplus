@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        layout="@layout/view_back" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_m"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="16dp">
+
+                <TextView
+                    android:id="@+id/text_id_transaksi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/idtransaksi"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/ubuntu_m"/>
+
+                <TextView
+                    android:id="@+id/text_nomor_polis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_id_transaksi"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/nomorpolis"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/ubuntu_m"/>
+
+                <TextView
+                    android:id="@+id/id_transaksi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="WE0123456"
+                    android:textColor="@color/blue_1"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_b"/>
+
+                <TextView
+                    android:id="@+id/nomor_polis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_transaksi"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="Z1 PAC 20192307"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_b"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/detailpembelian"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/nomor_polis"
+                    android:textColor="@color/black_7f7f7f"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/ubuntu_b" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp">
+
+                <TextView
+                    android:id="@+id/text_tgl_pembelian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/tglpembelian"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_r"/>
+
+                <TextView
+                    android:id="@+id/text_metode_pembayaran"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_tgl_pembelian"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/metodepembayaran"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_r"/>
+
+                <TextView
+                    android:id="@+id/text_masa_aktif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_metode_pembayaran"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/masaakitipolis"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_r"/>
+
+                <TextView
+                    android:id="@+id/tgl_pembelian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/idtransaksi"
+                    android:textColor="@color/black_7f7f7f"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"/>
+
+                <TextView
+                    android:id="@+id/metode_pembayaran"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tgl_pembelian"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/nomorpolis"
+                    android:textColor="@color/black_7f7f7f"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"/>
+
+                <TextView
+                    android:id="@+id/masa_aktif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/metode_pembayaran"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="4dp"
+                    android:textAlignment="textEnd"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@id/text_masa_aktif"
+                    android:text=" 7 Februari 2020"
+                    android:textColor="@color/black_7f7f7f"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/grey_bg_border" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp">
+
+                <TextView
+                    android:id="@+id/text_harga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/harga"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/ubuntu_m"/>
+
+                <TextView
+                    android:id="@+id/harga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_harga"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="4dp"
+                    android:text="Rp. 1.235.000"
+                    android:textColor="@color/black_7070"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_b"/>
+
+                <TextView
+                    android:id="@+id/btn_lihat_rincian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:text="@string/lihatrincian"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_b" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rec_show_rincian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/text_biaya_produk_asuransi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:text="@string/biayaprodukasuransi"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/text_biaya_admin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_biaya_produk_asuransi"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:text="@string/biayaadmin"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/text_potongan_harga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_biaya_admin"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:text="@string/potonganharga"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/text_total_pembelian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_potongan_harga"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:text="@string/totalpembelian"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/biaya_produk_asuransi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:text="Rp. 200.000"
+                    android:textColor="@color/black_7f7f7f"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/biaya_admin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/biaya_produk_asuransi"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:text="Rp. 5000"
+                    android:textColor="@color/black_7f7f7f"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/potongan_harga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/biaya_admin"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:text="Rp. -10.000"
+                    android:textColor="@color/black_7f7f7f"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/total_pembelian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/potongan_harga"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:text="Rp. 95.000"
+                    android:textColor="@color/black_7f7f7f"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/grey"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="@string/detailprodukklaim"
+                android:textColor="@color/black_7070"
+                android:textSize="14sp"
+                android:fontFamily="@font/ubuntu_b" />
+
+            <RelativeLayout
+                android:id="@+id/transaksi_linear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/transaksi_img"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/aca_insurance" />
+
+                <TextView
+                    android:id="@+id/polis_saya_asuransi_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toStartOf="@+id/viewadapterprofillist_next2"
+                    android:layout_toEndOf="@id/transaksi_img"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:text="@string/axacareprotection"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/polis_saya_tgl_transaksi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/polis_saya_asuransi_name"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_toEndOf="@id/transaksi_img"
+                    android:layout_toStartOf="@+id/viewadapterprofillist_next2"
+                    android:fontFamily="@font/ubuntu_r"
+                    android:text="24-03-2020 11:59"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/transaksi_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_below="@+id/polis_saya_tgl_transaksi"
+                    android:layout_marginStart="@dimen/margin_16"
+                    android:layout_marginTop="15dp"
+                    android:layout_toEndOf="@id/transaksi_img"
+                    android:background="@drawable/border_green"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="@string/Aktif"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_normal" />
+
+                <ImageView
+                    android:id="@+id/viewadapterprofillist_next2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    app:srcCompat="@drawable/ic_chevron_right_black_24dp"
+                    app:tint="@color/black_7f7f7f" />
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/tvDataMobil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/grey"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:visibility="gone"
+                android:text="Data Mobil"
+                android:textColor="@color/black_7070"
+                android:textSize="14sp"
+                android:fontFamily="@font/ubuntu_b" />
+
+            <RelativeLayout
+                android:id="@+id/transaksi_item_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/item_detail_img"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/proteksi" />
+
+                <TextView
+                    android:id="@+id/itemDetailsBrand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/item_detail_img"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:text="@string/axacareprotection"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/itemDetailSeries"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/itemDetailsBrand"
+                    android:layout_marginStart="24dp"
+                    android:layout_toEndOf="@id/item_detail_img"
+                    android:fontFamily="@font/ubuntu_r"
+                    android:text="24-03-2020 11:59"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/itemDetailsYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/icon"
+                    android:layout_below="@+id/itemDetailSeries"
+                    android:layout_toEndOf="@id/item_detail_img"
+                    android:fontFamily="@font/ubuntu_r"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/grey_medium"
+                    android:maxLines="1"
+                    android:layout_marginLeft="24dp"
+                    android:paddingRight="@dimen/margin_17"
+                    android:text="Aktif"
+                    android:textSize="@dimen/font_normal" />
+
+                <ImageView
+                    android:id="@+id/itemDetaislNext"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    app:srcCompat="@drawable/ic_chevron_right_black_24dp"
+                    app:tint="@color/black_7f7f7f" />
+            </RelativeLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rec_detail_produk_klaim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/margin_m"
+                android:paddingTop="@dimen/margin_small"
+                android:paddingRight="@dimen/margin_m"
+                android:visibility="gone">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_m"
+                android:background="@color/grey"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="Detail Tertanggung"
+                android:textColor="@color/black_7f7f7f"
+                android:textSize="14sp"
+                android:fontFamily="@font/ubuntu_b"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rec_data_mobil"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:paddingLeft="@dimen/margin_m"
+                    android:paddingTop="@dimen/margin_small"
+                    android:paddingRight="@dimen/margin_m"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textAhliWaris"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_m"
+                android:background="@color/grey"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="Data Ahli Waris"
+                android:textColor="@color/black_7070"
+                android:textSize="14sp"
+                android:fontFamily="@font/ubuntu_b" />
+
+            <RelativeLayout
+                android:id="@+id/waris_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="@dimen/margin"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/margin_m"
+                android:paddingTop="@dimen/margin"
+                android:paddingRight="@dimen/margin_m"
+                android:paddingBottom="@dimen/margin">
+
+                <ImageView
+                    android:id="@+id/detailpolis_img_icon"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    app:srcCompat="@drawable/ic_baseline_person_24px" />
+
+                <TextView
+                    android:id="@+id/detailwaris_nama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_m"
+                    android:layout_marginTop="8dp"
+                    android:layout_toEndOf="@+id/detailpolis_img_icon"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:text="title"
+                    android:textColor="@color/black_7070"
+                    android:textSize="@dimen/font_normal" />
+
+                <TextView
+                    android:id="@+id/detailwaris_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/detailwaris_nama"
+                    android:layout_marginStart="@dimen/margin_m"
+                    android:layout_toStartOf="@id/viewadapterprofillist_next"
+                    android:layout_toEndOf="@+id/detailpolis_img_icon"
+                    android:fontFamily="@font/ubuntu_r"
+                    android:text="description"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_medium" />
+
+                <TextView
+                    android:id="@+id/detailwaris_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/detailwaris_email"
+                    android:layout_marginStart="@dimen/margin_m"
+                    android:layout_toStartOf="@id/viewadapterprofillist_next"
+                    android:layout_toEndOf="@+id/detailpolis_img_icon"
+                    android:fontFamily="@font/ubuntu_r"
+                    android:text="description"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_medium" />
+
+
+                <ImageView
+                    android:id="@+id/viewadapterprofillist_next"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/ic_chevron_right_black_24dp"
+                    app:tint="@color/grey_medium" />
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rec_data_pemegang_polis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/margin_m"
+                android:paddingTop="@dimen/margin_small"
+                android:paddingRight="@dimen/margin_m"
+                android:visibility="gone">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_m"
+                android:background="@color/grey"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="Bantuan Lainnya"
+                android:textColor="@color/black_7070"
+                android:textSize="14sp"
+                android:fontFamily="@font/ubuntu_b" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rec_menu_detail_polis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/margin_m"
+                android:paddingTop="@dimen/margin_small"
+                android:paddingRight="@dimen/margin_m">
+
+            </androidx.recyclerview.widget.RecyclerView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_m"
+                android:background="@color/grey"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="Hubungi WE+"
+                android:textColor="@color/black_7070"
+                android:textSize="14sp"
+                android:fontFamily="@font/ubuntu_b" />
+            <RelativeLayout
+                android:id="@+id/contactUsWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:paddingTop="8dp">
+                <TextView
+                    android:id="@+id/tv_id_transaksi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ID Transaksi"
+                    android:textColor="@color/black_7070"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_m"/>
+                <TextView
+                    android:id="@+id/tv_id_transaksi_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="WE103050"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_toEndOf="@id/tv_id_transaksi"
+                    android:textColor="@color/red_burem"
+                    android:fontFamily="@font/ubuntu_m"
+                    android:background="@drawable/gray_button_background"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ID Transaksi akan ditanyakan pada saat Anda menghubungi Layanan Konsumen kami"
+                    android:textColor="@color/grey_medium"
+                    android:fontFamily="@font/ubuntu_m"
+                    android:textSize="14sp"
+                    android:layout_below="@id/tv_id_transaksi"
+                    android:layout_marginTop="4dp"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    app:tint="@color/black_7f7f7f"
+                    app:srcCompat="@drawable/ic_chevron_right_black_24dp"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:orientation="vertical"
+        android:id="@+id/loader_bg"
+        android:visibility="gone"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey">
+    <com.agrawalsuneet.dotsloader.loaders.AllianceLoader
+        android:id="@+id/loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:alliance_animDuration="500"
+        app:alliance_distanceMultiplier="5"
+        app:alliance_dotsRadius="4dp"
+        app:alliance_drawOnlyStroke="true"
+        app:alliance_firstDotsColor="@color/colorPrimary"
+        app:alliance_secondDotsColor="@color/colorPrimary"
+        app:alliance_strokeWidth="8dp"
+        app:alliance_thirdDotsColor="@color/colorPrimary" />
+    </RelativeLayout>
+
+</RelativeLayout>

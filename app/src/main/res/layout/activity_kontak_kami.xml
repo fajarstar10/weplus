@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/view_back_no_description"/>
+
+    <RelativeLayout
+        android:layout_below="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="@dimen/margin_m">
+
+
+        <!-- start nama lengkap-->
+        <ImageView
+            android:id="@+id/pemegangpolis_name_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/pemegangpolis_label_name"
+            android:layout_alignBottom="@+id/pemegangpolis_name"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginLeft="@dimen/margin_m"
+            android:src="@drawable/ic_round_mail_24px" />
+
+        <TextView
+            android:id="@+id/pemegangpolis_label_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/pemegangpolis_name_icon"
+            android:text="@string/email"
+            android:textColor="@color/grey_medium"
+            android:layout_marginLeft="@dimen/margin_m"
+            android:fontFamily="@font/ubuntu_m"
+            android:textSize="@dimen/font_normal" />
+
+        <TextView
+            android:id="@+id/pemegangpolis_name"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/spinner_height"
+            android:layout_below="@id/pemegangpolis_label_name"
+            android:layout_toRightOf="@id/pemegangpolis_name_icon"
+            android:text="tami@weplus.id"
+            android:paddingLeft="0dp"
+            android:textColor="@color/red"
+            android:fontFamily="@font/ubuntu_m"
+            android:layout_marginLeft="@dimen/margin_m"
+            android:textSize="@dimen/font_normal"
+            android:gravity="center_vertical"/>
+
+        <View
+            android:id="@+id/line_nama_lengkap"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_very_small"
+            android:layout_below="@+id/pemegangpolis_name"
+            android:background="@color/grey"
+            android:layout_marginBottom="@dimen/margin"/>
+        <!-- END NAMA LENGKAP-->
+
+        <!-- START NOMOR KTP-->
+        <RelativeLayout
+            android:id="@+id/relativ_mulai_cat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line_nama_lengkap">
+            <ImageView
+                android:id="@+id/pemegangpolis_no_ktp_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/pemegangpolis_label_no_ktp"
+                android:layout_alignBottom="@+id/pemegangpolis_no_ktp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_small"
+                android:src="@drawable/ic_chat_bubble_outline_24_px" />
+
+            <TextView
+                android:id="@+id/pemegangpolis_label_no_ktp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/pemegangpolis_no_ktp_icon"
+                android:text="Chat melalui browser"
+                android:textColor="@color/grey_medium"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_m"/>
+
+            <TextView
+                android:id="@+id/pemegangpolis_no_ktp"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/spinner_height"
+                android:layout_below="@id/pemegangpolis_label_no_ktp"
+                android:layout_toRightOf="@id/pemegangpolis_no_ktp_icon"
+                android:gravity="center_vertical"
+                android:paddingLeft="0dp"
+                android:text="Mulai Chat"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_m"
+                android:textColor="@color/red"
+                android:layout_marginLeft="@dimen/margin_m"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_arrow_forward_ios_24px"
+                android:layout_below="@id/pemegangpolis_label_no_ktp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_medium"/>
+
+            <View
+                android:id="@+id/line_no_ktp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_very_small"
+                android:layout_below="@+id/pemegangpolis_no_ktp"
+                android:background="@color/grey"
+                android:layout_marginBottom="@dimen/margin"/>
+
+        </RelativeLayout>
+        <!-- END NOMOR KTP -->
+
+        <!-- START TGL LAHIR-->
+        <ImageView
+            android:id="@+id/pemegangpolis_dob_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relativ_mulai_cat"
+            android:layout_alignTop="@+id/pemegangpolis_label_dob"
+            android:layout_alignBottom="@+id/pemegangpolis_dob"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_m"
+            android:layout_marginRight="@dimen/margin_small"
+            android:src="@drawable/ic_baseline_phone_24px" />
+
+        <TextView
+            android:id="@+id/pemegangpolis_label_dob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relativ_mulai_cat"
+            android:layout_toRightOf="@+id/pemegangpolis_dob_icon"
+            android:text="Telp"
+            android:textColor="@color/grey_medium"
+            android:layout_marginLeft="@dimen/margin_m"
+            android:textSize="@dimen/font_normal"
+            android:fontFamily="@font/ubuntu_m"/>
+
+        <TextView
+            android:id="@+id/pemegangpolis_dob"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/icon"
+            android:layout_below="@id/pemegangpolis_label_dob"
+            android:layout_toRightOf="@id/pemegangpolis_dob_icon"
+            android:paddingLeft="0dp"
+            android:textSize="@dimen/font_normal"
+            android:fontFamily="@font/ubuntu_m"
+            android:textColor="@color/red"
+            android:text="(021) 27899680"
+            android:layout_marginLeft="@dimen/margin_m"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="@dimen/margin"/>
+
+        <TextView
+            android:id="@+id/pemegangpolis_hubungi"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/icon"
+            android:paddingRight="@dimen/margin_small"
+            android:gravity="center_vertical"
+            android:layout_below="@id/pemegangpolis_label_dob"
+            android:layout_toRightOf="@id/pemegangpolis_dob"
+            android:paddingLeft="@dimen/margin_small"
+            android:textSize="@dimen/font_normal"
+            android:textColor="@color/white"
+            android:text="@string/hubungi"
+            android:background="@drawable/border_red"
+            android:layout_marginLeft="@dimen/margin_big"/>
+        <View
+            android:id="@+id/line_dob"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_small"
+            android:layout_below="@+id/pemegangpolis_dob"
+            android:background="@color/grey"
+            />
+        <!-- END TGL LAHIR -->
+
+    </RelativeLayout>
+
+</RelativeLayout>

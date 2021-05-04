@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".agen.WithdrawRequestActivity">
+    <include
+        android:id="@+id/layoutHeader"
+        layout="@layout/view_back" />
+    <RelativeLayout
+        android:id="@+id/loadingProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layoutHeader"
+        android:visibility="gone"
+        android:background="#80d5d5d5">
+        <com.agrawalsuneet.dotsloader.loaders.AllianceLoader
+            android:id="@+id/loader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            app:alliance_animDuration="500"
+            app:alliance_distanceMultiplier="5"
+            app:alliance_dotsRadius="4dp"
+            app:alliance_drawOnlyStroke="true"
+            app:alliance_firstDotsColor="@color/colorPrimary"
+            app:alliance_secondDotsColor="@color/colorPrimary"
+            app:alliance_strokeWidth="8dp"
+            app:alliance_thirdDotsColor="@color/colorPrimary" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/topSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_below="@id/layoutHeader">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jumlah Penarikan Saldo"
+            android:fontFamily="@font/ubuntu_b"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tvRpLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Rp"
+                android:fontFamily="@font/ubuntu_b"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText" />
+            <EditText
+                android:id="@+id/etSaldo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/tvRpLabel"
+                android:hint="Masukkan Nominal"
+                android:inputType="number"
+                android:layout_toStartOf="@id/tvTarikSemua"/>
+            <TextView
+                android:id="@+id/tvTarikSemua"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tarik semua"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/green"
+                android:fontFamily="@font/ubuntu_r"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/grey_bg_border"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Minimal penarikan saldo Rp 100.000"
+            android:fontFamily="@font/ubuntu_r"/>
+    </LinearLayout>
+    <View
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/topSection"
+        android:background="@color/grey_bg_border"/>
+    <LinearLayout
+        android:id="@+id/bottomSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="16dp"
+        android:layout_below="@id/separator"
+        android:layout_above="@id/btnNext"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Metode Penarikan"
+            android:textSize="16sp"
+            android:fontFamily="@font/ubuntu_b"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvWithdrawalMethod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"/>
+        <LinearLayout
+            android:id="@+id/informationWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/tvWithdrawlInformation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jumlah Penarikan Saldo"
+                android:fontFamily="@font/ubuntu_m"/>
+            <TextView
+                android:id="@+id/tvWithdralBank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jumlah Penarikan Saldo"
+                android:fontFamily="@font/ubuntu_m"/>
+            <TextView
+                android:id="@+id/tvWithdrawlAccountName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jumlah Penarikan Saldo"
+                android:fontFamily="@font/ubuntu_m"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jumlah Penarikan Saldo"
+                    android:fontFamily="@font/ubuntu_r"/>
+                <TextView
+                    android:id="@+id/tvWithdrawalNominal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/ubuntu_r"
+                    android:text="123123"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Biaya Administrasi"
+                    android:fontFamily="@font/ubuntu_r"/>
+                <TextView
+                    android:id="@+id/tvAdminFee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/ubuntu_r"
+                    android:text="Rp. 0"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Penarikan Saldo"
+                    android:fontFamily="@font/ubuntu_b"/>
+                <TextView
+                    android:id="@+id/tvTotalWithdrawal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:text="Rp 123.123"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tarik Saldo"
+        android:enabled="false"
+        android:layout_margin="16dp"
+        android:textColor="@color/white"
+        android:background="@drawable/border_fill_frey_medium"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

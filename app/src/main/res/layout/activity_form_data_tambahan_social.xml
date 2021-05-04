@@ -1,0 +1,907 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".belipolis.FormDataTertanggung">
+    <include
+        android:id="@+id/layoutHeader"
+        layout="@layout/view_back" />
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layoutHeader"
+        android:layout_above="@id/btnNext">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/protectionTypeWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/protectionTypeIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7f7f7f"
+                    app:srcCompat="@drawable/ic_person_outline_black_24dp" />
+
+                <TextView
+                    android:id="@+id/protectionTypeLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/protectionTypeIcon"
+                    android:text="Tipe Perlindungan"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tvProtectionType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/protectionTypeLabel"
+                    android:layout_toEndOf="@+id/protectionTypeIcon"
+                    android:background="@null"
+                    android:text="Pilih Tipe Perlindungan"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart"
+                    tools:ignore="HardcodedText">
+                </TextView>
+
+                <View
+                    android:id="@+id/protectionTypeLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tvProtectionType"
+                    android:layout_toEndOf="@+id/protectionTypeIcon"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/errorTextProtectionType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/protectionTypeLine"
+                    android:layout_toEndOf="@id/protectionTypeIcon"
+                    android:text="Silahkan isi data"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/keuskupanNameWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/keuskupanNameIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7f7f7f"
+                    app:srcCompat="@drawable/ic_person_pin_black_24dp" />
+
+                <TextView
+                    android:id="@+id/keuskupanNameLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/keuskupanNameIcon"
+                    android:text="Nama Keuskupan"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tvKeuskupanName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/keuskupanNameLabel"
+                    android:layout_toEndOf="@+id/keuskupanNameIcon"
+                    android:background="@null"
+                    android:text="Pilih Keuskupan"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart">
+                </TextView>
+
+                <View
+                    android:id="@+id/keuskupanLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tvKeuskupanName"
+                    android:layout_toEndOf="@+id/keuskupanNameIcon"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/errorTextKeuskupan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/keuskupanLine"
+                    android:layout_toEndOf="@id/keuskupanNameIcon"
+                    android:text="Silahkan Pilih salah satu"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/parokiNameWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/parokiNameIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7f7f7f"
+                    app:srcCompat="@drawable/ic_baseline_date_range_24px" />
+
+                <TextView
+                    android:id="@+id/parokiNameLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/parokiNameIcon"
+                    android:hint="Nama Paroki"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tvParokiName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/parokiNameLabel"
+                    android:layout_toEndOf="@+id/parokiNameIcon"
+                    android:background="@null"
+                    android:text="Pilih Paroki"
+                    android:textColorHint="@color/grey_bg_border"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart">
+                </TextView>
+
+                <View
+                    android:id="@+id/parokiNameLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tvParokiName"
+                    android:layout_toEndOf="@+id/parokiNameIcon"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/errorTextParoki"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/parokiNameLine"
+                    android:layout_toEndOf="@id/parokiNameIcon"
+                    android:text="Silahkan isi data"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/communityNameWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/communityNameIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7f7f7f"
+                    app:srcCompat="@drawable/ic_baseline_date_range_24px" />
+
+                <TextView
+                    android:id="@+id/communityNameLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/communityNameIcon"
+                    android:hint="Nama Komunitas"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/etCommunityName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/communityNameLabel"
+                    android:layout_toEndOf="@+id/communityNameIcon"
+                    android:background="@null"
+                    android:hint="Masukkan Nama Komunitas"
+                    android:textColorHint="@color/grey_bg_border"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart">
+                </EditText>
+
+                <View
+                    android:id="@+id/communityNameLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/etCommunityName"
+                    android:layout_toEndOf="@+id/communityNameIcon"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/errorTextCommunity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/communityNameLine"
+                    android:layout_toEndOf="@id/communityNameIcon"
+                    android:text="Silahkan isi data"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/environmentWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/environmentIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7f7f7f"
+                    app:srcCompat="@drawable/ic_sex" />
+
+                <TextView
+                    android:id="@+id/environmentLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/environmentIcon"
+                    android:text="Nama Lingkungan"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tvEnvironment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/environmentLabel"
+                    android:layout_toEndOf="@+id/environmentIcon"
+                    android:background="@null"
+                    android:text="Pilih Lingkungan"
+                    android:textColorHint="@color/grey_bg_border"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:entries="@array/gender"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart">
+                </TextView>
+
+                <View
+                    android:id="@+id/environmentLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tvEnvironment"
+                    android:layout_toEndOf="@+id/environmentIcon"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/errorTextEnvironment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/environmentLine"
+                    android:layout_toEndOf="@id/environmentIcon"
+                    android:text="Silahkan isi data"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/environmentTextWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/environmentTextIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7f7f7f"
+                    app:srcCompat="@drawable/ic_sex" />
+
+                <TextView
+                    android:id="@+id/environmentTextLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/environmentTextIcon"
+                    android:text="Nama Lingkungan"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/etEnvironment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/environmentTextLabel"
+                    android:layout_toEndOf="@+id/environmentTextIcon"
+                    android:background="@null"
+                    android:hint="Masukkan Nama Lingkungan"
+                    android:textColorHint="@color/grey_bg_border"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:entries="@array/gender"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart">
+                </EditText>
+
+                <View
+                    android:id="@+id/environmentTextLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/etEnvironment"
+                    android:layout_toEndOf="@+id/environmentTextIcon"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/errorTextEnvironmentText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/environmentTextLine"
+                    android:layout_toEndOf="@id/environmentTextIcon"
+                    android:text="Silahkan isi data"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/familyRelationWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/familyRelationIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7f7f7f"
+                    app:srcCompat="@drawable/ic_round_mail_24px" />
+
+                <TextView
+                    android:id="@+id/familyRelationLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/familyRelationIcon"
+                    android:text="Hubungan Keluarga"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tvFamilyRelation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/familyRelationLabel"
+                    android:layout_toEndOf="@+id/familyRelationIcon"
+                    android:background="@null"
+                    android:text="Pilih Hubungan Keluarga"
+                    android:textColorHint="@color/grey_bg_border"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart"
+                    tools:ignore="HardcodedText">
+                </TextView>
+
+                <View
+                    android:id="@+id/familyRelationLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tvFamilyRelation"
+                    android:layout_toEndOf="@+id/familyRelationIcon"
+                    android:background="@color/grey_bg_border"/>
+
+                <TextView
+                    android:id="@+id/errorTextFamilyRelation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/familyRelationLine"
+                    android:layout_toEndOf="@id/familyRelationIcon"
+                    android:text="Silahkan isi data"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/otherFamilyWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/otherFamilyIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7f7f7f"
+                    app:srcCompat="@drawable/ic_baseline_phone_24px" />
+
+                <TextView
+                    android:id="@+id/otherFamilyLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/otherFamilyIcon"
+                    android:text="Hubungan Keluarga Lainnya"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/etOtherFamily"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/otherFamilyLabel"
+                    android:layout_toEndOf="@+id/otherFamilyIcon"
+                    android:background="@null"
+                    android:hint="Contoh : sepupu"
+                    android:textColorHint="@color/grey_bg_border"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart"
+                    tools:ignore="HardcodedText">
+                </EditText>
+
+                <View
+                    android:id="@+id/otherFamilyLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/etOtherFamily"
+                    android:layout_toEndOf="@+id/otherFamilyIcon"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/errorTextOtherFamily"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/otherFamilyLine"
+                    android:layout_toEndOf="@id/otherFamilyIcon"
+                    android:text="Silahkan isi data"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/jobWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/jobIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7f7f7f"
+                    app:srcCompat="@drawable/ic_baseline_location_on_24px" />
+
+                <TextView
+                    android:id="@+id/jobLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/jobIcon"
+                    android:text="Pekerjaan"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tvJob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/jobLabel"
+                    android:layout_toEndOf="@+id/jobIcon"
+                    android:background="@null"
+                    android:text=" Pilih Pekerjaan"
+                    android:textColorHint="@color/grey_bg_border"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart"
+                    tools:ignore="HardcodedText">
+                </TextView>
+
+                <View
+                    android:id="@+id/jobLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tvJob"
+                    android:layout_toEndOf="@+id/jobIcon"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/errorTextJob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/jobLine"
+                    android:layout_toEndOf="@id/jobIcon"
+                    android:text="Silahkan isi data"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/otherJobWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/otherJobIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7f7f7f"
+                    app:srcCompat="@drawable/ic_baseline_location_on_24px" />
+
+                <TextView
+                    android:id="@+id/otherJobLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/otherJobIcon"
+                    android:text="Pekerjaan Lainnya"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/etOtherJob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/otherJobLabel"
+                    android:layout_toEndOf="@+id/otherJobIcon"
+                    android:background="@null"
+                    android:hint="Contoh: Karyawan Swasta"
+                    android:textColorHint="@color/grey_bg_border"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart">
+                </EditText>
+
+                <View
+                    android:id="@+id/otherJobLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/etOtherJob"
+                    android:layout_toEndOf="@+id/otherJobIcon"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/errorTextOtherJob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/otherJobLine"
+                    android:layout_toEndOf="@id/otherJobIcon"
+                    android:text="Silahkan isi data"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/addressWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/addressIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7f7f7f"
+                    app:srcCompat="@drawable/ic_calendar_24px" />
+
+                <TextView
+                    android:id="@+id/addressLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/addressIcon"
+                    android:text="Alamat KTP"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/etAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/addressLabel"
+                    android:layout_toEndOf="@+id/addressIcon"
+                    android:background="@null"
+                    android:hint="Masukkan Alamat KTP"
+                    android:textColorHint="@color/grey_bg_border"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart"
+                    tools:ignore="HardcodedText">
+                </EditText>
+
+                <View
+                    android:id="@+id/addressLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_below="@+id/etAddress"
+                    android:layout_toEndOf="@+id/addressIcon"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/errorTextAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/addressLine"
+                    android:layout_toEndOf="@id/addressIcon"
+                    android:text="Silahkan isi data"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/provinceWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/provinceIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7f7f7f"
+                    app:srcCompat="@drawable/ic_map_24_px" />
+
+                <TextView
+                    android:id="@+id/provinceLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/rekananIcon"
+                    android:text="Provinsi"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tvProvince"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/provinceLabel"
+                    android:layout_toEndOf="@+id/rekananIcon"
+                    android:background="@null"
+                    android:hint="Pilih Provinsi"
+                    android:textColorHint="@color/grey_bg_border"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart"
+                    tools:ignore="HardcodedText">
+                </TextView>
+
+                <View
+                    android:id="@+id/provinceLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tvProvince"
+                    android:layout_toEndOf="@+id/rekananIcon"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/errorTextProvince"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/provinceLine"
+                    android:layout_toEndOf="@id/provinceIcon"
+                    android:text="Silahkan isi data"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/cityWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/cityIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7f7f7f"
+                    app:srcCompat="@drawable/ic_map_24_px" />
+
+                <TextView
+                    android:id="@+id/cityLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/cityIcon"
+                    android:text="Kota"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tvCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/cityLabel"
+                    android:layout_toEndOf="@+id/cityIcon"
+                    android:background="@null"
+                    android:hint="Pilih Kota"
+                    android:textColorHint="@color/grey_bg_border"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart">
+                </TextView>
+
+                <View
+                    android:id="@+id/cityLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tvCity"
+                    android:layout_toEndOf="@+id/cityIcon"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/errorTextCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cityLine"
+                    android:layout_toEndOf="@id/cityIcon"
+                    android:text="Silahkan isi data"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginBottom="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:background="@drawable/border_fill_red"
+        android:fontFamily="@font/ubuntu_l"
+        android:layout_alignParentBottom="true"
+        android:text="@string/lanjutkan"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_normal"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</RelativeLayout>

@@ -1,0 +1,856 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".belipolis.FormBeliPolisNew">
+    <include
+        android:id="@+id/layoutHeader"
+        layout="@layout/view_back" />
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layoutHeader"
+        android:layout_above="@id/btnNext">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/tripReasonWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/tripReasonIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="24dp"
+                    app:tint="@color/black_7f7f7f"
+                    android:src="@drawable/passport" />
+
+                <TextView
+                    android:id="@+id/tripReasonLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/tripReasonIcon"
+                    android:text="Alasan Perjalanan"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tvTripReasonCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/tripReasonLabel"
+                    android:layout_toEndOf="@+id/tripReasonIcon"
+                    android:background="@null"
+                    android:hint="Pilih Alasan Perjalanan"
+                    android:textColorHint="@color/grey_bg_border"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart">
+                </TextView>
+
+                <View
+                    android:id="@+id/tripReasonLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tvTripReasonCode"
+                    android:layout_toEndOf="@+id/tripReasonIcon"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/errorTextTripReason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tripReasonLine"
+                    android:layout_toEndOf="@id/tripReasonIcon"
+                    android:text="Silahkan isi data"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/ticketPriceWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/ticketPriceIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7f7f7f"
+                    app:srcCompat="@drawable/ic_baseline_location_on_24px" />
+
+                <TextView
+                    android:id="@+id/ticketPriceLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/ticketPriceIcon"
+                    android:text="Harga Tiket"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/etticketPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/ticketPriceLabel"
+                    android:layout_toEndOf="@+id/ticketPriceIcon"
+                    android:background="@null"
+                    android:hint="Contoh : 500.000"
+                    android:textColorHint="@color/grey_bg_border"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart">
+                </EditText>
+
+                <View
+                    android:id="@+id/ticketPriceLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/etticketPrice"
+                    android:layout_toEndOf="@+id/ticketPriceIcon"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/errorTextticketPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ticketPriceLine"
+                    android:layout_toEndOf="@id/ticketPriceIcon"
+                    android:text="Silahkan isi data"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/bookingCodeWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/bookingCodeIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7f7f7f"
+                    android:src="@drawable/ic_kode_booking" />
+
+                <TextView
+                    android:id="@+id/bookingCodeLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/bookingCodeIcon"
+                    android:text="Kode Booking"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/etbookingCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/bookingCodeLabel"
+                    android:layout_toEndOf="@+id/bookingCodeIcon"
+                    android:background="@null"
+                    android:hint="Masukkan Kode Booking"
+                    android:textColorHint="@color/grey_bg_border"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart">
+                </EditText>
+
+                <View
+                    android:id="@+id/bookingCodeLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/etbookingCode"
+                    android:layout_toEndOf="@+id/bookingCodeIcon"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/errorTextbookingCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/bookingCodeLine"
+                    android:layout_toEndOf="@id/bookingCodeIcon"
+                    android:text="Silahkan isi data"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/transitWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/transitIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7f7f7f"
+                    android:src="@drawable/ic_transit" />
+
+                <TextView
+                    android:id="@+id/transitLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/transitIcon"
+                    android:text="Tipe Penerbangan"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tvTransit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/transitLabel"
+                    android:layout_toEndOf="@+id/transitIcon"
+                    android:background="@null"
+                    android:hint="Pilih tipe penerbangan"
+                    android:textColorHint="@color/grey_bg_border"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart"/>
+
+                <View
+                    android:id="@+id/transitLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/tvTransit"
+                    android:layout_toEndOf="@+id/transitIcon"
+                    android:background="@color/grey_bg_border" />
+                <TextView
+                    android:id="@+id/errorTextTransit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/transitLine"
+                    android:layout_toEndOf="@id/transitIcon"
+                    android:text="Silahkan isi data"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/directWrapper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <RelativeLayout
+                    android:id="@+id/directFlightWrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/no_flight_bg"
+                    android:layout_margin="16dp"
+                    android:padding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="150dp"
+                        android:layout_centerInParent="true">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Belum ada kode penerbangan"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/ubuntu_r"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cari penerbangan anda disini"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/ubuntu_b"/>
+                    </LinearLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/directFlightDetailWrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:padding="16dp"
+                    android:visibility="gone"
+                    android:background="@drawable/bg_flight">
+                    <TextView
+                        android:id="@+id/tvFlightNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="GA-411"/>
+                    <TextView
+                        android:id="@+id/tvAirline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Garuda Indonesia"
+                        android:textStyle="bold"
+                        android:layout_below="@id/tvFlightNo"/>
+                    <TextView
+                        android:id="@+id/tvDepartureTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="14:15 CEST"
+                        android:layout_below="@id/tvAirline"/>
+                    <TextView
+                        android:id="@+id/tvArrivalTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="15:15 CEST"
+                        android:layout_below="@id/tvAirline"
+                        android:layout_alignParentEnd="true"/>
+                    <TextView
+                        android:id="@+id/tvDepartureCity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Jakarta"
+                        android:layout_marginTop="4dp"
+                        android:layout_below="@id/tvArrivalTime"/>
+                    <TextView
+                        android:id="@+id/tvArrivalCity"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_height="wrap_content"
+                        tools:text="Denpasar"
+                        android:layout_below="@id/tvArrivalTime"
+                        android:layout_alignParentEnd="true"/>
+                    <TextView
+                        android:id="@+id/tvDepartureIata"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        tools:text="14:15 CEST"
+                        android:layout_below="@id/tvArrivalCity"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/tvArrivalIata"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="15:15 CEST"
+                        android:layout_marginTop="4dp"
+                        android:layout_below="@id/tvArrivalCity"
+                        android:layout_alignParentEnd="true"
+                        android:textStyle="bold"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/horizontal_dotted_line"
+                        android:layout_below="@id/tvArrivalCity"
+                        android:layout_toEndOf="@id/tvDepartureIata"
+                        android:layout_toStartOf="@id/flightIcon"/>
+                    <ImageView
+                        android:id="@+id/flightIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/tvArrivalCity"
+                        app:srcCompat="@drawable/ic_baseline_flight_takeoff_24px"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/horizontal_dotted_line"
+                        android:layout_below="@id/tvArrivalCity"
+                        android:layout_toEndOf="@id/flightIcon"
+                        android:layout_toStartOf="@id/tvArrivalIata"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/firstTransitWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Transit 1"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/ubuntu_b"/>
+                <RelativeLayout
+                    android:id="@+id/transitOneFlightWrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/no_flight_bg"
+                    android:layout_margin="16dp"
+                    android:padding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="72dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Belum ada kode penerbangan"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/ubuntu_r"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cari penerbangan anda disini"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/ubuntu_b"/>
+                    </LinearLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/transitOneFlightDetailWrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:padding="16dp"
+                    android:visibility="gone"
+                    android:background="@drawable/bg_flight">
+                    <TextView
+                        android:id="@+id/tvFlightNoTransitOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="GA-411"/>
+                    <TextView
+                        android:id="@+id/tvAirlineTransitOne"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Garuda Indonesia"
+                        android:textStyle="bold"
+                        android:layout_below="@id/tvFlightNoTransitOne"/>
+                    <TextView
+                        android:id="@+id/tvDepartureTimeTransitOne"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="14:15 CEST"
+                        android:layout_below="@id/tvAirlineTransitOne"/>
+                    <TextView
+                        android:id="@+id/tvArrivalTimeTransitOne"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="15:15 CEST"
+                        android:layout_below="@id/tvAirlineTransitOne"
+                        android:layout_alignParentEnd="true"/>
+                    <TextView
+                        android:id="@+id/tvDepartureCityTransitOne"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Jakarta"
+                        android:layout_marginTop="4dp"
+                        android:layout_below="@id/tvArrivalTimeTransitOne"/>
+
+                    <TextView
+                        android:id="@+id/tvArrivalCityTransitOne"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvArrivalTimeTransitOne"
+                        android:layout_marginTop="4dp"
+                        android:layout_alignParentEnd="true"
+                        tools:text="Denpasar" />
+                    <TextView
+                        android:id="@+id/tvDepartureIataTransitOne"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        tools:text="14:15 CEST"
+                        android:layout_below="@id/tvArrivalCityTransitOne"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/tvArrivalIataTransitOne"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="15:15 CEST"
+                        android:layout_marginTop="4dp"
+                        android:layout_below="@id/tvArrivalCityTransitOne"
+                        android:layout_alignParentEnd="true"
+                        android:textStyle="bold"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/horizontal_dotted_line"
+                        android:layout_below="@id/tvArrivalCityTransitOne"
+                        android:layout_toEndOf="@id/tvDepartureIataTransitOne"
+                        android:layout_toStartOf="@id/flightIconTransitOne"/>
+                    <ImageView
+                        android:id="@+id/flightIconTransitOne"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/tvArrivalCityTransitOne"
+                        app:srcCompat="@drawable/ic_baseline_flight_takeoff_24px"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/horizontal_dotted_line"
+                        android:layout_below="@id/tvArrivalCityTransitOne"
+                        android:layout_toEndOf="@id/flightIconTransitOne"
+                        android:layout_toStartOf="@id/tvArrivalIataTransitOne"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/secondTransitWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Transit 2"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/ubuntu_b"/>
+                <RelativeLayout
+                    android:id="@+id/transitTwoFlightWrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/no_flight_bg"
+                    android:layout_margin="16dp"
+                    android:padding="8dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="72dp"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Belum ada kode penerbangan"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/ubuntu_r"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cari penerbangan anda disini"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/ubuntu_b"/>
+                    </LinearLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/transitTwoFlightDetailWrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:padding="16dp"
+                    android:visibility="gone"
+                    android:background="@drawable/bg_flight">
+                    <TextView
+                        android:id="@+id/tvFlightNoTransitTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="GA-411"/>
+                    <TextView
+                        android:id="@+id/tvAirlineTransitTwo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Garuda Indonesia"
+                        android:textStyle="bold"
+                        android:layout_below="@id/tvFlightNoTransitTwo"/>
+                    <TextView
+                        android:id="@+id/tvDepartureTimeTransitTwo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="14:15 CEST"
+                        android:layout_below="@id/tvAirlineTransitTwo"/>
+                    <TextView
+                        android:id="@+id/tvArrivalTimeTransitTwo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="15:15 CEST"
+                        android:layout_below="@id/tvAirlineTransitTwo"
+                        android:layout_alignParentEnd="true"/>
+                    <TextView
+                        android:id="@+id/tvDepartureCityTransitTwo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Jakarta"
+                        android:layout_marginTop="4dp"
+                        android:layout_below="@id/tvArrivalTimeTransitTwo"/>
+
+                    <TextView
+                        android:id="@+id/tvArrivalCityTransitTwo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvArrivalTimeTransitTwo"
+                        android:layout_marginTop="4dp"
+                        android:layout_alignParentEnd="true"
+                        tools:text="Denpasar" />
+                    <TextView
+                        android:id="@+id/tvDepartureIataTransitTwo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        tools:text="14:15 CEST"
+                        android:layout_below="@id/tvArrivalCityTransitTwo"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/tvArrivalIataTransitTwo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="15:15 CEST"
+                        android:layout_marginTop="4dp"
+                        android:layout_below="@id/tvArrivalCityTransitTwo"
+                        android:layout_alignParentEnd="true"
+                        android:textStyle="bold"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/horizontal_dotted_line"
+                        android:layout_below="@id/tvArrivalCityTransitTwo"
+                        android:layout_toEndOf="@id/tvDepartureIataTransitTwo"
+                        android:layout_toStartOf="@id/flightIconTransitTwo"/>
+                    <ImageView
+                        android:id="@+id/flightIconTransitTwo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/tvArrivalCityTransitTwo"
+                        app:srcCompat="@drawable/ic_baseline_flight_takeoff_24px"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/horizontal_dotted_line"
+                        android:layout_below="@id/tvArrivalCityTransitTwo"
+                        android:layout_toEndOf="@id/flightIconTransitTwo"
+                        android:layout_toStartOf="@id/tvArrivalIataTransitTwo"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/thirdTransitWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Transit 3"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/ubuntu_b"/>
+                <RelativeLayout
+                    android:id="@+id/transitThreeFlightWrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/no_flight_bg"
+                    android:layout_margin="16dp"
+                    android:padding="8dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="72dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Belum ada kode penerbangan"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/ubuntu_r"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cari penerbangan anda disini"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/ubuntu_b"/>
+                    </LinearLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/transitThreeFlightDetailWrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:padding="16dp"
+                    android:visibility="gone"
+                    android:background="@drawable/bg_flight">
+                    <TextView
+                        android:id="@+id/tvFlightNoTransitThree"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="GA-411"/>
+                    <TextView
+                        android:id="@+id/tvAirlineTransitThree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Garuda Indonesia"
+                        android:textStyle="bold"
+                        android:layout_below="@id/tvFlightNoTransitThree"/>
+                    <TextView
+                        android:id="@+id/tvDepartureTimeTransitThree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="14:15 CEST"
+                        android:layout_below="@id/tvAirlineTransitThree"/>
+                    <TextView
+                        android:id="@+id/tvArrivalTimeTransitThree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="15:15 CEST"
+                        android:layout_below="@id/tvAirlineTransitThree"
+                        android:layout_alignParentEnd="true"/>
+                    <TextView
+                        android:id="@+id/tvDepartureCityTransitThree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Jakarta"
+                        android:layout_marginTop="4dp"
+                        android:layout_below="@id/tvArrivalTimeTransitThree"/>
+
+                    <TextView
+                        android:id="@+id/tvArrivalCityTransitThree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvArrivalTimeTransitThree"
+                        android:layout_marginTop="4dp"
+                        android:layout_alignParentEnd="true"
+                        tools:text="Denpasar" />
+                    <TextView
+                        android:id="@+id/tvDepartureIataTransitThree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        tools:text="14:15 CEST"
+                        android:layout_below="@id/tvArrivalCityTransitThree"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/tvArrivalIataTransitThree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="15:15 CEST"
+                        android:layout_marginTop="4dp"
+                        android:layout_below="@id/tvArrivalCityTransitThree"
+                        android:layout_alignParentEnd="true"
+                        android:textStyle="bold"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/horizontal_dotted_line"
+                        android:layout_below="@id/tvArrivalCityTransitThree"
+                        android:layout_toEndOf="@id/tvDepartureIataTransitThree"
+                        android:layout_toStartOf="@id/flightIconTransitThree"/>
+                    <ImageView
+                        android:id="@+id/flightIconTransitThree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/tvArrivalCityTransitThree"
+                        app:srcCompat="@drawable/ic_baseline_flight_takeoff_24px"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/horizontal_dotted_line"
+                        android:layout_below="@id/tvArrivalCityTransitThree"
+                        android:layout_toEndOf="@id/flightIconTransitThree"
+                        android:layout_toStartOf="@id/tvArrivalIataTransitThree"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <RelativeLayout
+        android:id="@+id/loader"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_below="@id/layoutHeader"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <com.agrawalsuneet.dotsloader.loaders.AllianceLoader
+            android:id="@+id/loaderImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            app:alliance_animDuration="500"
+            app:alliance_distanceMultiplier="5"
+            app:alliance_dotsRadius="4dp"
+            app:alliance_drawOnlyStroke="true"
+            app:alliance_firstDotsColor="@color/colorPrimary"
+            app:alliance_secondDotsColor="@color/colorPrimary"
+            app:alliance_strokeWidth="8dp"
+            app:alliance_thirdDotsColor="@color/colorPrimary" />
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginBottom="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:background="@drawable/border_fill_red"
+        android:fontFamily="@font/ubuntu_l"
+        android:layout_alignParentBottom="true"
+        android:text="Cari Penerbangan"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_normal"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</RelativeLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/view_back"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize" />
+
+    <LinearLayout
+        android:id="@+id/login_liniear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_big_m"
+            android:layout_marginRight="@dimen/margin_big_m"
+            android:paddingTop="@dimen/margin_m"
+            android:fontFamily="@font/ubuntu_m"
+            android:textColor="#959ba0"
+            android:text="@string/email"
+            android:textSize="13sp"/>
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="@dimen/margin_big_m"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="@dimen/margin_big_m"
+            android:background="@drawable/border_grey"
+            android:fontFamily="@font/ubuntu_r"
+            android:hint="masukan email anda"
+            android:textColorHint="@color/grey_text"
+            tools:text="summerxshein@gmail.com"
+            android:inputType="textEmailAddress"
+            android:paddingStart="@dimen/margin_16"
+            android:paddingEnd="@dimen/margin_16"
+            android:textColor="@color/grey_text_2"
+            android:textSize="15sp"
+            tools:ignore="HardcodedText" />
+        <!--        android:text="summerxshein@gmail.com"-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_big_m"
+            android:layout_marginRight="@dimen/margin_big_m"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/katasandi"
+            android:textSize="13sp"
+            android:fontFamily="@font/ubuntu_m"
+            android:textColor="#959ba0"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_big_m"
+            android:layout_marginRight="@dimen/margin_big_m">
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/border_grey"
+                android:fontFamily="@font/ubuntu_r"
+                android:hint="password"
+                android:inputType="textPassword"
+                android:paddingStart="@dimen/margin_17"
+                tools:text="weplus1234"
+                android:textColor="@color/grey_text_2"
+                android:textSize="15sp"
+                android:textColorHint="@color/grey_text"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+            <!--            android:text="pDp7faJI"-->
+            <ImageView
+                android:id="@+id/password_visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/margin_17"
+                app:srcCompat="@drawable/ic_baseline_visibility_off_24px" />
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginLeft="@dimen/margin_big_m"
+            android:layout_marginRight="@dimen/margin_big_m"
+            android:layout_marginTop="@dimen/margin_29"
+            android:background="@drawable/border_red"
+            android:gravity="center_horizontal|center_vertical"
+            android:fontFamily="@font/ubuntu_b"
+            android:text="@string/masuk"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/btn_lupa_katasandi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_big_m"
+            android:layout_marginRight="@dimen/margin_big_m"
+            android:layout_marginBottom="@dimen/margin"
+            android:layout_marginTop="@dimen/margin_16"
+            android:text="@string/lupakatasandi"
+            android:fontFamily="@font/ubuntu_m"
+            android:textColor="#798cf5"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

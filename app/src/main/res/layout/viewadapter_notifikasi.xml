@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_11"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/margin_11"
+    android:paddingLeft="@dimen/margin_m"
+    android:paddingRight="@dimen/margin_m"
+    android:paddingBottom="@dimen/margin_11">
+
+    <TextView
+        android:id="@+id/notifikasi_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ubuntu_m"
+        android:text="Hari ini"
+        android:textColor="@color/red"
+        android:textSize="@dimen/font_midle"/>
+
+    <TextView
+        android:id="@+id/notifikasi_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ubuntu_m"
+        android:maxLines="1"
+        android:text="Pembelian Anda pada tanggal 1 Mei telah dibatalkan"
+        android:textColor="@color/grey_medium"
+        android:textSize="@dimen/font_midle"/>
+</LinearLayout>

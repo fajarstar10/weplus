@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/adapterkategori_layout">
+
+    <ImageView
+        android:id="@+id/adapterkategori_icon"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/border_fill_red_rounded"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/adapterkategori_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/margin_small"
+        android:gravity="center_horizontal"
+        android:text="Category"
+        android:textColor="#777777"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/ubuntu_b"
+        />
+
+</LinearLayout>

@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/view_back" />
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/belipolis_perjalanan_btn_lanjutkan">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/wrapperTipePerjalanan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="@dimen/margin">
+
+                <ImageView
+                    android:id="@+id/iconTipePerjalanan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_m"
+                    app:tint="@color/black_7070"
+                    app:srcCompat="@drawable/ic_baseline_business_center_24" />
+
+                <TextView
+                    android:id="@+id/labelTipePerjalanan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@+id/iconTipePerjalanan"
+                    android:text="Tipe Perjalanan"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_r" />
+
+                <TextView
+                    android:id="@+id/formbelipolis_tipe_perjalanan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/labelTipePerjalanan"
+                    android:layout_toEndOf="@+id/iconTipePerjalanan"
+                    android:background="@null"
+                    android:hint="@string/negaraperjalanan"
+                    android:textColor="@color/black_7f7f7f"
+                    android:textColorHint="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart">
+                </TextView>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_below="@+id/formbelipolis_tipe_perjalanan"
+                    android:layout_toEndOf="@+id/iconTipePerjalanan"
+                    android:background="@color/grey_bg_border" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/btn_negaraperjalanan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="@dimen/margin">
+
+                <ImageView
+                    android:id="@+id/destinasiperjalanan_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_m"
+                    app:tint="@color/black_7070"
+                    app:srcCompat="@drawable/ic_destination" />
+
+                <TextView
+                    android:id="@+id/destinasiperjalanan_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@+id/destinasiperjalanan_icon"
+                    android:text="Tujuan Perjalanan"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_r" />
+
+                <TextView
+                    android:id="@+id/formbelipolis_tujuan_perjalanan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/destinasiperjalanan_label"
+                    android:layout_toEndOf="@+id/destinasiperjalanan_icon"
+                    android:background="@null"
+                    android:hint="@string/negaraperjalanan"
+                    android:textColor="@color/black_7f7f7f"
+                    android:textColorHint="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart">
+                </TextView>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_below="@+id/formbelipolis_tujuan_perjalanan"
+                    android:layout_toEndOf="@+id/destinasiperjalanan_icon"
+                    android:background="@color/grey_bg_border" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/layoutWrapperNegara"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="@dimen/margin">
+
+                <ImageView
+                    android:id="@+id/iconNegara"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_m"
+                    app:tint="@color/black_7070"
+                    app:srcCompat="@drawable/ic_baseline_location_on_24px" />
+
+                <TextView
+                    android:id="@+id/labelNegara"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@+id/iconNegara"
+                    android:text="Negara Tujuan Perjalanan"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_r" />
+
+                <TextView
+                    android:id="@+id/etNegara"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/labelNegara"
+                    android:layout_toEndOf="@+id/iconNegara"
+                    android:hint="@string/negaraperjalanan"
+                    android:textColor="@color/black_7f7f7f"
+                    android:textColorHint="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:textAlignment="textStart">
+                </TextView>
+                <TextView
+                    android:id="@+id/errorTextCountry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/countryLine"
+                    android:layout_toEndOf="@id/iconNegara"
+                    android:text="Silahkan isi data"
+                    android:layout_marginStart="8dp"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    android:textColorHint="@color/grey_medium" />
+                <View
+                    android:id="@+id/countryLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_below="@+id/etNegara"
+                    android:layout_toEndOf="@+id/iconNegara"
+                    android:background="@color/grey_bg_border" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutWrapperProvinsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                android:visibility="gone"
+                android:layout_marginBottom="@dimen/margin">
+
+                <ImageView
+                    android:id="@+id/iconProvinsi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_m"
+                    app:tint="@color/black_7070"
+                    app:srcCompat="@drawable/ic_baseline_location_on_24px" />
+
+                <TextView
+                    android:id="@+id/labelProvinsi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@+id/iconProvinsi"
+                    android:text="Provinsi Tujuan Perjalanan"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_r" />
+
+                <TextView
+                    android:id="@+id/etProvinsi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/labelProvinsi"
+                    android:layout_toEndOf="@+id/iconProvinsi"
+                    android:background="@null"
+                    android:hint="@string/provinsiperjalanan"
+                    android:textColor="@color/black_7f7f7f"
+                    android:textColorHint="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/errorTextProvince"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/provinceLine"
+                    android:layout_toEndOf="@id/iconProvinsi"
+                    android:text="Silahkan isi data"
+                    android:layout_marginStart="8dp"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    android:textColorHint="@color/grey_medium"/>
+                <View
+                    android:id="@+id/provinceLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_below="@+id/etProvinsi"
+                    android:layout_toEndOf="@+id/iconProvinsi"
+                    android:background="@color/grey_bg_border" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutWrapperKota"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="@dimen/margin">
+
+                <ImageView
+                    android:id="@+id/iconKota"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_m"
+                    app:tint="@color/black_7070"
+                    app:srcCompat="@drawable/ic_baseline_location_on_24px" />
+
+                <TextView
+                    android:id="@+id/labelKota"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@+id/iconKota"
+                    android:text="Kota Tujuan Perjalanan"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_r" />
+
+                <TextView
+                    android:id="@+id/etKota"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/labelKota"
+                    android:layout_toEndOf="@+id/iconKota"
+                    android:background="@null"
+                    android:text="@string/kotaperjalanan"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="@dimen/font_normal"
+                    android:enabled="false"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/errorTextCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cityLine"
+                    android:layout_toEndOf="@id/iconKota"
+                    android:text="Silahkan isi data"
+                    android:layout_marginStart="8dp"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    android:textColorHint="@color/grey_medium" />
+
+                <View
+                    android:id="@+id/cityLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_below="@+id/etKota"
+                    android:layout_toEndOf="@+id/iconKota"
+                    android:background="@color/grey_bg_border" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/formbelipolis_layout_tgl_keberangkatan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_m"
+                android:layout_marginBottom="@dimen/margin_13">
+
+                <ImageView
+                    android:id="@+id/tglkeberangkatan_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7070"
+                    app:srcCompat="@drawable/ic_baseline_flight_takeoff_24px" />
+
+                <TextView
+                    android:id="@+id/tglkeberangkatan_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/tglkeberangkatan_icon"
+                    android:text="@string/tglkeberangkatan"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_r" />
+
+                <TextView
+                    android:id="@+id/formbelipolis_tglkeberangkatan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tglkeberangkatan_label"
+                    android:layout_toEndOf="@+id/tglkeberangkatan_icon"
+                    android:background="@null"
+                    android:layout_marginTop="4dp"
+                    android:enabled="false"
+                    android:hint="@string/pilihtanggal"
+                    android:textColor="@color/toogle_enabled"
+                    android:textColorHint="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_b">
+                </TextView>
+                <TextView
+                    android:id="@+id/errorTextDateStart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dateStartLine"
+                    android:layout_toEndOf="@id/tglkeberangkatan_icon"
+                    android:text="Silahkan isi data"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    android:textColorHint="@color/grey_medium" />
+
+                <View
+                    android:id="@+id/dateStartLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/formbelipolis_tglkeberangkatan"
+                    android:layout_toEndOf="@+id/tglkeberangkatan_icon"
+                    android:background="@color/grey_bg_border" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/checkbox"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_230">
+
+                <CheckBox
+                    android:id="@+id/cb_pp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </CheckBox>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pulangpergi"
+                    android:layout_marginLeft="@dimen/margin_29"
+                    android:layout_marginRight="@dimen/margin"
+                    android:layout_marginBottom="@dimen/margin"
+                    android:layout_marginTop="@dimen/margin_6"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_r" >
+
+                </TextView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/formbelipolis_layout_tgl_kedatangan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:layout_marginBottom="@dimen/margin">
+
+                <ImageView
+                    android:id="@+id/tglkedatangan_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7070"
+                    app:srcCompat="@drawable/ic_baseline_flight_land_24px" />
+
+                <TextView
+                    android:id="@+id/tglkedatangan_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/tglkedatangan_icon"
+                    android:text="@string/tglkedatangan"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_r" />
+
+                <TextView
+                    android:id="@+id/formbelipolis_tglkedatangan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/tglkedatangan_label"
+                    android:layout_toEndOf="@+id/tglkedatangan_icon"
+                    android:background="@null"
+                    android:enabled="false"
+                    android:hint="@string/pilihtanggal"
+                    android:textColor="@color/black_7070"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_b"/>
+                <TextView
+                    android:id="@+id/errorTextDateEnd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dateEndLine"
+                    android:layout_toEndOf="@id/tglkedatangan_icon"
+                    android:text="Silahkan isi data"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    android:textColorHint="@color/grey_medium" />
+
+                <View
+                    android:id="@+id/dateEndLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/formbelipolis_tglkedatangan"
+                    android:layout_toEndOf="@+id/tglkedatangan_icon"
+                    android:background="@color/grey_bg_border" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/formbelipolis_layout_tipe_penumpang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:layout_marginBottom="@dimen/margin">
+
+                <ImageView
+                    android:id="@+id/tipepenumpang_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7070"
+                    app:srcCompat="@drawable/ic_baseline_person_24px" />
+
+                <TextView
+                    android:id="@+id/tipepenumpang_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tipepenumpang_icon"
+                    android:text="Tipe Peserta"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_r" />
+
+                <TextView
+                    android:id="@+id/formbelipolis_tipe_penumpang_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/tipepenumpang_label"
+                    android:layout_toEndOf="@+id/tipepenumpang_icon"
+                    android:background="@null"
+                    android:text="Pilih Tipe Peserta"
+                    android:textColor="@color/toogle_enabled"
+                    android:enabled="false"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_b"/>
+
+                <TextView
+                    android:id="@+id/errorTextPassengerType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/formbelipolis_proteksi_line"
+                    android:layout_toEndOf="@id/tipepenumpang_icon"
+                    android:text="Silahkan isi data"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    android:textColorHint="@color/grey_medium" />
+
+                <View
+                    android:id="@+id/formbelipolis_proteksi_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/formbelipolis_tipe_penumpang_spinner"
+                    android:layout_toEndOf="@+id/tipepenumpang_icon"
+                    android:background="@color/grey_bg_border" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/formbelipolis_layout_jumlah_penumpang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:layout_marginBottom="@dimen/margin">
+
+                <ImageView
+                    android:id="@+id/jumlahpenumpang_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    app:tint="@color/black_7070"
+                    app:srcCompat="@drawable/ic_baseline_person_24px" />
+
+                <TextView
+                    android:id="@+id/jumlahpenumpang_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/jumlahpenumpang_icon"
+                    android:text="@string/jumlahpeserta"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_r" />
+
+
+                <TextView
+                    android:id="@+id/formbelipolis_jumlah_penumpang_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/jumlahpenumpang_label"
+                    android:layout_toEndOf="@+id/jumlahpenumpang_icon"
+                    android:background="@null"
+                    android:text="Pilih Jumlah Peserta"
+                    android:textColor="@color/toogle_enabled"
+                    android:enabled="false"
+                    android:textColorHint="@color/grey_medium"
+                    android:textSize="@dimen/font_normal"
+                    android:fontFamily="@font/ubuntu_b"/>
+
+                <TextView
+                    android:id="@+id/errorTextPassengerCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/bengkelrekanan_proteksi_line"
+                    android:layout_toEndOf="@id/jumlahpenumpang_icon"
+                    android:text="Silahkan isi data"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_burem"
+                    android:textColorHint="@color/grey_medium" />
+
+                <View
+                    android:id="@+id/bengkelrekanan_proteksi_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/formbelipolis_jumlah_penumpang_spinner"
+                    android:layout_toEndOf="@+id/jumlahpenumpang_icon"
+                    android:background="@color/grey_bg_border" />
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/belipolis_perjalanan_btn_lanjutkan"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:layout_marginLeft="@dimen/margin_m"
+        android:layout_marginBottom="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_m"
+        android:background="@drawable/border_red"
+        android:text="@string/lanjutkan"
+        android:textAllCaps="false"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"
+        android:fontFamily="@font/ubuntu_b"
+        android:textSize="@dimen/font_normal" />
+</RelativeLayout>

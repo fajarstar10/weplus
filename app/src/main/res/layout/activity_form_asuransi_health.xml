@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <include layout="@layout/view_back" />
+
+        <RelativeLayout
+            android:id="@+id/txt_tipe_asuransi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_m"
+            android:layout_marginRight="@dimen/margin_m"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_marginBottom="@dimen/margin">
+
+            <ImageView
+                android:id="@+id/tipeasuransi_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/margin_16"
+                app:srcCompat="@drawable/ic_baseline_person_24px" />
+
+            <TextView
+                android:id="@+id/tipeasuransi_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/tipeasuransi_icon"
+                android:text="@string/tipeasuransi"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_r" />
+
+            <TextView
+                android:id="@+id/healthFormInsuranceType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/tipeasuransi_label"
+                android:layout_toEndOf="@+id/tipeasuransi_icon"
+                android:background="@null"
+                android:hint="@string/individual"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_b"
+                android:isScrollContainer="true"
+                android:textAlignment="textStart">
+            </TextView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/healthFormInsuranceType"
+                android:layout_toEndOf="@+id/tipeasuransi_icon"
+                android:background="@color/grey_bg_border" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_perokok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_m"
+            android:layout_marginRight="@dimen/margin_m"
+            android:layout_marginTop="@dimen/margin_m"
+            android:layout_marginBottom="@dimen/margin_13">
+
+            <ImageView
+                android:id="@+id/perokok_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:layout_marginStart="@dimen/margin"
+                android:src="@drawable/smokingarea" />
+
+            <TextView
+                android:id="@+id/perokok_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/perokok_icon"
+                android:text="@string/perokok"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_r" />
+
+            <TextView
+                android:id="@+id/healthFormIsSmoker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/perokok_label"
+                android:layout_toEndOf="@+id/perokok_icon"
+                android:background="@null"
+                android:hint="@string/ya"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_b">
+            </TextView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/healthFormIsSmoker"
+                android:layout_toEndOf="@+id/perokok_icon"
+                android:background="@color/grey_bg_border" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_jumlah_anggota_keluarga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_m"
+            android:layout_marginRight="@dimen/margin_m"
+            android:layout_marginBottom="@dimen/margin">
+
+            <ImageView
+                android:id="@+id/anggota_keluarga_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/margin_16"
+                app:tint="@color/grey_medium"
+                app:srcCompat="@drawable/ic_baseline_people_24" />
+
+            <TextView
+                android:id="@+id/anggota_keluarga_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/anggota_keluarga_icon"
+                android:text="Anggota Keluarga"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_r" />
+
+            <TextView
+                android:id="@+id/anggota_keluarga_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/anggota_keluarga_label"
+                android:layout_toEndOf="@+id/anggota_keluarga_icon"
+                android:background="@null"
+                android:text="1 Dewasa, 0 Anak"
+                android:textColor="@color/black_7f7f7f"
+                android:textColorHint="@color/grey_medium"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_b">
+            </TextView>
+
+            <View
+                android:id="@+id/anggota_keluarga_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/anggota_keluarga_value"
+                android:layout_toEndOf="@+id/anggota_keluarga_icon"
+                android:background="@color/grey_bg_border" />
+            <TextView
+                android:id="@+id/errorTextAnggotaKeluarga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/anggota_keluarga_line"
+                android:layout_toEndOf="@id/anggota_keluarga_line"
+                android:text="Silahkan isi data"
+                android:textSize="12sp"
+                android:visibility="gone"
+                android:textColor="@color/red_burem"
+                android:textColorHint="@color/grey_medium" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_tgl_lahir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_m"
+            android:layout_marginRight="@dimen/margin_m"
+            android:layout_marginTop="@dimen/margin_m"
+            android:layout_marginBottom="@dimen/margin">
+
+            <ImageView
+                android:id="@+id/tgllahir_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/margin_16"
+                app:srcCompat="@drawable/ic_baseline_date_range_24px" />
+
+            <TextView
+                android:id="@+id/tgllahir_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/tgllahir_icon"
+                android:text="@string/tgllahir"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_r" />
+
+            <TextView
+                android:id="@+id/healthFormDob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/tgllahir_label"
+                android:layout_toEndOf="@+id/tgllahir_icon"
+                android:background="@null"
+                android:hint="@string/masukkantgllahir"
+                android:textColor="@color/black_7f7f7f"
+                android:textColorHint="@color/grey_medium"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_b">
+            </TextView>
+
+            <View
+                android:id="@+id/dobLine"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/healthFormDob"
+                android:layout_toEndOf="@+id/tgllahir_icon"
+                android:background="@color/grey_bg_border" />
+            <TextView
+                android:id="@+id/errorTextDob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dobLine"
+                android:layout_toEndOf="@id/tgllahir_icon"
+                android:text="Silahkan isi data"
+                android:textSize="12sp"
+                android:visibility="gone"
+                android:textColor="@color/red_burem"
+                android:textColorHint="@color/grey_medium" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_jenis_kelamin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_m"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginRight="@dimen/margin_m"
+            android:layout_marginBottom="@dimen/margin">
+
+            <ImageView
+                android:id="@+id/jeniskelamin_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_sex" />
+
+            <TextView
+                android:id="@+id/jeniskelamin_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/jeniskelamin_icon"
+                android:text="@string/jeniskelamin"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_r" />
+
+            <Spinner
+                android:id="@+id/healthFormGender"
+                android:layout_width="match_parent"
+                android:layout_marginStart="-8dp"
+                android:layout_height="@dimen/spinner_height"
+                android:layout_below="@+id/jeniskelamin_label"
+                android:layout_toEndOf="@+id/jeniskelamin_icon"
+                android:autofillHints="@string/pilihjeniskelamin"
+                android:entries="@array/gender"
+                android:isScrollContainer="true">
+
+            </Spinner>
+            <TextView
+                android:id="@+id/errorTextGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/genderLine"
+                android:layout_toEndOf="@id/jeniskelamin_icon"
+                android:text="Silahkan isi data"
+                android:textSize="12sp"
+                android:visibility="gone"
+                android:textColor="@color/red_burem"
+                android:textColorHint="@color/grey_medium" />
+
+            <View
+                android:id="@+id/genderLine"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/healthFormGender"
+                android:layout_toEndOf="@+id/jeniskelamin_icon"
+                android:background="@color/grey_bg_border" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/layout_metode_klaim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_m"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginRight="@dimen/margin_m"
+            android:layout_marginBottom="@dimen/margin">
+
+            <ImageView
+                android:id="@+id/metode_klaim_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                app:tint="@color/grey_medium"
+                app:srcCompat="@drawable/ic_baseline_bookmark_border_24px" />
+
+            <TextView
+                android:id="@+id/metode_klaim_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/metode_klaim_icon"
+                android:text="Metode Klaim"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_r" />
+
+            <TextView
+                android:id="@+id/metode_klaim_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/metode_klaim_label"
+                android:layout_toEndOf="@+id/metode_klaim_icon"
+                android:background="@null"
+                android:hint="Pilih Metode Klaim"
+                android:textColor="@color/black_7f7f7f"
+                android:textColorHint="@color/grey_medium"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_b">
+            </TextView>
+            <TextView
+                android:id="@+id/errorTextKlaim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/klaimLine"
+                android:layout_toEndOf="@id/metode_klaim_icon"
+                android:text="Silahkan isi data"
+                android:textSize="12sp"
+                android:visibility="gone"
+                android:textColor="@color/red_burem"
+                android:textColorHint="@color/grey_medium" />
+
+            <View
+                android:id="@+id/klaimLine"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/metode_klaim_value"
+                android:layout_toEndOf="@+id/metode_klaim_icon"
+                android:background="@color/grey_bg_border" />
+        </RelativeLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginLeft="@dimen/margin_m"
+            android:layout_marginTop="@dimen/margin_big_m"
+            android:layout_marginRight="@dimen/margin_m"
+            android:background="@drawable/border_red"
+            android:text="@string/lanjutkan"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:fontFamily="@font/ubuntu_b"
+            android:textSize="@dimen/font_normal" />
+
+    </LinearLayout>
+
+</ScrollView>

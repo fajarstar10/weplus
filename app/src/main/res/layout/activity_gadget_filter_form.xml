@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".belipolis.gadget.GadgetFilterFormActivity">
+    <include
+        android:id="@+id/layoutHeader"
+        layout="@layout/view_back" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/layoutHeader"
+        android:layout_margin="16dp">
+        <RelativeLayout
+            android:id="@+id/gadgetOptionWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/gadgetOptionIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/margin_16"
+                app:tint="@color/black_7f7f7f"
+                app:srcCompat="@drawable/icon_awesome_laptop" />
+
+            <TextView
+                android:id="@+id/gadgetOptionLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/gadgetOptionIcon"
+                android:text="Jenis Gadget"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_r"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tvGadgetOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/gadgetOptionLabel"
+                android:layout_toEndOf="@+id/gadgetOptionIcon"
+                android:background="@null"
+                android:hint="Pilih Jenis Gadget"
+                android:textColor="@color/toogle_enabled"
+                android:textSize="14sp"
+                android:fontFamily="@font/ubuntu_b"
+                android:isScrollContainer="true"
+                android:textAlignment="textStart"
+                tools:ignore="HardcodedText">
+            </TextView>
+
+            <View
+                android:id="@+id/gadgetLine"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tvGadgetOption"
+                android:layout_toEndOf="@+id/gadgetOptionIcon"
+                android:background="@color/grey_bg_border" />
+            <TextView
+                android:id="@+id/errorTextGadgetOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/gadgetLine"
+                android:layout_toEndOf="@id/gadgetOptionIcon"
+                android:text="Silahkan pilih data"
+                android:textSize="12sp"
+                android:visibility="gone"
+                android:textColor="@color/red_burem"
+                tools:ignore="HardcodedText" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/gadgetBrandWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+            <ImageView
+                android:id="@+id/gadgetBrandIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/margin_16"
+                app:tint="@color/black_7f7f7f"
+                app:srcCompat="@drawable/icon_awesome_laptop" />
+
+            <TextView
+                android:id="@+id/gadgetBrandLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/gadgetBrandIcon"
+                android:text="Merk Gadget"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_r"
+                tools:ignore="HardcodedText" />
+            <RelativeLayout
+                android:id="@+id/brandInputWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gadgetBrandLabel"
+                android:layout_toEndOf="@+id/gadgetBrandIcon"
+                >
+                <TextView
+                    android:id="@+id/tvGadgetBrand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@null"
+                    android:enabled="false"
+                    android:hint="Pilih Merk Gadget"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:visibility="visible"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart">
+                </TextView>
+                <EditText
+                    android:id="@+id/etGadgetBrand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@null"
+                    android:visibility="gone"
+                    android:hint="Masukkan Merk Gadget"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart">
+                </EditText>
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/gadgetBrandLine"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/brandInputWrapper"
+                android:layout_toEndOf="@+id/gadgetBrandIcon"
+                android:background="@color/grey_bg_border" />
+            <TextView
+                android:id="@+id/errorTextGadgetBrand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/gadgetBrandLine"
+                android:layout_toEndOf="@id/gadgetBrandIcon"
+                android:text="Silahkan pilih data"
+                android:textSize="12sp"
+                android:visibility="gone"
+                android:textColor="@color/red_burem"
+                tools:ignore="HardcodedText" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/gadgetTypeWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+            <ImageView
+                android:id="@+id/gadgetTypeIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/margin_16"
+                app:tint="@color/black_7f7f7f"
+                app:srcCompat="@drawable/icon_awesome_laptop" />
+
+            <TextView
+                android:id="@+id/gadgetTypeLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/gadgetTypeIcon"
+                android:text="Tipe Gadget"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_r"
+                tools:ignore="HardcodedText" />
+            <RelativeLayout
+                android:id="@+id/typeInputWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gadgetTypeLabel"
+                android:layout_toEndOf="@+id/gadgetTypeIcon">
+                <TextView
+                    android:id="@+id/tvGadgetType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+
+                    android:background="@null"
+                    android:enabled="false"
+                    android:hint="Pilih Tipe Gadget"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart">
+                </TextView>
+                <EditText
+                    android:id="@+id/etGadgetType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@null"
+                    android:visibility="gone"
+                    android:hint="Masukkan Tipe Gadget"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart">
+                </EditText>
+            </RelativeLayout>
+            <View
+                android:id="@+id/gadgetTypeLine"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/typeInputWrapper"
+                android:layout_toEndOf="@+id/gadgetTypeIcon"
+                android:background="@color/grey_bg_border" />
+            <TextView
+                android:id="@+id/errorTextGadgetType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/gadgetTypeLine"
+                android:layout_toEndOf="@id/gadgetTypeIcon"
+                android:text="Silahkan isi data"
+                android:textSize="12sp"
+                android:visibility="gone"
+                android:textColor="@color/red_burem"
+                tools:ignore="HardcodedText" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/gadgetYearWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+            <ImageView
+                android:id="@+id/gadgetYearIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/margin_16"
+                app:tint="@color/black_7f7f7f"
+                app:srcCompat="@drawable/icon_material_date_range" />
+
+            <TextView
+                android:id="@+id/gadgetYearLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/gadgetYearIcon"
+                android:text="Tahun Produksi"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_r"
+                tools:ignore="HardcodedText" />
+            <RelativeLayout
+                android:id="@+id/yearInputWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gadgetYearLabel"
+                android:layout_toEndOf="@+id/gadgetYearIcon">
+                <TextView
+                    android:id="@+id/tvGadgetYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@null"
+                    android:enabled="false"
+                    android:visibility="visible"
+                    android:hint="Contoh : 2020"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart">
+                </TextView>
+                <ImageView
+                    android:id="@+id/iconYearDropdown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_baseline_keyboard_arrow_down_24"/>
+                <EditText
+                    android:id="@+id/etGadgetYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@null"
+                    android:visibility="gone"
+                    android:inputType="number"
+                    android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+                    android:hint="Pilih Tahun Produksi"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart">
+                </EditText>
+                
+            </RelativeLayout>
+            <View
+                android:id="@+id/gadgetYearLine"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/yearInputWrapper"
+                android:layout_toEndOf="@+id/gadgetYearIcon"
+                android:background="@color/grey_bg_border" />
+            <TextView
+                android:id="@+id/errorTextGadgetYear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/gadgetYearLine"
+                android:layout_toEndOf="@id/gadgetYearIcon"
+                android:text="Silahkan pilih data"
+                android:textSize="12sp"
+                android:visibility="gone"
+                android:textColor="@color/red_burem"
+                tools:ignore="HardcodedText" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/gadgetPriceWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+            <ImageView
+                android:id="@+id/gadgetPriceIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/margin_16"
+                app:tint="@color/black_7f7f7f"
+                app:srcCompat="@drawable/ic_settings_24_px" />
+
+            <TextView
+                android:id="@+id/gadgetPriceLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/gadgetPriceIcon"
+                android:text="Harga Gadget"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_normal"
+                android:fontFamily="@font/ubuntu_r"
+                tools:ignore="HardcodedText" />
+            <RelativeLayout
+                android:id="@+id/priceInputWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gadgetPriceLabel"
+                android:layout_toEndOf="@+id/gadgetPriceIcon">
+                <TextView
+                    android:id="@+id/tvGadgetPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+
+                    android:background="@null"
+                    android:enabled="false"
+                    android:hint="Pilih Harga Gadget"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart"/>
+
+                <ImageView
+                    android:id="@+id/iconPriceDropdown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+                <EditText
+                    android:id="@+id/etGadgetPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:inputType="number"
+                    android:background="@null"
+                    android:visibility="gone"
+                    android:hint="Contoh : Rp 1.000.000"
+                    android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+                    android:textColor="@color/toogle_enabled"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_b"
+                    android:isScrollContainer="true"
+                    android:textAlignment="textStart"/>
+
+            </RelativeLayout>
+
+
+            <View
+                android:id="@+id/gadgetPriceLine"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/priceInputWrapper"
+                android:layout_toEndOf="@+id/gadgetPriceIcon"
+                android:background="@color/grey_bg_border" />
+            <TextView
+                android:id="@+id/errorTextGadgetPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/gadgetPriceLine"
+                android:layout_toEndOf="@id/gadgetPriceIcon"
+                android:text="Silahkan pilih"
+                android:textSize="12sp"
+                android:visibility="gone"
+                android:textColor="@color/red_burem"
+                tools:ignore="HardcodedText" />
+        </RelativeLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/loadingProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layoutHeader"
+        android:visibility="gone"
+        android:background="#80d5d5d5">
+        <com.agrawalsuneet.dotsloader.loaders.AllianceLoader
+            android:id="@+id/loader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            app:alliance_animDuration="500"
+            app:alliance_distanceMultiplier="5"
+            app:alliance_dotsRadius="4dp"
+            app:alliance_drawOnlyStroke="true"
+            app:alliance_firstDotsColor="@color/colorPrimary"
+            app:alliance_secondDotsColor="@color/colorPrimary"
+            app:alliance_strokeWidth="8dp"
+            app:alliance_thirdDotsColor="@color/colorPrimary" />
+    </RelativeLayout>
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lanjutkan"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/border_fill_red"
+        android:textColor="@color/white"
+        android:layout_margin="16dp"/>
+</RelativeLayout>

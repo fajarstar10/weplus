@@ -1,0 +1,42 @@
+package id.weplus.utility
+
+
+class Constant {
+    companion object {
+        const val ANALYTICS_ABOUT_US = "about_us"
+        const val ANALYTICS_LIST_VOUCHER = "list_voucher"
+        const val ANALYTICS_DETAIL_VOUCHER = "detail_voucher"
+        const val ANALYTICS_BUY_POLIS = "buy_polis"
+        const val ANALYTICS_BUY_POLIS_CATEGORY = "buy_polis_category"
+        const val ANALYTICS_BUY_POLIS_COMPANY = "buy_polis_company"
+        const val ANALYTICS_DETAIL_COMPANY_BUY_POLIS = "detail_company_buy_polis"
+        const val ANALYTICS_DETAIL_CATEGORY_BUY_POLIS = "detail_category_buy_polis"
+        const val ANALYTICS_LIST_POLIS = "list_polis"
+        const val ANALYTICS_DETAIL_POLIS = "detail_polis"
+        const val ANALYTICS_CODE_PROTECTION = "code_protection"
+        const val ANALYTICS_USE_CODE_PROTECTION = "use_code_protection"
+        const val ANALYTICS_CLINIC = "clinic"
+        const val ANALYTICS_CLAIM = "claim"
+        const val ANALYTICS_BILL_PAYMENT = "bill_payment"
+        const val ANALYTICS_CATEGORY_BILL_PAYMENT = "category_bill_payment"
+        const val ANALYTICS_CATEGORY_BILL_PAYMENT_BPJS = "category_bill_payment_bpjs"
+        const val ANALYTICS_CATEGORY_BILL_PAYMENT_PLN = "category_bill_payment_pln"
+        const val ANALYTICS_PARTNER = "partner"
+        const val ANALYTICS_BANNER_NEW_PRODUCT = "banner_new_product"
+        const val ANALYTICS_BANNER_FAVORITE_PRODUCT = "banner_favorite_product"
+        const val ANALYTICS_TRANSACTION_LIST = "transaction_list"
+        const val ANALYTICS_DETAIL_TRANSACTION = "detail_transaction"
+        const val ANALYTICS_HISTORY_TRANSACTION = "history_transaction"
+        const val ANALYTICS_DETAIL_HISTORY_TRANSACTION = "detail_history_transaction"
+        const val ANALYTICS_PROFILE = "profile"
+        const val ANALYTICS_EDIT_PROFILE = "edit_profile"
+        const val ANALYTICS_AGENT = "agent"
+        const val ANALYTICS_LIST_PRODUCT = "product"
+        const val ANALYTICS_DETAIL_PRODUCT = "detail_product"
+        const val ANALYTICS_SELECT_PRODUCT = "select_product"
+        const val ANALYTICS_TRANSACTION_HISTORY_BILLS = "history_bills"
+        const val ANALYTICS_DETAIL_TRANSACTION_HISTORY_BILLS = "detail_transaction_history_biills"
+        const val ANALYTICS_DETAIL_TRANSACTION_BILLS = "detail_transaction_bills"
+        const val ANALYTICS_TRANSACTION_BILLS = "transaction_bills"
+    }
+}

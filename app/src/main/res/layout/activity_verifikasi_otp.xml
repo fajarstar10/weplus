@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_back"/>
+
+    <ImageView
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/ic_done"
+        android:layout_marginTop="@dimen/margin_big"
+        android:layout_marginLeft="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/kodeverifikasisudahdikirim"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:fontFamily="@font/ubuntu_b"
+        android:textColor="@color/red"
+        android:textSize="18sp"
+        android:lineHeight="21sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/kamitelahmengirimkode"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="@dimen/margin_m"
+        android:textColor="#a7a7a7"
+        android:fontFamily="@font/ubuntu_r"
+        android:textSize="17sp"
+        android:lineHeight="20sp"
+        android:textStyle="normal"/>
+    <TextView
+        android:id="@+id/verifikasiotp_tidak_menerima_kode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tidakmenerimakode"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:fontFamily="@font/ubuntu_r"
+        android:textSize="12sp"
+        android:lineHeight="13sp"
+        android:textStyle="bold"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="@dimen/margin_m">
+        <com.mukesh.OtpView
+            android:id="@+id/otp_input_code_otp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:fontFamily="@font/ubuntu_r"
+            app:viewType="rectangle"
+            app:cursorColor="@color/black"
+            app:lineColor="@color/grey_bg_border"
+            app:itemCount="4"
+            android:itemBackground="@color/grey_bg_border"
+            app:itemSpacing="15dp"
+            app:itemRadius="@dimen/card_corner_radius"/>
+
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_big"
+            android:textStyle="bold"
+            android:textSize="@dimen/font_normal"
+            android:text="05:00"
+            android:gravity="right"
+            android:fontFamily="@font/ubuntu_r"
+            android:drawableLeft="@drawable/ic_baseline_wb_sunny_24px"
+            android:drawablePadding="5dp"
+            android:textColor="@android:color/holo_blue_light"
+            android:layout_gravity="center_vertical|end"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/verifikasiotp_wrong_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/maafkodesalah"
+        android:layout_marginLeft="@dimen/margin_m"
+        android:layout_marginRight="@dimen/margin_m"
+        android:textColor="@color/red"
+        android:fontFamily="@font/ubuntu_r"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        android:visibility="gone"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_konfirmasi"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:layout_above="@id/atau"
+        android:layout_marginLeft="@dimen/margin_m"
+        android:layout_marginTop="@dimen/margin_big"
+        android:layout_marginRight="@dimen/margin_m"
+        android:layout_marginBottom="@dimen/margin"
+        android:fontFamily="@font/ubuntu_b"
+        android:background="@drawable/border_red"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/konfirmasi"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:lineHeight="26sp"
+        android:textStyle="bold" />
+</LinearLayout>
+

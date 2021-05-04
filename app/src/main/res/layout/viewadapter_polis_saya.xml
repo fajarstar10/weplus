@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginTop="8dp"
+    android:id="@+id/transaksi_layout_item">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/label_idtransaksi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/idtransaksi"
+            android:textColor="@color/grey_medium"
+            android:textSize="@dimen/font_normal"
+            android:fontFamily="@font/ubuntu_r"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"/>
+        <TextView
+            android:id="@+id/polis_saya_id_transaksi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WE123456"
+            android:textColor="@color/grey_medium"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/ubuntu_b"
+            android:layout_below="@+id/label_idtransaksi"
+            android:layout_marginLeft="@dimen/margin"/>
+        <TextView
+            android:id="@+id/label_akanbatal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/totalpembayaran"
+            android:textColor="@color/grey_medium"
+            android:textSize="@dimen/font_normal"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/ubuntu_r"
+            android:layout_alignParentEnd="true"/>
+        <TextView
+            android:id="@+id/polis_saya_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Rp. 200.000"
+            android:textColor="@color/grey_medium"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/ubuntu_b"
+            android:layout_below="@+id/label_akanbatal"
+            android:layout_alignParentEnd="true"/>
+        <View
+            android:id="@+id/transaksi_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_bg_border"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_below="@+id/polis_saya_amount"/>
+
+
+        <RelativeLayout
+            android:id="@+id/transaksi_linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/transaksi_line"
+            android:orientation="vertical"
+            android:layout_marginBottom="8dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/transaksi_img"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/aca_insurance" />
+            <TextView
+                android:id="@+id/polis_saya_asuransi_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/axacareprotection"
+                android:fontFamily="@font/ubuntu_b"
+                android:layout_toEndOf="@id/transaksi_img"
+                android:layout_marginStart="16dp"
+                android:layout_alignParentTop="true"
+                android:textSize="14sp"
+                android:textColor="#777777" />
+
+            <TextView
+                android:id="@+id/polis_saya_tgl_transaksi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_r"
+                android:text="24-03-2020 11:59"
+                android:layout_toEndOf="@id/transaksi_img"
+                android:layout_marginStart="16dp"
+                android:layout_below="@id/polis_saya_asuransi_name"
+                android:textSize="14sp"
+                android:textColor="@color/grey_medium" />
+            <TextView
+                android:id="@+id/transaksi_status"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:paddingLeft="@dimen/margin_17"
+                android:paddingRight="@dimen/margin_17"
+                android:layout_below="@+id/polis_saya_tgl_transaksi"
+                android:layout_toEndOf="@id/transaksi_img"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:gravity="center_vertical"
+                android:text="Aktif"
+                android:maxLines="1"
+                android:textSize="@dimen/font_normal"
+                android:textColor="@color/white"
+                android:background="@drawable/border_green"
+                android:fontFamily="@font/ubuntu_b"/>
+            <TextView
+                android:id="@+id/adapter_polis_saya_lihat_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/icon"
+                android:layout_below="@+id/polis_saya_tgl_transaksi"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="18dp"
+                android:text="Lihat detail"
+                android:maxLines="1"
+                android:textSize="@dimen/font_normal"
+                android:textColor="@color/blue_2"
+                android:fontFamily="@font/ubuntu_b"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

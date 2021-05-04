@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="id.weplus">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@drawable/ic_logo_we"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".helper.FullScreenFilterActivity"></activity>
+        <activity android:name=".belipolis.mobil.AddCarAccesoriesActivity" />
+        <activity android:name=".Mitra.PartnerCategoryActivity" />
+        <activity
+            android:name=".belipolis.productdetail.ProductDetailActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".belipolis.productlist.ProductListActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".belipolis.kesehatan.HealthProductListActivity" />
+        <activity android:name=".belipolis.mobil.CarProductListActivity" />
+        <activity android:name=".belipolis.motor.MotorProductListActivity" />
+        <activity android:name=".belipolis.motor.TambahanPerlindunganAsuransiMotorActivity" />
+        <activity android:name=".belipolis.motor.AsuransiMotorKonvensionalActivity" />
+        <activity android:name=".belipolis.motor.AsuransiMotorMikroActivity" />
+        <activity android:name=".belipolis.motor.AsuransiMotorActivity" />
+        <activity android:name=".belipolis.perjalanan.DetailProdukTravelActivity" />
+        <activity android:name=".belipolis.kesehatan.MohonMenunggu" />
+        <activity android:name=".belipolis.kesehatan.AsuransiKesehatanKeluargaActivity" />
+        <activity android:name=".belipolis.kesehatan.AsuransiKesehatanIndividualActivity" /> <!-- <activity android:name=".Mitra.TipePerlindunganKesehatanActivity" /> -->
+        <activity android:name=".Mitra.KaryawanAlfamartActivity" />
+        <activity android:name=".Mitra.MitraActivity" />
+        <activity android:name=".Tagihan.KonfirmasiTagihanBpjsActivity" />
+        <activity android:name=".Tagihan.TagihanBpjsActivity" />
+        <activity android:name=".Tagihan.BayarBPJSActivity" />
+        <activity android:name=".transaksi.DetailCicilanActivity" />
+        <activity android:name=".transaksi.RefundActivity" />
+        <activity android:name=".belipolis.perjalanan.NegaraActivity" />
+        <activity android:name=".belipolis.perjalanan.DataAhliWarisActivity" />
+        <activity android:name=".belipolis.perjalanan.DataTertanggungActivity" />
+        <activity android:name=".Tagihan.KonfirmasiTagihanListrikActivity" />
+        <activity android:name=".Tagihan.BayarTagihanListrikActivity" /> <!-- <activity android:name=".Tagihan.BayarActivity" /> -->
+        <activity android:name=".Tagihan.TagihanListrikActivity" />
+        <activity android:name=".Tagihan.RiwayatPembayaranActivity" />
+        <activity android:name=".Tagihan.TagihanActivity" />
+        <activity android:name=".belipolis.mobil.UrutanDataMobilActivity" />
+        <activity android:name=".belipolis.mobil.TambahanPerlindunganMobilActivity" />
+        <activity android:name=".belipolis.mobil.DetailPembayaranPolisMobilActivity" />
+        <activity android:name=".Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".desclaimer.DesclaimerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait" /> <!-- <activity android:name=".MainActivity" android:screenOrientation="portrait"/> -->
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".pembayaran.PembayaranActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SignUp"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".VerifikasiOTP"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WelcomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".profil.UbahProfil"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".profil.UbahAlamatEmail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".profil.UbahNamaLengkap"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".profil.UbahNomorTelepon"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".profil.KontakKamiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".affiliasi.DaftarBengkelRekananActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".kontakklaim.DaftarKontakKlaimActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".belipolis.BeliPolisActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".belipolis.KategoriOnclickedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".belipolis.SemuaKategoriActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".belipolis.FormBeliPolis"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".belipolis.DetailProdukPolisActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".belipolis.motor.PolisMotorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".belipolis.motor.TambahanPerlindunganActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".informasi.InformasiMikroGeneralActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".belipolis.motor.FormDataMotorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".belipolis.motor.FormDataMotorMikroActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".belipolis.motor.FormDataMotorGeneralActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".belipolis.kesehatan.KesehatanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".belipolis.motor.KonfirmasiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".belipolis.perjalanan.PolisPerjalananActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".belipolis.perjalanan.BeliPolisPerjalananActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".belipolis.mobil.PolisMobilActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".belipolis.mobil.FormDataMobilActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".belipolis.FormDataNormalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".belipolis.perjalanan.FormAsuransiPerjalanan"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ubahkatasandi.UbahSandiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".transaksi.TransaksiSayaDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".pemegangpolis.FormPemegangPolisActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".pemegangpolis.DataPemegangPolisActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".notifikasi.NotifikasiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".transaksi.PetunjukPembayaran"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".polissaya.PolisSayaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".polissaya.DetailPolisActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".polissaya.DetailBenefitAsuransiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".profil.ChatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".forgotpassword.ForgotPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".forgotpassword.ForgotPasswordSuccess"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".voucher.VoucherActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".voucher.VoucherDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".belipolis.FormAhliWarisActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".polissaya.DetailHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mainfragment.RiwayatTransaksiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".detailpolis.DetailPolisMobilActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".detailpolis.DetailPolisTravelActivity"
+            android:screenOrientation="portrait" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+    </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+</manifest>

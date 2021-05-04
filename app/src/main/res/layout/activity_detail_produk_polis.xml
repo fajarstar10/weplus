@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/detailpolis_top"
+        layout="@layout/view_back" />
+
+    <ImageView
+        android:id="@+id/detailpolis_bookmark"
+        android:layout_width="30dp"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/margin_m"
+        android:src="@drawable/ic_baseline_bookmark_border_24px" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/detailpolis_top"
+        android:layout_above="@+id/detailpolis_btn_ajukan">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/detailpolis_banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_product_fav" />
+
+            <TextView
+                android:id="@+id/detailpolis_title_produk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Zurich Travel Insurance"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_medium"
+                android:layout_margin="@dimen/margin_m"
+                android:layout_below="@+id/detailpolis_banner"/>
+
+            <RelativeLayout
+                android:id="@+id/relative_produk_price"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/detailpolis_title_produk"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m">
+                <TextView
+                    android:id="@+id/detailpolis_price_produk"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Rp 400.000"
+                    android:textStyle="bold"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_medium" />
+
+                <View
+                    android:id="@+id/detailpolis_line"
+                    android:layout_width="80dp"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/margin_m"
+                    android:layout_marginRight="@dimen/margin_m"
+                   android:layout_centerVertical="true"
+                    android:background="@color/red" />
+
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/detailpolis_price_after_discount_produk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp. 200.000"
+                android:textStyle="bold"
+                android:textColor="@color/green"
+                android:textSize="@dimen/font_medium"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_toRightOf="@+id/relative_produk_price"
+                android:layout_below="@+id/detailpolis_title_produk"/>
+            <TextView
+                android:id="@+id/detailpolis_discount_produk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/detailpolis_price_after_discount_produk"
+                android:layout_alignBottom="@+id/detailpolis_price_after_discount_produk"
+                android:text="50% OFF"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:background="@color/red"
+                android:textColor="@color/white"
+                android:paddingLeft="@dimen/margin"
+                android:paddingRight="@dimen/margin"
+                android:textSize="@dimen/font_medium"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:layout_toRightOf="@+id/detailpolis_price_after_discount_produk"
+                android:layout_below="@+id/detailpolis_title_produk"/>
+            <TextView
+                android:id="@+id/detailpolis_title_alasan_produk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Alasan untuk kamu membeli Asuransi perjalanan dari Zurich"
+                android:textStyle="bold"
+                android:textColor="@color/grey_medium"
+                android:textSize="@dimen/font_medium"
+                android:justificationMode="inter_word"
+                android:layout_margin="@dimen/margin_m"
+                android:layout_below="@+id/detailpolis_discount_produk"/>
+
+            <TextView
+                android:id="@+id/detailpolis_title_alasan_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="travel Save International resmi diakui Uni Eropa  sebagain dokumen asuransi perjalanan atau travel insurance ke luar negeri."
+                android:textStyle="normal"
+                android:textColor="#a7a7a7"
+                android:textSize="12sp"
+                android:justificationMode="inter_word"
+                android:lineHeight="13sp"
+                android:layout_marginLeft="@dimen/margin_m"
+                android:layout_marginRight="@dimen/margin_m"
+                android:fontFamily="@font/ubuntu_r"
+                android:layout_below="@+id/detailpolis_title_alasan_produk"/>
+
+            <ImageView
+                android:id="@+id/detailpolis_icon_asuransi"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/aca_insurance"
+                android:background="@drawable/border_white"
+                android:layout_below="@+id/detailpolis_title_alasan_description"
+                android:layout_margin="@dimen/margin_m"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignTop="@+id/detailpolis_icon_asuransi"
+                android:layout_alignBottom="@+id/detailpolis_icon_asuransi"
+                android:layout_toRightOf="@+id/detailpolis_icon_asuransi"
+                android:layout_below="@id/detailpolis_title_alasan_description"
+                android:layout_marginTop="@dimen/margin"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/detailpolis_nama_asuransi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PT ACA Insurance Indonesia"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_medium"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jl. Jenderal Sudirman"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/font_medium"
+                    android:background="@color/white" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/detailproduk_separator"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin"
+                android:background="@color/grey_bg_border"
+                android:layout_below="@+id/detailpolis_icon_asuransi"/>
+
+            <TextView
+                android:id="@+id/title_deskripsi_produk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_m"
+                android:background="@color/white"
+                android:text="@string/deskripsiproduk"
+                android:textSize="15sp"
+                android:layout_below="@+id/detailproduk_separator"
+                android:fontFamily="@font/ubuntu_b"
+                android:textColor="#707070"/>
+            <ImageView
+                android:id="@+id/btn_deskripsi_produk"
+                android:layout_width="@dimen/icon"
+                android:layout_height="@dimen/icon"
+                android:src="@drawable/ic_baseline_expand_more_24px"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/detailproduk_separator"
+                android:layout_margin="@dimen/margin_m"/>
+            <View
+                android:id="@+id/line_deskripsi_produk"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey_bg_border"
+                android:layout_below="@+id/btn_deskripsi_produk"/>
+
+            <TextView
+                android:id="@+id/deskripsi_produk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_m"
+                android:background="@color/white"
+                android:text="@string/lipsum"
+                android:textSize="12sp"
+                android:lineHeight="17sp"
+                android:justificationMode="inter_word"
+                android:layout_below="@+id/line_deskripsi_produk"
+                android:textStyle="normal"
+                android:visibility="gone"/>
+
+            <!-- -->
+            <TextView
+                android:id="@+id/title_informasi_umum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_m"
+                android:background="@color/white"
+                android:text="@string/informasiumum"
+                android:textSize="15sp"
+                android:lineHeight="17sp"
+                android:layout_below="@+id/deskripsi_produk"
+               android:fontFamily="@font/ubuntu_b"
+                android:textColor="#707070"/>
+            <ImageView
+                android:id="@+id/btn_informasi_umum"
+                android:layout_width="@dimen/icon"
+                android:layout_height="@dimen/icon"
+                android:src="@drawable/ic_baseline_expand_more_24px"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/deskripsi_produk"
+                android:layout_margin="@dimen/margin_m"/>
+            <View
+                android:id="@+id/line_informasi_umum"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey_bg_border"
+                android:layout_below="@+id/btn_informasi_umum"/>
+
+            <TextView
+                android:id="@+id/informasi_umum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_m"
+                android:background="#a7a7a7"
+                android:text="@string/lipsum"
+                android:textSize="@dimen/font_medium"
+                android:justificationMode="inter_word"
+                android:layout_below="@+id/line_informasi_umum"
+                android:textStyle="normal"
+                android:visibility="gone"/>
+
+
+            <!-- start manfaat dasar produk-->
+            <TextView
+                android:id="@+id/title_manfaat_produk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_m"
+                android:background="@color/white"
+                android:text="@string/manfaatdasarproduk"
+                android:textSize="15sp"
+                android:lineHeight="17sp"
+                android:textColor="#707070"
+                android:layout_below="@+id/informasi_umum"
+                android:fontFamily="@font/ubuntu_b"/>
+            <ImageView
+                android:id="@+id/btn_manfaat_produk"
+                android:layout_width="@dimen/icon"
+                android:layout_height="@dimen/icon"
+                android:src="@drawable/ic_baseline_expand_more_24px"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/informasi_umum"
+                android:layout_margin="@dimen/margin_m"/>
+            <View
+                android:id="@+id/line_manfaat_produk"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey_bg_border"
+                android:layout_below="@+id/btn_manfaat_produk"/>
+
+            <TextView
+                android:id="@+id/manfaat_produk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_m"
+                android:justificationMode="inter_word"
+                android:background="@color/grey"
+                android:text="@string/lipsum"
+                android:textSize="@dimen/font_medium"
+                android:layout_below="@+id/line_manfaat_produk"
+                android:textStyle="normal"
+                android:visibility="gone"/>
+
+            <!-- end manfaat dasar produk-->
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/detailpolis_btn_ajukan"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/margin_big"
+        android:background="@drawable/border_red"
+        android:text="@string/ajukansekarang"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_medium" />
+
+
+</RelativeLayout>
