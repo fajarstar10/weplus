@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:text="Checklist aksesoris yang ingin ditambahan"
+                android:text="Checklist aklerasi yang ingin ditambahan"
                 android:textStyle="bold"
                 android:textColor="@color/grey_medium"
                 android:textSize="14sp"/>
